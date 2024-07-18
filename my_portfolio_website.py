@@ -139,7 +139,6 @@ if selected == 'About':
                 "Arduino": 85,
             }
 
-
             # Function to create a skill bar
             def create_skill_bar(skill, level):
                 return f"""
@@ -171,7 +170,6 @@ if selected == 'About':
                 "CFD": 80,
                 "CAD modeling": 75,
             }
-
 
             # Function to create a skill bar
             def create_skill_bar(skill, level):
@@ -466,7 +464,7 @@ if selected == 'Projects':
 if selected == "Contact":
     with st.container():
 
-        def load_lottieurl(url):
+        def load_lottieurl(url: str):
             r = requests.get(url)
             if r.status_code != 200:
                 return None
@@ -475,10 +473,9 @@ if selected == "Contact":
 
         def local_css(file_name):
             with open(file_name) as f:
-                st.markdown(f"<style>{f.read()}<style>", unsafe_allow_html=True)
+                st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
 
 
-        # Apply local CSS styles from the "style.css" file
         local_css("style/style.css")
 
         lottie_contact = load_lottieurl("https://lottie.host/6c502d7d-9573-4d15-8063-b93dd8aef2af/MhPNlv4ZJ5.json")

@@ -1,0 +1,5 @@
+streamlit
+google-generativeai
+streamlit_lottie
+requests
+streamlit_option_menu

@@ -34,7 +34,7 @@ if selected == 'About':
 
         with col2:
             st.title(" ")
-            st.img = st.image(r"my images\William.png")
+            st.img = st.image("my images/William.png")
 
         st.title(" ")
 
@@ -153,6 +153,7 @@ if selected == 'About':
                 </div>
                 """
 
+
             for skill, level in skills.items():
                 st.markdown(create_skill_bar(skill, level), unsafe_allow_html=True)
 
@@ -241,11 +242,13 @@ if selected == 'About':
 
         st.title("Socials")
 
+
         def load_lottieurl(url):
             r = requests.get(url)
             if r.status_code != 200:
                 return None
             return r.json()
+
 
         lottie_socials = load_lottieurl("https://lottie.host/388e33ea-ee07-4824-901a-ab65964df097/qc7HX5r2Qj.json")
 
@@ -277,7 +280,6 @@ if selected == 'About':
             #################################################################################################
         with col14:
             st_lottie(lottie_socials, height=300)
-
 
 if selected == 'Projects':
     with st.container():
@@ -459,7 +461,6 @@ if selected == 'Projects':
             </div>
             """, unsafe_allow_html=True)
 
-
 if selected == "Contact":
     with st.container():
 
@@ -495,4 +496,3 @@ if selected == "Contact":
             st.markdown(contact_form, unsafe_allow_html=True)
         with right_col:
             st_lottie(lottie_contact, height=300)
-

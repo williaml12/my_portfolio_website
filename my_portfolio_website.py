@@ -240,46 +240,46 @@ if selected == 'About':
 
         st.write('---')
 
-        st.title("Socials")
+        # st.title("Socials")
 
 
-        def load_lottieurl(url):
-            r = requests.get(url)
-            if r.status_code != 200:
-                return None
-            return r.json()
+        # def load_lottieurl(url):
+        #     r = requests.get(url)
+        #     if r.status_code != 200:
+        #         return None
+        #     return r.json()
 
 
-        lottie_socials = load_lottieurl("https://lottie.host/388e33ea-ee07-4824-901a-ab65964df097/qc7HX5r2Qj.json")
+        # lottie_socials = load_lottieurl("https://lottie.host/388e33ea-ee07-4824-901a-ab65964df097/qc7HX5r2Qj.json")
 
-        col13, col14 = st.columns(2)
-        with col13:
-            ######################################################################################################
-            # Include Font Awesome CSS
-            st.markdown("""
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-                """, unsafe_allow_html=True)
+        # col13, col14 = st.columns(2)
+        # with col13:
+        #     ######################################################################################################
+        #     # Include Font Awesome CSS
+        #     st.markdown("""
+        #         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        #         """, unsafe_allow_html=True)
 
-            # HTML for contact icons with vertical layout
-            contact_icons_html = """
-                <div style="display: flex; flex-direction: column; align-items: left; margin-top: 40px;">
-                    <a href="https://www.linkedin.com/in/william-lu-47693b145/" target="_blank" style="text-decoration: none; color: black; margin-bottom: 35px;">
-                         <i class="fab fa-linkedin" style="font-size: 36px; color: black;"></i> <span style="color: black; font-size: 35px;">LinkedIn</span>
-                    </a>
-                    <a href="https://github.com/williaml12" target="_blank" style="text-decoration: none; color: black; margin-bottom: 35px;">
-                        <i class="fab fa-github" style="font-size: 36px; color: black;"></i> <span style="color: black; font-size: 35px;">GitHub</span>
-                    </a>
-                    <a href="https://www.hackster.io/wlu1" target="_blank" style="text-decoration: none; color: black; margin-bottom: 25px;">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Hackster.io_logo.svg" style="width: 36px; height: 36px; filter: invert(100%); vertical-align: middle;"/> <span style="color: black; font-size: 35px;">Hackster.io</span>
-                    </a>
-                </div>
-                        """
+        #     # HTML for contact icons with vertical layout
+        #     contact_icons_html = """
+        #         <div style="display: flex; flex-direction: column; align-items: left; margin-top: 40px;">
+        #             <a href="https://www.linkedin.com/in/william-lu-47693b145/" target="_blank" style="text-decoration: none; color: black; margin-bottom: 35px;">
+        #                  <i class="fab fa-linkedin" style="font-size: 36px; color: black;"></i> <span style="color: black; font-size: 35px;">LinkedIn</span>
+        #             </a>
+        #             <a href="https://github.com/williaml12" target="_blank" style="text-decoration: none; color: black; margin-bottom: 35px;">
+        #                 <i class="fab fa-github" style="font-size: 36px; color: black;"></i> <span style="color: black; font-size: 35px;">GitHub</span>
+        #             </a>
+        #             <a href="https://www.hackster.io/wlu1" target="_blank" style="text-decoration: none; color: black; margin-bottom: 25px;">
+        #                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Hackster.io_logo.svg" style="width: 36px; height: 36px; filter: invert(100%); vertical-align: middle;"/> <span style="color: black; font-size: 35px;">Hackster.io</span>
+        #             </a>
+        #         </div>
+        #                 """
 
-            # Display the contact icons
-            st.markdown(contact_icons_html, unsafe_allow_html=True)
-            #################################################################################################
-        with col14:
-            st_lottie(lottie_socials, height=300)
+        #     # Display the contact icons
+        #     st.markdown(contact_icons_html, unsafe_allow_html=True)
+        #     #################################################################################################
+        # with col14:
+        #     st_lottie(lottie_socials, height=300)
 
 if selected == 'Projects':
     with st.container():

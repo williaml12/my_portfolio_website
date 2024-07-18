@@ -235,7 +235,7 @@ if selected == 'About':
             st.write("## Hiking")
 
         with col10:
-            st.image("my images/puzzle.jpg")
+            st.image("my images/Puzzle.jpg")
             st.write("## Puzzles")
 
         st.write('---')

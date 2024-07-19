@@ -471,40 +471,28 @@ if selected == "Contact":
             return r.json()
 
 
-        # Function to load local CSS
         def local_css(file_name):
             with open(file_name) as f:
                 st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 
-        # Load CSS
+        # Apply local CSS styles from the "style.css" file
         local_css("style/style.css")
 
         lottie_contact = load_lottieurl("https://lottie.host/6c502d7d-9573-4d15-8063-b93dd8aef2af/MhPNlv4ZJ5.json")
 
-        # HTML form with spinner
-        # HTML form with spinner
         contact_form = """
-        <form action="https://formsubmit.co/alphagalaga@gmail.com" method="POST" id="contactForm" onsubmit="showSpinner()">
+        <form action="https://formsubmit.co/alphagalaga@gmail.com" method="POST">
           <input type="hidden" name="_captcha" value="false">
-          <input type="text" name="name" placeholder="Your name" required>
-          <input type="email" name="email" placeholder="Your email" required>
-          <textarea name="message" placeholder="Your message" required></textarea>
+          <input type="text" name="name" placeholder = "Your name" required>
+          <input type="email" name="email" placeholder = "Your email" required>
+          <textarea name = "message" placeholder = "Your message" required></textarea>
           <button type="submit">Send</button>
         </form>
-        <div id="spinner">Submitting...</div>
-        <script>
-          function showSpinner() {
-            document.getElementById('spinner').style.display = 'block';
-            document.getElementById('contactForm').classList.add('disabled');
-          }
-        </script>
         """
-
         left_col, right_col = st.columns((2, 1))
         with left_col:
             st.subheader("📨 Contact Me")
-            # Display the form
             st.markdown(contact_form, unsafe_allow_html=True)
         with right_col:
             st_lottie(lottie_contact, height=300)

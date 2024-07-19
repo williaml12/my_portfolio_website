@@ -476,7 +476,7 @@ if selected == "Contact":
                 st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 
-        # Apply local CSS styles from the "style.css" file
+        # Load CSS
         local_css("style/style.css")
 
         lottie_contact = load_lottieurl("https://lottie.host/6c502d7d-9573-4d15-8063-b93dd8aef2af/MhPNlv4ZJ5.json")

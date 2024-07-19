@@ -482,21 +482,15 @@ if selected == "Contact":
         lottie_contact = load_lottieurl("https://lottie.host/6c502d7d-9573-4d15-8063-b93dd8aef2af/MhPNlv4ZJ5.json")
 
         # HTML form
-        contact_form = """
-        <form action="https://formsubmit.co/alphagalaga@gmail.com" method="POST" onsubmit="showSpinner()">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="text" name="name" placeholder="Your name" required>
-          <input type="email" name="email" placeholder="Your email" required>
-          <textarea name="message" placeholder="Your message" required></textarea>
-          <button type="submit">Send</button>
-        </form>
-        <div id="spinner" style="display:none;">Submitting...</div>
-        <script>
-          function showSpinner() {
-            document.getElementById("spinner").style.display = "block";
-          }
-        </script>
-        """
+        contact_form = f"""
+               <form action="<https://formsubmit.co/alphagalaga@gmail.com>" method="POST">
+                   <input type="hidden" name="_captcha value="false">
+                   <input type="text" name="name" placeholder="Your name" required>
+                   <input type="email" name="email" placeholder="Your email" required>
+                   <textarea name="message" placeholder="Your message here" required></textarea>
+                   <button type="submit">Send</button>
+               </form>
+               """
 
         left_col, right_col = st.columns((2, 1))
         with left_col:

@@ -471,6 +471,7 @@ if selected == "Contact":
             return r.json()
 
 
+        # Function to load local CSS
         def local_css(file_name):
             with open(file_name) as f:
                 st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
@@ -481,6 +482,7 @@ if selected == "Contact":
 
         lottie_contact = load_lottieurl("https://lottie.host/6c502d7d-9573-4d15-8063-b93dd8aef2af/MhPNlv4ZJ5.json")
 
+        # HTML form with spinner
         # HTML form with spinner
         contact_form = """
         <form action="https://formsubmit.co/alphagalaga@gmail.com" method="POST" id="contactForm" onsubmit="showSpinner()">

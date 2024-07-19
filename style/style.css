@@ -1,3 +1,8 @@
+/* Add this at the top of your style.css to confirm it's being loaded */
+body {
+    background-color: lightblue;
+}
+
 /* Change the sidebar color */
 [data-testid=stSidebar] {
   background-image: linear-gradient(#000395, #FFD4DD);

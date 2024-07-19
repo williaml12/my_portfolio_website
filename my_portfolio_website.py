@@ -481,26 +481,19 @@ if selected == "Contact":
 
         lottie_contact = load_lottieurl("https://lottie.host/6c502d7d-9573-4d15-8063-b93dd8aef2af/MhPNlv4ZJ5.json")
 
-        # HTML form with CSS for the spinner
+        # HTML form
         contact_form = """
-        <form action="https://formsubmit.co/alphagalaga@gmail.com" method="POST" id="contactForm" onsubmit="showSpinner()">
+        <form action="https://formsubmit.co/alphagalaga@gmail.com" method="POST" onsubmit="showSpinner()">
           <input type="hidden" name="_captcha" value="false">
           <input type="text" name="name" placeholder="Your name" required>
           <input type="email" name="email" placeholder="Your email" required>
           <textarea name="message" placeholder="Your message" required></textarea>
           <button type="submit">Send</button>
         </form>
-        <div id="spinner" style="display:none; margin-top: 10px;">Submitting...</div>
-        <style>
-          #contactForm.disabled {
-            pointer-events: none;
-            opacity: 0.5;
-          }
-        </style>
+        <div id="spinner" style="display:none;">Submitting...</div>
         <script>
           function showSpinner() {
-            document.getElementById('spinner').style.display = 'block';
-            document.getElementById('contactForm').classList.add('disabled');
+            document.getElementById("spinner").style.display = "block";
           }
         </script>
         """

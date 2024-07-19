@@ -483,7 +483,7 @@ if selected == "Contact":
 
         # HTML form
         contact_form = """
-        <form action="https://formsubmit.co/alphagalaga@gmail.com" method="POST"onsubmit="showSpinner()">
+        <form action="https://formsubmit.co/alphagalaga@gmail.com" method="POST" onsubmit="showSpinner()">
           <input type="hidden" name="_captcha" value="false">
           <input type="text" name="name" placeholder="Your name" required>
           <input type="email" name="email" placeholder="Your email" required>

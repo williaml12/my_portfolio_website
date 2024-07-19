@@ -464,9 +464,6 @@ if selected == 'Projects':
 if selected == "Contact":
     with st.container():
 
-        import os
-
-
         def load_lottieurl(url):
             r = requests.get(url)
             if r.status_code != 200:
@@ -475,11 +472,8 @@ if selected == "Contact":
 
 
         def local_css(file_name):
-            if os.path.exists(file_name):
-                with open(file_name) as f:
-                    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-            else:
-                st.error(f"File {file_name} not found")
+            with open(file_name) as f:
+                st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 
         # Apply local CSS styles from the "style.css" file

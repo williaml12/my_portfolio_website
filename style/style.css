@@ -1,17 +1,22 @@
-/* Change the sidebar color*/
-[data-testid=stSidebar] {
-  background-image: linear-gradient(#000395,#FFD4DD);
+/* Add this at the top of your style.css to confirm it's being loaded */
+body {
+    background-color: lightblue;
 }
 
-/* Style hyperlinks*/
-a{
+/* Change the sidebar color */
+[data-testid=stSidebar] {
+  background-image: linear-gradient(#000395, #FFD4DD);
+}
+
+/* Style hyperlinks */
+a {
   display: block;
-  color:#2e9aff !important;
+  color: #2e9aff !important;
   font-weight: bold;
 }
 
-p{
-  color: white
+p {
+  color: white;
 }
 
 .st-ck {
@@ -24,14 +29,14 @@ p{
 
 /* Style the contact form */
 input[type=message], input[type=email], input[type=text], textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
 }
 
 /* Style the submit button with a specific background color etc */
@@ -54,24 +59,37 @@ button[type=submit]:hover {
 footer {visibility: hidden;}
 header {visibility: hidden;}
 
-
 /* Design Hyperlink */
-a:link , a:visited{
-color: blue;
-text-decoration: underline;
+a:link, a:visited {
+  color: blue;
+  text-decoration: underline;
 }
 
-a:hover,  a:active {
-color: red;
-text-decoration: underline;
+a:hover, a:active {
+  color: red;
+  text-decoration: underline;
 }
 
 .footer {
-position: fixed;
-left: 0;
-bottom: 0;
-width: 100%;
-background-color: #001d6c;
-color: white;
-text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #001d6c;
+  color: white;
+  text-align: center;
+}
+
+/* Spinner Styles */
+#spinner {
+  display: none;
+  color: #04AA6D;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* Disabled Form Styles */
+#contactForm.disabled {
+  pointer-events: none;
+  opacity: 0.5;
 }

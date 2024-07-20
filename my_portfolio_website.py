@@ -139,6 +139,7 @@ if selected == 'About':
                 "Arduino": 85,
             }
 
+
             # Function to create a skill bar
             def create_skill_bar(skill, level):
                 return f"""
@@ -170,6 +171,7 @@ if selected == 'About':
                 "CFD": 80,
                 "CAD modeling": 75,
             }
+
 
             # Function to create a skill bar
             def create_skill_bar(skill, level):
@@ -462,27 +464,27 @@ if selected == 'Projects':
             """, unsafe_allow_html=True)
 
 if selected == "Contact":
-    with st.container():
+    # with st.container():
 
-        def load_lottieurl(url):
-            r = requests.get(url)
-            if r.status_code != 200:
-                return None
-            return r.json()
-
-
-        def local_css(file_name):
-            with open(file_name) as f:
-                st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+    def load_lottieurl(url):
+        r = requests.get(url)
+        if r.status_code != 200:
+            return None
+        return r.json()
 
 
-        # Apply local CSS styles from the "style.css" file
-        local_css("style/style.css")
+    def local_css(file_name):
+        with open(file_name) as f:
+            st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-        lottie_contact = load_lottieurl("https://lottie.host/6c502d7d-9573-4d15-8063-b93dd8aef2af/MhPNlv4ZJ5.json")
 
-        # HTML form
-        contact_form = """
+    # Apply local CSS styles from the "style.css" file
+    local_css("style/style.css")
+
+    lottie_contact = load_lottieurl("https://lottie.host/6c502d7d-9573-4d15-8063-b93dd8aef2af/MhPNlv4ZJ5.json")
+
+    # HTML form
+    contact_form = """
         <form action="https://formsubmit.co/alphagalaga@gmail.com" method="POST" onsubmit="showSpinner()">
           <input type="hidden" name="_captcha" value="false">
           <input type="text" name="name" placeholder="Your name" required>
@@ -497,9 +499,9 @@ if selected == "Contact":
           }
         </script>
         """
-        left_col, right_col = st.columns((2, 1))
-        with left_col:
-            st.subheader("📨 Contact Me")
-            st.markdown(contact_form, unsafe_allow_html=True)
-        with right_col:
-            st_lottie(lottie_contact, height=300)
+    left_col, right_col = st.columns((2, 1))
+    with left_col:
+        st.subheader("📨 Contact Me")
+        st.markdown(contact_form, unsafe_allow_html=True)
+    with right_col:
+        st_lottie(lottie_contact, height=300)

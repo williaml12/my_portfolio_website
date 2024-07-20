@@ -481,40 +481,24 @@ if selected == "Contact":
 
         lottie_contact = load_lottieurl("https://lottie.host/6c502d7d-9573-4d15-8063-b93dd8aef2af/MhPNlv4ZJ5.json")
 
-
-        # Function to simulate form submission
-        def submit_form(name, email, message):
-            with st.spinner('Submitting...'):
-                # Simulate a delay for form submission
-                # You can replace this with your actual form submission logic
-                import time
-                time.sleep(2)
-                # Optionally, you can save the data or send an email here
-                # For example:
-                # send_email(name, email, message)
-            st.success('Form submitted successfully!')
-
-
-        # Create a form in Streamlit
-        with st.form(key='contact_form'):
-            name = st.text_input('Your name')
-            email = st.text_input('Your email')
-            message = st.text_area('Your message')
-            submit_button = st.form_submit_button(label='Send')
-
-        # Handle form submission
-        if submit_button:
-            submit_form(name, email, message)
-
+        # HTML form with spinner
         contact_form = """
-        <form action="https://formsubmit.co/alphagalaga@gmail.com" method="POST">
+        <form action="https://formsubmit.co/alphagalaga@gmail.com" method="POST" id="contactForm" onsubmit="showSpinner()">
           <input type="hidden" name="_captcha" value="false">
-          <input type="text" name="name" placeholder = "Your name" required>
-          <input type="email" name="email" placeholder = "Your email" required>
-          <textarea name = "message" placeholder = "Your message" required></textarea>
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="Your email" required>
+          <textarea name="message" placeholder="Your message" required></textarea>
           <button type="submit">Send</button>
         </form>
+        <div id="spinner">Submitting...</div>
+        <script>
+          function showSpinner() {
+            document.getElementById('spinner').style.display = 'block';
+            document.getElementById('contactForm').classList.add('disabled');
+          }
+        </script>
         """
+
         left_col, right_col = st.columns((2, 1))
         with left_col:
             st.subheader("📨 Contact Me")

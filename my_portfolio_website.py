@@ -139,7 +139,6 @@ if selected == 'About':
                 "Arduino": 85,
             }
 
-
             # Function to create a skill bar
             def create_skill_bar(skill, level):
                 return f"""
@@ -171,7 +170,6 @@ if selected == 'About':
                 "CFD": 80,
                 "CAD modeling": 75,
             }
-
 
             # Function to create a skill bar
             def create_skill_bar(skill, level):
@@ -464,44 +462,62 @@ if selected == 'Projects':
             """, unsafe_allow_html=True)
 
 if selected == "Contact":
-    # with st.container():
+    with st.container():
 
-    def load_lottieurl(url):
-        r = requests.get(url)
-        if r.status_code != 200:
-            return None
-        return r.json()
-
-
-    def local_css(file_name):
-        with open(file_name) as f:
-            st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+        def load_lottieurl(url):
+            r = requests.get(url)
+            if r.status_code != 200:
+                return None
+            return r.json()
 
 
-    # Apply local CSS styles from the "style.css" file
-    local_css("style/style.css")
+        def local_css(file_name):
+            with open(file_name) as f:
+                st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-    lottie_contact = load_lottieurl("https://lottie.host/6c502d7d-9573-4d15-8063-b93dd8aef2af/MhPNlv4ZJ5.json")
 
-    # HTML form
-    contact_form = """
-        <form action="https://formsubmit.co/alphagalaga@gmail.com" method="POST" onsubmit="showSpinner()">
+        # Apply local CSS styles from the "style.css" file
+        local_css("style/style.css")
+
+        lottie_contact = load_lottieurl("https://lottie.host/6c502d7d-9573-4d15-8063-b93dd8aef2af/MhPNlv4ZJ5.json")
+
+
+        # Function to simulate form submission
+        def submit_form(name, email, message):
+            with st.spinner('Submitting...'):
+                # Simulate a delay for form submission
+                # You can replace this with your actual form submission logic
+                import time
+                time.sleep(2)
+                # Optionally, you can save the data or send an email here
+                # For example:
+                # send_email(name, email, message)
+            st.success('Form submitted successfully!')
+
+
+        # Create a form in Streamlit
+        with st.form(key='contact_form'):
+            name = st.text_input('Your name')
+            email = st.text_input('Your email')
+            message = st.text_area('Your message')
+            submit_button = st.form_submit_button(label='Send')
+
+        # Handle form submission
+        if submit_button:
+            submit_form(name, email, message)
+
+        contact_form = """
+        <form action="https://formsubmit.co/alphagalaga@gmail.com" method="POST">
           <input type="hidden" name="_captcha" value="false">
-          <input type="text" name="name" placeholder="Your name" required>
-          <input type="email" name="email" placeholder="Your email" required>
-          <textarea name="message" placeholder="Your message" required></textarea>
+          <input type="text" name="name" placeholder = "Your name" required>
+          <input type="email" name="email" placeholder = "Your email" required>
+          <textarea name = "message" placeholder = "Your message" required></textarea>
           <button type="submit">Send</button>
         </form>
-        <div id="spinner" style="display:none;">Submitting...</div>
-        <script>
-          function showSpinner() {
-            document.getElementById("spinner").style.display = "block";
-          }
-        </script>
         """
-    left_col, right_col = st.columns((2, 1))
-    with left_col:
-        st.subheader("📨 Contact Me")
-        st.markdown(contact_form, unsafe_allow_html=True)
-    with right_col:
-        st_lottie(lottie_contact, height=300)
+        left_col, right_col = st.columns((2, 1))
+        with left_col:
+            st.subheader("📨 Contact Me")
+            st.markdown(contact_form, unsafe_allow_html=True)
+        with right_col:
+            st_lottie(lottie_contact, height=300)

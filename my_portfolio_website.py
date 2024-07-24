@@ -93,6 +93,8 @@ if selected == 'About':
                  """
 
         st.title("William's AI Bot")
+        # Display an icon from Iconfinder
+        st.image('chat-bot.png', caption='Chatbot Icon', use_column_width=True)
 
        # Initialize session state for conversation history if not already done
         if 'conversation' not in st.session_state:

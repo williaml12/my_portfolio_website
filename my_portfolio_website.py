@@ -102,7 +102,7 @@ if selected == 'About':
         # st.header("Conversation History")
         for chat in st.session_state.conversation:
             st.write(f"**User:** {chat['user']}")
-            st.write(f"**🤖Bot:** {chat['bot']}")
+            st.write(f"**🤖Bot:** {chat['🤖bot']}")
         
         # Create a form for input and button
         with st.form(key='question_form'):

@@ -110,7 +110,7 @@ if selected == 'About':
                 try:
                     response = model.generate_content(prompt)
                     # Append user question and AI response to conversation history
-                    st.session_state.conversation.append({"user": user_question, "bot": response.text})
+                    st.session_state.conversation.append({"user": user_question, "AI bot": response.text})
                 except Exception as e:
                     st.error(f"An error occurred: {e}")
             else:
@@ -119,7 +119,7 @@ if selected == 'About':
         # Display the conversation history
         for chat in st.session_state.conversation:
             st.write(f"**User:** {chat['user']}")
-            st.write(f"**Bot:** {chat['bot']}")
+            st.write(f"**AI Bot:** {chat['AI bot']}")
 
         st.write('---')
         # st.title(" ")

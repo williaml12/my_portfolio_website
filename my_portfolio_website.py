@@ -98,6 +98,12 @@ if selected == 'About':
         if 'conversation' not in st.session_state:
             st.session_state.conversation = []
 
+        # Display the conversation history
+        st.header("Conversation History")
+        for chat in st.session_state.conversation:
+            st.write(f"**User:** {chat['user']}")
+            st.write(f"**Bot:** {chat['bot']}")
+        
         # Create a form for input and button
         with st.form(key='question_form'):
             user_question = st.text_input("Ask anything about me", placeholder="Enter a prompt here")
@@ -110,16 +116,13 @@ if selected == 'About':
                 try:
                     response = model.generate_content(prompt)
                     # Append user question and AI response to conversation history
-                    st.session_state.conversation.append({"user": user_question, "AI bot": response.text})
+                    st.session_state.conversation.append({"user": user_question, "bot": response.text})
+                    # Clear the input field after submission
+                    st.experimental_rerun()
                 except Exception as e:
                     st.error(f"An error occurred: {e}")
             else:
                 st.warning("Please enter a question before clicking ASK ME.")
-
-        # Display the conversation history
-        for chat in st.session_state.conversation:
-            st.write(f"**User:** {chat['user']}")
-            st.write(f"**AI Bot:** {chat['AI bot']}")
 
         st.write('---')
         # st.title(" ")

@@ -500,7 +500,7 @@ if selected == "Contact":
         """
         left_col, right_col = st.columns((2, 1))
         with left_col:
-            st.subheader("📨 Contact Me")
+            st.subheader("🖅 Contact Me")
             st.markdown(contact_form, unsafe_allow_html=True)
         with right_col:
             st_lottie(lottie_contact, height=300)

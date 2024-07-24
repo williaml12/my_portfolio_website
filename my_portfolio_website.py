@@ -119,7 +119,7 @@ if selected == 'About':
         # Display the conversation history
         for chat in st.session_state.conversation:
             st.write(f"**User:** {chat['user']}")
-            st.write(f"**Bot:** {chat['bot']}")
+            st.write(f"**Bot:** {chat['AI bot']}")
 
         st.write('---')
         # st.title(" ")

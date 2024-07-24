@@ -103,7 +103,6 @@ if selected == 'About':
         bot_icon_url = "https://path-to-your-bot-icon.png"
         
         # Display the conversation history with icons
-        st.header("Conversation History")
         for chat in st.session_state.conversation:
             col1, col2 = st.columns([1, 9])
             with col1:
@@ -115,7 +114,7 @@ if selected == 'About':
             with col1:
                 st.image(bot_icon_url, width=30)
             with col2:
-                st.write(f"**Bot:** {chat['bot']}")
+                st.write(f"**AI Bot:** {chat['AI bot']}")
         
         # Create a form for input and button
         with st.form(key='question_form'):
@@ -129,7 +128,7 @@ if selected == 'About':
                 try:
                     response = model.generate_content(prompt)
                     # Append user question and AI response to conversation history
-                    st.session_state.conversation.append({"user": user_question, "bot": response.text})
+                    st.session_state.conversation.append({"user": user_question, "AI bot": response.text})
                     # Clear the input field after submission
                     st.experimental_rerun()
                 except Exception as e:

@@ -99,7 +99,7 @@ if selected == 'About':
             st.session_state.conversation = []
 
         # Display the conversation history
-        st.header("Conversation History")
+        # st.header("Conversation History")
         for chat in st.session_state.conversation:
             st.write(f"**User:** {chat['user']}")
             st.write(f"**Bot:** {chat['bot']}")

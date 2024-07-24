@@ -102,7 +102,7 @@ if selected == 'About':
         # st.header("Conversation History")
         for chat in st.session_state.conversation:
             st.write(f"**User:** {chat['user']}")
-            st.write(f"**🤖Bot:** {chat['🤖bot']}")
+            st.write(f"**AI Bot:** {chat['AI bot']}")
         
         # Create a form for input and button
         with st.form(key='question_form'):
@@ -116,7 +116,7 @@ if selected == 'About':
                 try:
                     response = model.generate_content(prompt)
                     # Append user question and AI response to conversation history
-                    st.session_state.conversation.append({"user": user_question, "🤖bot": response.text})
+                    st.session_state.conversation.append({"user": user_question, "AI bot": response.text})
                     # Clear the input field after submission
                     st.experimental_rerun()
                 except Exception as e:

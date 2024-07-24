@@ -98,26 +98,38 @@ if selected == 'About':
         if 'conversation' not in st.session_state:
             st.session_state.conversation = []
 
-        # Display the conversation history
+        # Define the URLs for your custom icons
+        user_icon_url = "https://path-to-your-user-icon.png"
+        bot_icon_url = "https://path-to-your-bot-icon.png"
+
+        # Display the conversation history with icons
         for chat in st.session_state.conversation:
-            st.markdown(f"<i class='fas fa-user'></i> **User:** {chat['user']}", unsafe_allow_html=True)
-            st.markdown(f"<i class='fas fa-robot'></i> **AI Bot:** {chat['AI bot']}", unsafe_allow_html=True)    
+            col1, col2 = st.columns([1, 9])
+            with col1:
+                st.image(user_icon_url, width=30)
+            with col2:
+                st.write(f"**User:** {chat['user']}")
+            
+            col1, col2 = st.columns([1, 9])
+            with col1:
+                st.image(bot_icon_url, width=30)
+            with col2:
+                st.write(f"**AI Bot:** {chat['AI bot']}")
 
         # Create a form for input and button
         with st.form(key='question_form'):
             user_question = st.text_input("Ask anything about me", placeholder="Enter a prompt here")
             submit_button = st.form_submit_button(label='ASK ME', use_container_width=400)
-
+            
         # Handle form submission
         if submit_button:
             if user_question:
-                # Assume persona and model are defined elsewhere
-                persona = "Persona: "
                 prompt = persona + "Here is the question that the user asked: " + user_question
                 try:
-                    # response = model.generate_content(prompt)  # Replace with actual model response
-                    response_text = "Placeholder AI response"  # Replace with actual AI response text
-                    st.session_state.conversation.append({"user": user_question, "AI bot": response_text})
+                    response = model.generate_content(prompt)
+                    # Append user question and AI response to conversation history
+                    st.session_state.conversation.append({"user": user_question, "AI bot": response.text})
+                    # Clear the input field after submission
                     st.experimental_rerun()
                 except Exception as e:
                     st.error(f"An error occurred: {e}")

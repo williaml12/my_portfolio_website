@@ -102,7 +102,7 @@ if selected == 'About':
         for chat in st.session_state.conversation:
             st.markdown(f"<i class='fas fa-user'></i> **User:** {chat['user']}", unsafe_allow_html=True)
             st.markdown(f"<i class='fas fa-robot'></i> **AI Bot:** {chat['AI bot']}", unsafe_allow_html=True)
-    
+        
         # Create a form for input and button
         with st.form(key='question_form'):
             user_question = st.text_input("Ask anything about me", placeholder="Enter a prompt here")

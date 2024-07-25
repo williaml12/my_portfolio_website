@@ -51,7 +51,7 @@ if selected == 'About':
                 medical tech., Computer Vision, IoT solutions, Robotics, and AI. 
                 
                 EDUCATION: 
-                - You can find that information in the "Education" https://williamlu.streamlit.app/~/+/#education section of the "About" tab of my AI portfolio 
+                - You can find that information in the "Education" section of the "About" tab of my AI portfolio 
                 website.
                 
                 Work Experience:

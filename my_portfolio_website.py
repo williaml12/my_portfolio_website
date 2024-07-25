@@ -94,7 +94,7 @@ if selected == 'About':
 
         st.title("William's AI Bot")
         
-      # Initialize session state for conversation history if not already done
+        # Initialize session state for conversation history if not already done
         if 'conversation' not in st.session_state:
             st.session_state.conversation = []
 
@@ -123,6 +123,7 @@ if selected == 'About':
                     st.error(f"An error occurred: {e}")
             else:
                 st.warning("Please enter a question before clicking ASK ME.")
+
         
         st.write('---')
         # st.title(" ")

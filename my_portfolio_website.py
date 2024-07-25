@@ -100,8 +100,8 @@ if selected == 'About':
 
         # Display the conversation history
         for chat in st.session_state.conversation:
-            st.markdown(f"<span style='color: blue; font-size: 18px;'><i class='fas fa-user'></i> User:</span> {chat['user']}", unsafe_allow_html=True)
-            st.markdown(f"<span style='color: green; font-size: 18px;'><i class='fas fa-robot'></i> AI Bot:</span> {chat['AI bot']}", unsafe_allow_html=True)
+            st.markdown("<i class='fas fa-user'></i>", unsafe_allow_html=True)
+            st.markdown("<i class='fas fa-robot'></i>", unsafe_allow_html=True)
 
         # Create a form for input and button
         with st.form(key='question_form'):

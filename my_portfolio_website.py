@@ -43,7 +43,7 @@ if selected == 'About':
         experience_url = "https://williamlu.streamlit.app/~/+/#experience"
         skills_url = "https://williamlu.streamlit.app/~/+/#my-skills"
         hobbies_url = "https://williamlu.streamlit.app/~/+/#my-hobbies-interests"
-        contact_url = "https://williamlu.streamlit.app/~/+/#b949ecef"
+        contact_url = "javascript:void(0);"
         
         # Create hyperlinks using Markdown
         education_link = f"[Education]({education_url})"

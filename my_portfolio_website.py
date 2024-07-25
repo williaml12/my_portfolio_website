@@ -99,7 +99,7 @@ if selected == 'About':
             st.session_state.conversation = []
 
         # Define the URLs for your custom icons
-        user_icon_url = "https://path-to-your-user-icon.png"
+        user_icon_url = "https://png.pngtree.com/png-clipart/20230820/original/pngtree-chatbot-icon-chat-bot-robot-picture-image_8080841.png"
         bot_icon_url = "https://path-to-your-bot-icon.png"
 
         # Display the conversation history with icons

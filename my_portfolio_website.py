@@ -100,7 +100,7 @@ if selected == 'About':
 
         # Define the URLs for your custom icons
         user_icon_url = "https://path-to-your-user-icon.png"
-        bot_icon_url = "https://path-to-your-bot-icon.png"
+        bot_icon_url = "https://th.bing.com/th/id/OIP.N-PYnKUeKlQo48HNKXWEOwHaHa?w=216&h=216&c=7&r=0&o=5&pid=1.7"
 
         # Display the conversation history with icons
         for chat in st.session_state.conversation:

@@ -95,42 +95,34 @@ if selected == 'About':
         st.title("William's AI Bot")
         
        # Initialize session state for conversation history if not already done
-        if 'conversation' not in st.session_state:
-            st.session_state.conversation = []
+if 'conversation' not in st.session_state:
+    st.session_state.conversation = []
 
-        # Define the URLs for your custom icons
-        user_icon_url = "https://path-to-your-user-icon.png"
-        bot_icon_url = "https://cdn-icons-png.flaticon.com/128/8943/8943377.png"
+# Display the conversation history
+for chat in st.session_state.conversation:
+    st.markdown(f"<i class='fas fa-user'></i> **User:** {chat['user']}", unsafe_allow_html=True)
+    st.markdown(f"<i class='fas fa-robot'></i> **AI Bot:** {chat['AI bot']}", unsafe_allow_html=True)
 
-        # Display the conversation history with icons
-        st.header("Conversation History")
-        for chat in st.session_state.conversation:
-            col1, col2 = st.columns([1, 9])
-            with col1:
-                st.image(user_icon_url, width=30))
-            
-            with col1:
-                st.image(bot_icon_url, width=30)
+# Create a form for input and button
+with st.form(key='question_form'):
+    user_question = st.text_input("Ask anything about me", placeholder="Enter a prompt here")
+    submit_button = st.form_submit_button(label='ASK ME', use_container_width=400)
 
-        # Create a form for input and button
-        with st.form(key='question_form'):
-            user_question = st.text_input("Ask anything about me", placeholder="Enter a prompt here")
-            submit_button = st.form_submit_button(label='ASK ME', use_container_width=400)
-
-        # Handle form submission
-        if submit_button:
-            if user_question:
-                prompt = persona + "Here is the question that the user asked: " + user_question
-                try:
-                    response = model.generate_content(prompt)
-                    # Append user question and AI response to conversation history
-                    st.session_state.conversation.append({"user": user_question, "bot": response.text})
-                    # Clear the input field after submission
-                    st.experimental_rerun()
-                except Exception as e:
-                    st.error(f"An error occurred: {e}")
-            else:
-                st.warning("Please enter a question before clicking ASK ME.")
+    # Handle form submission
+    if submit_button:
+        if user_question:
+            # Assume persona and model are defined elsewhere
+            persona = "Persona: "
+            prompt = persona + "Here is the question that the user asked: " + user_question
+            try:
+                # response = model.generate_content(prompt)  # Replace with actual model response
+                response_text = "Placeholder AI response"  # Replace with actual AI response text
+                st.session_state.conversation.append({"user": user_question, "AI bot": response_text})
+                st.experimental_rerun()
+            except Exception as e:
+                st.error(f"An error occurred: {e}")
+        else:
+            st.warning("Please enter a question before clicking ASK ME.")
                 
         st.write('---')
         # st.title(" ")

@@ -54,17 +54,6 @@ if selected == 'About':
                 - You can find that information in the "Education" section of the "About" tab of my AI portfolio 
                 website.
 
-                    # # Define the word and URL
-                    # word = "Education"
-                    # url = "https://williamlu.streamlit.app/~/+/#education"
-                    
-                    #  # Create a hyperlink using Markdown
-                    # markdown_link = f"[{word}]({url})"
-    
-                    # # Display the hyperlinks in the Streamlit app
-                    # st.write("Using Markdown:")
-                    # st.markdown(markdown_link)
-
                     # Define the word and URL
                     word = "Education"
                     url = "https://williamlu.streamlit.app/~/+/#education"
@@ -74,12 +63,6 @@ if selected == 'About':
                     
                     # Display the message with the hyperlink in the Streamlit app
                     st.markdown(f'You can find that information in the {markdown_link} section of the "About" tab of my AI portfolio website.')
-
-
-            
-
-
-
                     
                     
                 Work Experience:
@@ -93,9 +76,8 @@ if selected == 'About':
                     # Create a hyperlink using Markdown
                     markdown_link = f"[{word}]({url})"
     
-                    # Display the hyperlinks in the Streamlit app
-                    st.write("Using Markdown:")
-                    st.markdown(markdown_link)
+                    # Display the message with the hyperlink in the Streamlit app
+                    st.markdown(f'You can find that information in the {markdown_link} section of the "About" tab of my AI portfolio website.')
                     
                 SKILLS: 
                 Software: MatLab, LabVIEW, SolidWorks, ANSYS(CFD), PSpice, ImageJ, MS Word, Excel, PowerPoint, 

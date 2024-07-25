@@ -58,11 +58,12 @@ if selected == 'About':
                     word = "Education"
                     url = "https://williamlu.streamlit.app/~/+/#education"
                     
-                    # Create a hyperlink using HTML
-                    html_link = f'<a href="{url}" target="_blank">{word}</a>'
-
-                    st.write("Using HTML:")
-                    st.markdown(html_link, unsafe_allow_html=True)
+                     # Create a hyperlink using Markdown
+                    markdown_link = f"[{word}]({url})"
+    
+                    # Display the hyperlinks in the Streamlit app
+                    st.write("Using Markdown:")
+                    st.markdown(markdown_link)
                     
                 Work Experience:
                 - You can find that information in the "Experience" section of the "About" tab of my AI portfolio 

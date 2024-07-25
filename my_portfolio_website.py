@@ -68,7 +68,18 @@ if selected == 'About':
                 Work Experience:
                 - You can find that information in the "Experience" section of the "About" tab of my AI portfolio 
                 website.
-                
+
+                    # Define the word and URL
+                    word = "Experience"
+                    url = "https://williamlu.streamlit.app/~/+/#experience"
+                    
+                    # Create a hyperlink using Markdown
+                    markdown_link = f"[{word}]({url})"
+    
+                    # Display the hyperlinks in the Streamlit app
+                    st.write("Using Markdown:")
+                    st.markdown(markdown_link)
+                    
                 SKILLS: 
                 Software: MatLab, LabVIEW, SolidWorks, ANSYS(CFD), PSpice, ImageJ, MS Word, Excel, PowerPoint, 
                 Project, Arduino IDE, and Visual Studio
@@ -79,12 +90,34 @@ if selected == 'About':
                 validation and documentation, FEA and failure analysis, technical writing
                 You can also find that information in the "My Skills" section of the "About" tab of my AI 
                 portfolio website.
-                
+
+                    # Define the word and URL
+                    word = "My Skills"
+                    url = "https://williamlu.streamlit.app/~/+/#my-skills"
+                    
+                    # Create a hyperlink using Markdown
+                    markdown_link = f"[{word}]({url})"
+    
+                    # Display the hyperlinks in the Streamlit app
+                    st.write("Using Markdown:")
+                    st.markdown(markdown_link)
+                    
                 Hobby or Hobbies:
                 I enjoy most of my time listening to music, watching YouTube videos, WeChat and TikTok short videos, 
                 and reading journal articles or magazines in the fields of physics, engineering, medicine, and biology 
                 to gain insight for research. You can also find that information in the "My Hobbies & Interests" section
                 of the "About" tab of my AI portfolio website.
+
+                    # Define the word and URL
+                    word = "My Hobbies & Interests"
+                    url = "https://williamlu.streamlit.app/~/+/#my-hobbies-interests"
+                    
+                    # Create a hyperlink using Markdown
+                    markdown_link = f"[{word}]({url})"
+    
+                    # Display the hyperlinks in the Streamlit app
+                    st.write("Using Markdown:")
+                    st.markdown(markdown_link)
                 
                 Projects:
                 You can find information about my projects in a few places:
@@ -92,12 +125,23 @@ if selected == 'About':
                 - Hackster.io: https://www.hackster.io/wlu1
                 - Go to "Projects" tab of my AI portfolio website
                 - You can find links to those websites in the "Socials" section of the "About" tab of my AI portfolio 
-                website..
+                website.
                 
                 Contact:
                 You can reach me at luwei2359@gmail.com. You can also find me on LinkedIn at 
                 https://www.linkedin.com/in/william-lu-47693b145/. Or you can contact me through the "Contact" tab of
                 my AI portfolio website.
+
+                    # Define the word and URL
+                    word = "Contact"
+                    url = "https://williamlu.streamlit.app/~/+/#b949ecef"
+                    
+                    # Create a hyperlink using Markdown
+                    markdown_link = f"[{word}]({url})"
+    
+                    # Display the hyperlinks in the Streamlit app
+                    st.write("Using Markdown:")
+                    st.markdown(markdown_link)
                 
                 Availability:
                 William is actively seeking new opportunities and is ready to start immediately.

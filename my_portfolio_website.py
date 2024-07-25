@@ -100,7 +100,7 @@ if selected == 'About':
 
         # Define the URLs for your custom icons
         user_icon_url = "https://path-to-your-user-icon.png"
-        bot_icon_url = "https://media.istockphoto.com/id/1140553974/vector/chat-bubble-logo-letter-c-logo-consultation-communication-advice-icon-abstract-speach.jpg?s=612x612&w=0&k=20&c=3u2_u7JpInrk9WJFfMgnxHfOQbPDPPDK6TqubVUdq7o="
+        bot_icon_url = "https://cdn-icons-png.flaticon.com/128/8943/8943377.png"
 
         # Display the conversation history with icons
         st.header("Conversation History")

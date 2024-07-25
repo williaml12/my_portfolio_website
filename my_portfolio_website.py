@@ -80,16 +80,6 @@ if selected == 'About':
                     st.markdown(f'You can find that information in the {markdown_link} section of the "About" tab of my AI portfolio website.')
                     
                 SKILLS: 
-
-                    # Define the word and URL
-                    word = "My Skills"
-                    url = "https://williamlu.streamlit.app/~/+/#my-skills"
-                    
-                    # Create a hyperlink using Markdown
-                    markdown_link = f"[{word}]({url})"
-    
-                    # Display the sentence with the hyperlink
-                    st.markdown(f'You can also find that information in the {markdown_link} section of the "About" tab of my AI portfolio website.')
                     
                 Software: MatLab, LabVIEW, SolidWorks, ANSYS(CFD), PSpice, ImageJ, MS Word, Excel, PowerPoint, 
                 Project, Arduino IDE, and Visual Studio
@@ -100,6 +90,17 @@ if selected == 'About':
                 validation and documentation, FEA and failure analysis, and technical writing
                 You can also find that information in the "My Skills" section of the "About" tab of my AI 
                 portfolio website.
+
+
+                    # Define the word and URL
+                    word = "My Skills"
+                    url = "https://williamlu.streamlit.app/~/+/#my-skills"
+                    
+                    # Create a hyperlink using Markdown
+                    markdown_link = f"[{word}]({url})"
+    
+                    # Display the sentence with the hyperlink
+                    st.markdown(f'You can also find that information in the {markdown_link} section of the "About" tab of my AI portfolio website.')
 
                     
                     

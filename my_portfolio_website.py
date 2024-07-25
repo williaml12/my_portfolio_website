@@ -43,7 +43,8 @@ if selected == 'About':
         experience_url = "https://williamlu.streamlit.app/~/+/#experience"
         skills_url = "https://williamlu.streamlit.app/~/+/#my-skills"
         hobbies_url = "https://williamlu.streamlit.app/~/+/#my-hobbies-interests"
-        contact_url = "javascript:void(0);"
+        contact_url = "https://williamlu.streamlit.app/~/+/#b949ecef"
+        socials_url = "https://williamlu.streamlit.app/~/+/#socials"
         
         # Create hyperlinks using Markdown
         education_link = f"[Education]({education_url})"
@@ -51,6 +52,7 @@ if selected == 'About':
         skills_link = f"[My Skills]({skills_url})"
         hobbies_link = f"[My Hobbies & Interests]({hobbies_url})"
         contact_link = f"[Contact]({contact_url})"
+        socials_link = f"[Socials]({socials_url})"
         
         # Display the persona with hyperlinks in the Streamlit app
         persona = f"""
@@ -90,7 +92,7 @@ if selected == 'About':
         - William's Github: [https://github.com/williaml12](https://github.com/williaml12)
         - Hackster.io: [https://www.hackster.io/wlu1](https://www.hackster.io/wlu1)
         - Go to "Projects" tab of my AI portfolio website
-        - You can find links to those websites in the "Socials" section of the "About" tab of my AI portfolio website.
+        - You can find links to those websites in the {socials_link} section of the "About" tab of my AI portfolio website.
         
         ### CONTACT:
         You can reach me at luwei2359@gmail.com. You can also find me on LinkedIn at [https://www.linkedin.com/in/william-lu-47693b145/](https://www.linkedin.com/in/william-lu-47693b145/). 
@@ -99,9 +101,6 @@ if selected == 'About':
         ### AVAILABILITY:
         William is actively seeking new opportunities and is ready to start immediately.
         """
-        
-        # Display the persona
-        # st.markdown(persona)
 
         st.title("William's AI Bot")
         

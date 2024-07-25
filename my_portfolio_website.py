@@ -80,15 +80,6 @@ if selected == 'About':
                     st.markdown(f'You can find that information in the {markdown_link} section of the "About" tab of my AI portfolio website.')
                     
                 SKILLS: 
-                Software: MatLab, LabVIEW, SolidWorks, ANSYS(CFD), PSpice, ImageJ, MS Word, Excel, PowerPoint, 
-                Project, Arduino IDE, and Visual Studio
-                Hardware: Arduino, Particle Photon, Sony Spresense, ESP32, ESP8266, and Raspberry Pi 
-                Programming Languages: C++, C, Python, Java, and MatLab 
-                Languages: Chinese (Native), and Spanish (Elementary Proficiency, basic, entry-level) 
-                Others: Good verbal and written communication skills, 3D printing, assembling, troubleshooting, 
-                validation and documentation, FEA and failure analysis, and technical writing
-                You can also find that information in the "My Skills" section of the "About" tab of my AI 
-                portfolio website.
 
                     # Define the word and URL
                     word = "My Skills"
@@ -99,6 +90,18 @@ if selected == 'About':
     
                     # Display the sentence with the hyperlink
                     st.markdown(f'You can also find that information in the {markdown_link} section of the "About" tab of my AI portfolio website.')
+                    
+                Software: MatLab, LabVIEW, SolidWorks, ANSYS(CFD), PSpice, ImageJ, MS Word, Excel, PowerPoint, 
+                Project, Arduino IDE, and Visual Studio
+                Hardware: Arduino, Particle Photon, Sony Spresense, ESP32, ESP8266, and Raspberry Pi 
+                Programming Languages: C++, C, Python, Java, and MatLab 
+                Languages: Chinese (Native), and Spanish (Elementary Proficiency, basic, entry-level) 
+                Others: Good verbal and written communication skills, 3D printing, assembling, troubleshooting, 
+                validation and documentation, FEA and failure analysis, and technical writing
+                You can also find that information in the "My Skills" section of the "About" tab of my AI 
+                portfolio website.
+
+                    
                     
                 Hobby or Hobbies:
                 I enjoy most of my time listening to music, watching YouTube videos, WeChat and TikTok short videos, 

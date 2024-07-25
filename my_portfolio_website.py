@@ -97,9 +97,8 @@ if selected == 'About':
                     # Create a hyperlink using Markdown
                     markdown_link = f"[{word}]({url})"
     
-                    # Display the hyperlinks in the Streamlit app
-                    st.write("Using Markdown:")
-                    st.markdown(markdown_link)
+                    # Display the message with the hyperlink in the Streamlit app
+                    st.markdown(f'You can find that information in the {markdown_link} section of the "About" tab of my AI portfolio website.')
                     
                 Hobby or Hobbies:
                 I enjoy most of my time listening to music, watching YouTube videos, WeChat and TikTok short videos, 
@@ -114,9 +113,8 @@ if selected == 'About':
                     # Create a hyperlink using Markdown
                     markdown_link = f"[{word}]({url})"
     
-                    # Display the hyperlinks in the Streamlit app
-                    st.write("Using Markdown:")
-                    st.markdown(markdown_link)
+                    # Display the message with the hyperlink in the Streamlit app
+                    st.markdown(f'You can find that information in the {markdown_link} section of the "About" tab of my AI portfolio website.')
                 
                 Projects:
                 You can find information about my projects in a few places:

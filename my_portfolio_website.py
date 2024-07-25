@@ -94,15 +94,15 @@ if selected == 'About':
 
         st.title("William's AI Bot")
         
-       # Initialize session state for conversation history if not already done
+      # Initialize session state for conversation history if not already done
         if 'conversation' not in st.session_state:
             st.session_state.conversation = []
 
         # Display the conversation history
         # st.header("Conversation History")
         for chat in st.session_state.conversation:
-            st.markdown(f"**👤 User:** {chat['user']}")
-            st.markdown(f"**🤖 AI Bot:** {chat['AI bot']}")
+            st.markdown(f"<p style='font-size: 16px;'><span style='color: blue;'>User:</span> {chat['user']}</p>", unsafe_allow_html=True)
+            st.markdown(f"<p style='font-size: 16px;'><span style='color: green;'>AI Bot:</span> {chat['AI bot']}</p>", unsafe_allow_html=True)
 
         # Create a form for input and button
         with st.form(key='question_form'):
@@ -112,7 +112,7 @@ if selected == 'About':
         # Handle form submission
         if submit_button:
             if user_question:
-                prompt = persona + "Here is the question that the user asked: " + user_question
+                prompt = persona + " Here is the question that the user asked: " + user_question
                 try:
                     response = model.generate_content(prompt)
                     # Append user question and AI response to conversation history
@@ -123,7 +123,7 @@ if selected == 'About':
                     st.error(f"An error occurred: {e}")
             else:
                 st.warning("Please enter a question before clicking ASK ME.")
-                
+                        
         st.write('---')
         # st.title(" ")
 

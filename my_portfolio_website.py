@@ -86,7 +86,7 @@ if selected == 'About':
                 Programming Languages: C++, C, Python, Java, and MatLab 
                 Languages: Chinese (Native), and Spanish (Elementary Proficiency, basic, entry-level) 
                 Others: Good verbal and written communication skills, 3D printing, assembling, troubleshooting, 
-                validation and documentation, FEA and failure analysis, technical writing
+                validation and documentation, FEA and failure analysis, and technical writing
                 You can also find that information in the "My Skills" section of the "About" tab of my AI 
                 portfolio website.
 
@@ -98,7 +98,7 @@ if selected == 'About':
                     markdown_link = f"[{word}]({url})"
     
                     # Display the message with the hyperlink in the Streamlit app
-                    st.markdown(f'You can find that information in the {markdown_link} section of the "About" tab of my AI portfolio website.')
+                    st.markdown(f'You can also find that information in the {markdown_link} section of the "About" tab of my AI portfolio website.')
                     
                 Hobby or Hobbies:
                 I enjoy most of my time listening to music, watching YouTube videos, WeChat and TikTok short videos, 

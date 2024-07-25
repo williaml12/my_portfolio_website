@@ -137,8 +137,7 @@ if selected == 'About':
                     markdown_link = f"[{word}]({url})"
     
                     # Display the hyperlinks in the Streamlit app
-                    st.write("Using Markdown:")
-                    st.markdown(markdown_link)
+                    st.markdown(f'Or you can contact me through the {markdown_link} tab of my AI portfolio website.')
                 
                 Availability:
                 William is actively seeking new opportunities and is ready to start immediately.

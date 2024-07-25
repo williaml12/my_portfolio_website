@@ -97,7 +97,7 @@ if selected == 'About':
                     # Create a hyperlink using Markdown
                     markdown_link = f"[{word}]({url})"
     
-                    # Display the message with the hyperlink in the Streamlit app
+                    # Display the sentence with the hyperlink
                     st.markdown(f'You can also find that information in the {markdown_link} section of the "About" tab of my AI portfolio website.')
                     
                 Hobby or Hobbies:
@@ -114,7 +114,7 @@ if selected == 'About':
                     markdown_link = f"[{word}]({url})"
     
                     # Display the message with the hyperlink in the Streamlit app
-                    st.markdown(f'You can find that information in the {markdown_link} section of the "About" tab of my AI portfolio website.')
+                    st.markdown(f'You can also find that information in the {markdown_link} section of the "About" tab of my AI portfolio website.')
                 
                 Projects:
                 You can find information about my projects in a few places:

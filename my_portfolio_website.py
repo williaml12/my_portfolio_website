@@ -53,6 +53,17 @@ if selected == 'About':
                 EDUCATION: 
                 - You can find that information in the "Education" section of the "About" tab of my AI portfolio 
                 website.
+
+                # Define the word and URL
+                word = "education"
+                url = "https://williamlu.streamlit.app/~/+/#education"
+                
+                # Create a hyperlink using Markdown
+                markdown_link = f"[{word}]({url})"
+
+                # Display the hyperlinks in the Streamlit app
+                st.write("Using Markdown:")
+                st.markdown(markdown_link)
                 
                 Work Experience:
                 - You can find that information in the "Experience" section of the "About" tab of my AI portfolio 

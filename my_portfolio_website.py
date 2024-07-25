@@ -107,15 +107,10 @@ if selected == 'About':
         for chat in st.session_state.conversation:
             col1, col2 = st.columns([1, 9])
             with col1:
-                st.image(user_icon_url, width=30)
-            with col2:
-                st.write(f"**User:** {chat['user']}")
+                st.image(user_icon_url, width=30))
             
-            col1, col2 = st.columns([1, 9])
             with col1:
                 st.image(bot_icon_url, width=30)
-            with col2:
-                st.write(f"**Bot:** {chat['bot']}")
 
         # Create a form for input and button
         with st.form(key='question_form'):

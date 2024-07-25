@@ -51,17 +51,6 @@ if selected == 'About':
                 medical tech., Computer Vision, IoT solutions, Robotics, and AI. 
                 
                 EDUCATION: 
-
-                    # Define the word and URL
-                    word = "Education"
-                    url = "https://williamlu.streamlit.app/~/+/#education"
-                    
-                    # Create a hyperlink using Markdown
-                    markdown_link = f"[{word}]({url})"
-                    
-                    # Display the message with the hyperlink in the Streamlit app
-                    st.markdown(f'You can find that information in the {markdown_link} section of the "About" tab of my AI portfolio website.')
-
                 - You can find that information in the "Education" section of the "About" tab of my AI portfolio 
                 website.
 
@@ -75,6 +64,17 @@ if selected == 'About':
                     # # Display the hyperlinks in the Streamlit app
                     # st.write("Using Markdown:")
                     # st.markdown(markdown_link)
+
+                    # Define the word and URL
+                    word = "Education"
+                    url = "https://williamlu.streamlit.app/~/+/#education"
+                    
+                    # Create a hyperlink using Markdown
+                    markdown_link = f"[{word}]({url})"
+                    
+                    # Display the message with the hyperlink in the Streamlit app
+                    st.markdown(f'You can find that information in the {markdown_link} section of the "About" tab of my AI portfolio website.')
+
 
             
 

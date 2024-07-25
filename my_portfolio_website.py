@@ -100,7 +100,7 @@ if selected == 'About':
 
         # Define the URLs for your custom icons
         user_icon_url = "https://path-to-your-user-icon.png"
-        bot_icon_url = "https://es.vecteezy.com/arte-vectorial/26127173-linda-robot-chatbot-icono-en-plano-estilo-larva-del-moscardon-operador-vector-ilustracion-con-largo-sombra-inteligente-chatbot-personaje-negocio-concepto"
+        bot_icon_url = "https://static.vecteezy.com/system/resources/previews/010/927/083/original/chatbot-icon-on-white-background-online-support-service-bot-sign-chat-bot-sign-for-support-service-concept-flat-style-vector.jpg"
 
         # Display the conversation history with icons
         for chat in st.session_state.conversation:

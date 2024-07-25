@@ -98,12 +98,14 @@ if selected == 'About':
         if 'conversation' not in st.session_state:
             st.session_state.conversation = []
 
+        # Define icons for User and AI Bot
+        user_icon = "👤"
+        bot_icon = "🤖"
+
         # Display the conversation history
         for chat in st.session_state.conversation:
-            st.markdown("<i class='fas fa-user'></i>", unsafe_allow_html=True)
-            st.write(chat['user'])
-            st.markdown("<i class='fas fa-robot'></i>", unsafe_allow_html=True)
-            st.write(chat['AI bot'])
+            st.write(f"{user_icon} **User:** {chat['user']}")
+            st.write(f"{bot_icon} **AI Bot:** {chat['AI bot']}")
 
         # Create a form for input and button
         with st.form(key='question_form'):
@@ -113,13 +115,12 @@ if selected == 'About':
         # Handle form submission
         if submit_button:
             if user_question:
-                # Assume persona and model are defined elsewhere
-                persona = "Persona: "
                 prompt = persona + "Here is the question that the user asked: " + user_question
                 try:
-                    # response = model.generate_content(prompt)  # Replace with actual model response
-                    response_text = "Placeholder AI response"  # Replace with actual AI response text
-                    st.session_state.conversation.append({"user": user_question, "AI bot": response_text})
+                    response = model.generate_content(prompt)
+                    # Append user question and AI response to conversation history
+                    st.session_state.conversation.append({"user": user_question, "AI bot": response.text})
+                    # Clear the input field after submission
                     st.experimental_rerun()
                 except Exception as e:
                     st.error(f"An error occurred: {e}")

@@ -81,11 +81,10 @@ if selected == 'About':
         **Others:** Good verbal and written communication skills, 3D printing, assembling, troubleshooting, validation and documentation, FEA and failure analysis, and technical writing
         - You can also find that information in the {skills_link} section of the "About" tab of my AI portfolio website.
         
-        ### Bobby or HOBBIES:
+        ### Hobby or HOBBIES:
         I enjoy most of my time listening to music, watching YouTube videos, WeChat and TikTok short videos, 
         and reading journal articles or magazines in the fields of physics, engineering, medicine, and biology 
-        to gain insight for research.
-        You can also find that information in the {hobbies_link} section of the "About" tab of my AI portfolio website.
+        to gain insight for research. You can also find that information in the {hobbies_link} section of the "About" tab of my AI portfolio website.
         
         ### PROJECTS:
         You can find information about my projects in a few places:

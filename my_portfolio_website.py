@@ -98,14 +98,23 @@ if selected == 'About':
         if 'conversation' not in st.session_state:
             st.session_state.conversation = []
 
-        # Define icons for User and AI Bot
-        user_icon = "👤"
-        bot_icon = "🤖"
+        # Define the URLs for your custom icons
+        user_icon_url = "https://path-to-your-user-icon.png"
+        bot_icon_url = "https://path-to-your-bot-icon.png"
 
-        # Display the conversation history
+        # Display the conversation history with icons
         for chat in st.session_state.conversation:
-            st.write(f"{user_icon} **User:** {chat['user']}")
-            st.write(f"{bot_icon} **AI Bot:** {chat['AI bot']}")
+            col1, col2 = st.columns([1, 9])
+            with col1:
+                st.image(user_icon_url, width=30)
+            with col2:
+                st.write(f"**User:** {chat['user']}")
+            
+            col1, col2 = st.columns([1, 9])
+            with col1:
+                st.image(bot_icon_url, width=30)
+            with col2:
+                st.write(f"**AI Bot:** {chat['AI bot']}")
 
         # Create a form for input and button
         with st.form(key='question_form'):

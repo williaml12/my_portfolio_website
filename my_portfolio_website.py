@@ -101,7 +101,7 @@ if selected == 'About':
         """
         
         # Display the persona
-        st.markdown(persona)
+        # st.markdown(persona)
 
         st.title("William's AI Bot")
         

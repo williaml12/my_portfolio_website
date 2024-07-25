@@ -104,13 +104,13 @@ if selected == 'About':
 
         # Display the conversation history with icons
         for chat in st.session_state.conversation:
-            col1, col2 = st.columns([2, 20])
+            col1, col2 = st.columns([0, 20])
             with col1:
                 st.image(user_icon_url, width=30)
             with col2:
                 st.write(f"**User:** {chat['user']}")
             
-            col1, col2 = st.columns([2, 20])
+            col1, col2 = st.columns([0, 20])
             with col1:
                 st.image(bot_icon_url, width=30)
             with col2:

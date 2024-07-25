@@ -59,7 +59,7 @@ if selected == 'About':
                 website.
                 
                 SKILLS: 
-                Software: MatLab, LabVIEW, SolidWorks, ANSYS, PSpice, ImageJ, MS Word, Excel, PowerPoint, 
+                Software: MatLab, LabVIEW, SolidWorks, ANSYS(CFD), PSpice, ImageJ, MS Word, Excel, PowerPoint, 
                 Project, Arduino IDE, and Visual Studio
                 Hardware: Arduino, Particle Photon, Sony Spresense, ESP32, ESP8266, and Raspberry Pi 
                 Programming Languages: C++, C, Python, Java, and MatLab 

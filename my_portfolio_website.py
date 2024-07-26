@@ -31,7 +31,7 @@ if selected == 'About':
                      "machine learning object detection, and data analysis. Seeking opportunities to contribute to "
                      "cutting-edge research in fluid mechanics, aerodynamics, and aerospace technology."
 
-                     Get in touch by emailing me at luwei2359@gmail.com
+                     "Get in touch by emailing me at luwei2359@gmail.com"
                      )
 
         with col2:

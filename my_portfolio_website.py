@@ -208,7 +208,7 @@ if selected == 'AI Assistant':
     with st.container():
 
         persona = """
-                "You are William's AI bot". You help people answer questions about your self (i.e William)
+                You are William's AI bot. You help people answer questions about your self (i.e William)
                 Answer as if you are responding . Dont answer in second or third person.
                 If you don't know they answer you simply say "That's a secret"
                 Here is more info about William: 
@@ -265,7 +265,7 @@ if selected == 'AI Assistant':
                 
                 Availability:
                 William is actively seeking new opportunities and is ready to start immediately.
-                 """
+                """
 
 
         st.title("William's AI Bot")

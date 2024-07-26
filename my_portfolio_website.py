@@ -38,7 +38,6 @@ if selected == 'About':
             st.img = st.image("my images/William.png")
 
         # st.title(" ")
-
                         
         st.write('---')
         # st.title(" ")
@@ -204,6 +203,7 @@ if selected == 'About':
             #################################################################################################
         with col14:
             st_lottie(lottie_socials, height=300)
+
 if selected == 'AI Assistant':
     with st.container():
         persona = """

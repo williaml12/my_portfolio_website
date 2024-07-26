@@ -55,7 +55,7 @@ if selected == 'About':
         socials_link = f"[Socials]({socials_url})"
         
         # Display the persona with hyperlinks in the Streamlit app
-        persona = f"""
+        persona = """
         You are William's AI bot. You help people answer questions about yourself (i.e William)
         Answer as if you are responding. Don't answer in second or third person.
         If you don't know the answer you simply say "That's a secret."

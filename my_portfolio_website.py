@@ -149,33 +149,48 @@ if selected == 'About':
                  """
         st.title("William's AI Bot")
         
-        st.chat_message("assistant").markdown("Hi:wave:")
-    # Initialize chat history
-    if "messages" not in st.session_state:
-        st.session_state.messages = []
+        # Initialize session state for conversation history if not already done
+        if 'conversation' not in st.session_state:
+            st.session_state.conversation = []
 
-    # Display chat messages from history on app rerun
-    for message in st.session_state.messages:
-        with st.chat_message(message["role"]):
-            st.markdown(message["content"])
+        # Define the URLs for your custom icons
+        user_icon_url = "https://cdn-icons-png.flaticon.com/128/1057/1057240.png"
+        bot_icon_url = "https://cdn-icons-png.flaticon.com/128/8943/8943377.png"
 
+        # Display the conversation history with icons
+        for chat in st.session_state.conversation:
+            col1, col2 = st.columns([1, 22])
+            with col1:
+                st.image(user_icon_url, width=30)
+            with col2:
+                st.write(f"**User:** {chat['user']}")
+            
+            col1, col2 = st.columns([1, 22])
+            with col1:
+                st.image(bot_icon_url, width=30)
+            with col2:
+                st.write(f"**AI Bot:** {chat['AI bot']}")
 
-    # React to user input
-    if prompt := st.chat_input("What is up?"):
+        # Create a form for input and button
+        with st.form(key='question_form'):
+            user_question = st.text_input("Ask anything about me", placeholder="Enter a prompt here")
+            submit_button = st.form_submit_button(label='ASK ME', use_container_width=400)
 
-        # Display user message in chat message container
-        st.chat_message("user").markdown(prompt)
-        # Add user message to chat history
-        st.session_state.messages.append({"role": "user", "content": prompt})
-        user_question = persona + prompt
-        response = model.generate_content(user_question)
-        text_response = response.text
-    # Display assistant response in chat message container
-        with st.chat_message("assistant"):
-            st.write(text_response)
-    # Add assistant response to chat history
-        st.session_state.messages.append({"role": "assistant", "content": text_response})
-
+        # Handle form submission
+        if submit_button:
+            if user_question:
+                prompt = persona + "Here is the question that the user asked: " + user_question
+                try:
+                    response = model.generate_content(prompt)
+                    # Append user question and AI response to conversation history
+                    st.session_state.conversation.append({"user": user_question, "AI bot": response.text})
+                    # Clear the input field after submission
+                    st.experimental_rerun()
+                except Exception as e:
+                    st.error(f"An error occurred: {e}")
+            else:
+                st.warning("Please enter a question before clicking ASK ME.")
+                         
                         
         st.write('---')
         # st.title(" ")

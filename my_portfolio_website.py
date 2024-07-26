@@ -162,11 +162,12 @@ if selected == 'About':
             """
             <style>
             .user-message {
-                background-color: #f0f0f0;
+                background-color: #e0e0e0;  /* Light gray color */
                 padding: 10px;
                 border-radius: 5px;
             }
             .bot-message {
+                background-color: #ffffff;  /* White background for bot messages */
                 padding: 10px;
                 border-radius: 5px;
             }
@@ -177,17 +178,18 @@ if selected == 'About':
 
         # Display the conversation history with icons
         for chat in st.session_state.conversation:
-            col1, col2 = st.columns([1, 22])
-            with col1:
-                st.image(user_icon_url, width=30)
-            with col2:
-                st.write(f"**User:** {chat['user']}")
-            
-            col1, col2 = st.columns([1, 22])
-            with col1:
-                st.image(bot_icon_url, width=30)
-            with col2:
-                st.write(f"**AI Bot:** {chat['AI bot']}")
+            with st.container():
+                col1, col2 = st.columns([1, 22])
+                with col1:
+                    st.image(user_icon_url, width=30)
+                with col2:
+                    st.markdown(f'<div class="user-message"><strong>User:</strong> {chat["user"]}</div>', unsafe_allow_html=True)
+            with st.container():
+                col1, col2 = st.columns([1, 22])
+                with col1:
+                    st.image(bot_icon_url, width=30)
+                with col2:
+                    st.markdown(f'<div class="bot-message"><strong>AI Bot:</strong> {chat["AI bot"]}</div>', unsafe_allow_html=True)
 
         # Create a form for input and button
         with st.form(key='question_form'):

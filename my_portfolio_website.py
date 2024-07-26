@@ -162,12 +162,11 @@ if selected == 'About':
             """
             <style>
             .user-message {
-                background-color: #e0e0e0;  /* Light gray color */
+                background-color: #f0f0f0;
                 padding: 10px;
                 border-radius: 5px;
             }
             .bot-message {
-                background-color: #ffffff;  /* White background for bot messages */
                 padding: 10px;
                 border-radius: 5px;
             }

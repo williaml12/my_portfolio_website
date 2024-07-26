@@ -12,8 +12,8 @@ model = genai.GenerativeModel('gemini-1.5-flash')
 with st.container():
     selected = option_menu(
         menu_title=None,
-        options=['About', 'Projects', 'Contact'],
-        icons=['person-bounding-box', 'grid-fill', 'chat-text-fill'],
+        options=['About', 'AI Assistant', 'Projects', 'Contact'],
+        icons=['person-bounding-box', 'Infinity', 'grid-fill', 'chat-text-fill'],
         orientation='horizontal'
     )
 

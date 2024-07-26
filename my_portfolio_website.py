@@ -571,3 +571,10 @@ if selected == "Contact":
             st.markdown(contact_form, unsafe_allow_html=True)
         with right_col:
             st_lottie(lottie_contact, height=300)
+
+# Footer
+st.markdown("""
+<div class="footer">
+    ©️ 2024 William. All rights reserved.
+</div>
+""", unsafe_allow_html=True)

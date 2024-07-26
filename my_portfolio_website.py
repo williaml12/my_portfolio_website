@@ -162,7 +162,7 @@ if selected == 'About':
             """
             <style>
             .user-message {
-                background-color: #f5f5f5;  /* Lighter gray color */
+                background-color: #fafafa;  /* Even lighter gray color */
                 padding: 10px;
                 border-radius: 5px;
             }

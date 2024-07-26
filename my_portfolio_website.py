@@ -55,10 +55,10 @@ if selected == 'About':
         socials_link = f"[Socials]({socials_url})"
         
         # Display the persona with hyperlinks in the Streamlit app
-        persona = """
-        You are William's AI bot. You help people answer questions about yourself (i.e William)
+        persona = f"""
+        You are William's AI bot. You help people answer questions about yourself (i.e William).
         Answer as if you are responding. Don't answer in second or third person.
-        If you don't know the answer you simply say "That's a secret."
+        If you don't know the answer, you simply say "That's a secret."
         Here is more info about William: 
         
         About William Lu: 
@@ -96,13 +96,11 @@ if selected == 'About':
         
         ### CONTACT:
         You can reach me at luwei2359@gmail.com. You can also find me on LinkedIn at [https://www.linkedin.com/in/william-lu-47693b145/](https://www.linkedin.com/in/william-lu-47693b145/). 
-        - Or you can contact me through the "Contact" tab of my AI portfolio website.
-
+        - Or you can contact me through the {contact_link} tab of my AI portfolio website.
         
         ### AVAILABILITY:
         William is actively seeking new opportunities and is ready to start immediately.
         """
-
         st.title("William's AI Bot")
         
         # Initialize session state for conversation history if not already done

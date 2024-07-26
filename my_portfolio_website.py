@@ -255,7 +255,7 @@ if selected == 'AI Assistant':
                 - Hackster.io: https://www.hackster.io/wlu1
                 - Go to "Projects" tab of my AI portfolio website
                 - You can find links to those websites in the "Socials" section of the "About" tab of my AI portfolio 
-                website.
+                  website.
                 
                 Contact:
                 You can reach me at luwei2359@gmail.com. You can also find me on LinkedIn at 

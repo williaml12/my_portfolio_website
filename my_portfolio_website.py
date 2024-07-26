@@ -157,6 +157,25 @@ if selected == 'About':
         user_icon_url = "https://cdn-icons-png.flaticon.com/128/1057/1057240.png"
         bot_icon_url = "https://cdn-icons-png.flaticon.com/128/8943/8943377.png"
 
+        # CSS to style the user input background
+        st.markdown(
+            """
+            <style>
+            .user-message {
+                background-color: #e0e0e0;  /* Light gray color */
+                padding: 10px;
+                border-radius: 5px;
+            }
+            .bot-message {
+                background-color: #ffffff;  /* White background for bot messages */
+                padding: 10px;
+                border-radius: 5px;
+            }
+            </style>
+            """,
+            unsafe_allow_html=True
+        )
+
         # Display the conversation history with icons
         for chat in st.session_state.conversation:
             col1, col2 = st.columns([1, 22])

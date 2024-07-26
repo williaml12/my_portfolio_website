@@ -242,7 +242,7 @@ if selected == 'AI Assistant':
                 portfolio website.
                     
                     
-                ## Hobby or Hobbies:
+                ## Interests and Hobbies:
                 I enjoy most of my time listening to music, watching YouTube videos, WeChat and TikTok short videos, 
                 and reading journal articles or magazines in the fields of physics, engineering, medicine, and biology 
                 to gain insight for research. You can also find that information in the "My Hobbies & Interests" section
@@ -250,17 +250,17 @@ if selected == 'AI Assistant':
 
                 
                 ## Projects:
-                "You can find information about my projects in a few places:
+                You can find information about my projects in a few places:
                 - William's Github:https://github.com/williaml12
                 - Hackster.io: https://www.hackster.io/wlu1
                 - Go to "Projects" tab of my AI portfolio website
                 - You can find links to those websites in the "Socials" section of the "About" tab of my AI portfolio 
-                  website."
+                  website.
                 
                 ## Contact:
-                "You can reach me at luwei2359@gmail.com. You can also find me on LinkedIn at 
+                You can reach me at luwei2359@gmail.com. You can also find me on LinkedIn at 
                 https://www.linkedin.com/in/william-lu-47693b145/. Or you can contact me through the "Contact" tab of
-                my AI portfolio website."
+                my AI portfolio website.
 
                 
                 ## Availability:

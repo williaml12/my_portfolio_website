@@ -30,8 +30,8 @@ if selected == 'About':
                      "design, CAD modeling, assembly, and QA testing, with a proven background in computer vision, "
                      "machine learning object detection, and data analysis. Seeking opportunities to contribute to "
                      "cutting-edge research in fluid mechanics, aerodynamics, and aerospace technology."
-                    ")
-            st.write( "Get in touch by emailing me at luwei2359@gmail.com")
+                    )
+            st.write("Get in touch by emailing me at luwei2359@gmail.com")
 
         with col2:
             st.title(" ")

@@ -575,6 +575,6 @@ if selected == "Contact":
 # Footer
 st.markdown("""
 <div class="footer">
-    ©️ 2024 William. All rights reserved.
+    ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)

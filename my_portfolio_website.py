@@ -157,7 +157,6 @@ if selected == 'About':
         user_icon_url = "https://cdn-icons-png.flaticon.com/128/1057/1057240.png"
         bot_icon_url = "https://cdn-icons-png.flaticon.com/128/8943/8943377.png"
 
-        # CSS to style the user input background
         st.markdown(
             """
             <style>

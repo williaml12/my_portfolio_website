@@ -149,7 +149,7 @@ if selected == 'About':
                  """
         st.title("William's AI Bot")
         
-        # Initialize session state for conversation history if not already done
+       # Initialize session state for conversation history if not already done
         if 'conversation' not in st.session_state:
             st.session_state.conversation = []
 
@@ -184,15 +184,13 @@ if selected == 'About':
                     response = model.generate_content(prompt)
                     # Append user question and AI response to conversation history
                     st.session_state.conversation.append({"user": user_question, "AI bot": response.text})
-                    st.chat_message("user").markdown(prompt)
-                    st.session_state.messages.append({"role": "user", "content": prompt})
-                    
                     # Clear the input field after submission
                     st.experimental_rerun()
                 except Exception as e:
                     st.error(f"An error occurred: {e}")
             else:
                 st.warning("Please enter a question before clicking ASK ME.")
+
                          
                         
         st.write('---')

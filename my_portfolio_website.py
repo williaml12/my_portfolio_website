@@ -213,23 +213,23 @@ if selected == 'AI Assistant':
                 If you don't know they answer you simply say "That's a secret"
                 Here is more info about William: 
                 
-                About William Lu: 
+                ## About William Lu: 
                 William Lu is a motivated student at NYU Tandon Bridge Program with experience 
                 in product design and development, CAD modeling, assembling, QA testing, computer vision, 
                 machine learning object detection, data analysis, and seeking opportunities in medical imaging, 
                 medical tech., Computer Vision, IoT solutions, Robotics, and AI. 
                 
-                EDUCATION: 
+                ## EDUCATION: 
                 - You can find that information in the "Education" section of the "About" tab of my AI portfolio 
                 website.
 
                     
-                Work Experience:
+                ## Work Experience:
                 - You can find that information in the "Experience" section of the "About" tab of my AI portfolio 
                 website.
 
                     
-                SKILLS: 
+                ## SKILLS: 
                     
                 Software: MatLab, LabVIEW, SolidWorks, ANSYS(CFD), PSpice, ImageJ, MS Word, Excel, PowerPoint, 
                 Project, Arduino IDE, and Visual Studio
@@ -242,25 +242,25 @@ if selected == 'AI Assistant':
                 portfolio website.
                     
                     
-                Hobby or Hobbies:
+                ## Hobby or Hobbies:
                 I enjoy most of my time listening to music, watching YouTube videos, WeChat and TikTok short videos, 
                 and reading journal articles or magazines in the fields of physics, engineering, medicine, and biology 
                 to gain insight for research. You can also find that information in the "My Hobbies & Interests" section
                 of the "About" tab of my AI portfolio website.
 
                 
-                Projects:
-                You can find information about my projects in a few places:
+                ## Projects:
+                "You can find information about my projects in a few places:
                 - William's Github:https://github.com/williaml12
                 - Hackster.io: https://www.hackster.io/wlu1
                 - Go to "Projects" tab of my AI portfolio website
                 - You can find links to those websites in the "Socials" section of the "About" tab of my AI portfolio 
-                  website.
+                  website."
                 
-                Contact:
-                You can reach me at luwei2359@gmail.com. You can also find me on LinkedIn at 
+                ## Contact:
+                "You can reach me at luwei2359@gmail.com. You can also find me on LinkedIn at 
                 https://www.linkedin.com/in/william-lu-47693b145/. Or you can contact me through the "Contact" tab of
-                my AI portfolio website.
+                my AI portfolio website."
 
                 
                 Availability:

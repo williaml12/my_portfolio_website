@@ -304,13 +304,13 @@ if selected == 'AI Assistant':
                 with col1:
                     st.image(user_icon_url, width=30)
                 with col2:
-                    st.markdown(f'<div class="user-message"><strong>User:</strong> {chat[""]}</div>', unsafe_allow_html=True)
+                    st.markdown(f'<div class="user-message"><strong>User:</strong> {chat["user"]}</div>', unsafe_allow_html=True)
             with st.container():
                 col1, col2 = st.columns([1, 22])
                 with col1:
                     st.image(bot_icon_url, width=30)
                 with col2:
-                    st.markdown(f'<div class="bot-message"><strong>AI Bot:</strong> {chat[""]}</div>', unsafe_allow_html=True)
+                    st.markdown(f'<div class="bot-message"><strong>AI Bot:</strong> {chat["AI bot"]}</div>', unsafe_allow_html=True)
 
         # Create a form for input and button
         with st.form(key='question_form'):
@@ -324,14 +324,14 @@ if selected == 'AI Assistant':
                 try:
                     response = model.generate_content(prompt)
                     # Append user question and AI response to conversation history
-                    st.session_state.conversation.append({"user": user_question, "AI bot": response.text})
+                    st.session_state.conversation.append({"": user_question, "": response.text})
                     # Clear the input field after submission
                     st.experimental_rerun()
                 except Exception as e:
                     st.error(f"An error occurred: {e}")
             else:
                 st.warning("Please enter a question before clicking ASK ME.")
-                
+
         
 if selected == 'Projects':
     with st.container():

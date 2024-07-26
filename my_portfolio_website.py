@@ -185,6 +185,8 @@ if selected == 'About':
                     # Append user question and AI response to conversation history
                     st.session_state.conversation.append({"user": user_question, "AI bot": response.text})
                     st.chat_message("user").markdown(prompt)
+                    st.session_state.messages.append({"role": "user", "content": prompt})
+                    
                     # Clear the input field after submission
                     st.experimental_rerun()
                 except Exception as e:

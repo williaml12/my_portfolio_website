@@ -274,9 +274,9 @@ if selected == 'AI Assistant':
         if 'conversation' not in st.session_state:
             st.session_state.conversation = []
 
-        # Define the URLs for your custom icons (optional)
-        user_icon_url = "https://path-to-your-user-icon.png"
-        bot_icon_url = "https://path-to-your-bot-icon.png"
+        # Define the URLs for your custom icons
+        user_icon_url = "https://cdn-icons-png.flaticon.com/128/1057/1057240.png"
+        bot_icon_url = "https://cdn-icons-png.flaticon.com/128/8943/8943377.png"
 
         # CSS to style the user input background
         st.markdown(
@@ -297,22 +297,20 @@ if selected == 'AI Assistant':
             unsafe_allow_html=True
         )
 
-        # Display the conversation history with containers
-        st.header("Conversation History")
+        # Display the conversation history with icons
         for chat in st.session_state.conversation:
             with st.container():
-                col1, col2 = st.columns([1, 9])
+                col1, col2 = st.columns([1, 22])
                 with col1:
                     st.image(user_icon_url, width=30)
                 with col2:
-                    st.markdown(f'<div class="user-message">{chat["user"]}</div>', unsafe_allow_html=True)
-        
+                    st.markdown(f'<div class="user-message"><strong>User:</strong> {chat["user"]}</div>', unsafe_allow_html=True)
             with st.container():
-                col1, col2 = st.columns([1, 9])
+                col1, col2 = st.columns([1, 22])
                 with col1:
                     st.image(bot_icon_url, width=30)
                 with col2:
-                    st.markdown(f'<div class="bot-message">{chat["AI bot"]}</div>', unsafe_allow_html=True)
+                    st.markdown(f'<div class="bot-message"><strong>AI Bot:</strong> {chat["AI bot"]}</div>', unsafe_allow_html=True)
 
         # Create a form for input and button
         with st.form(key='question_form'):

@@ -96,7 +96,8 @@ if selected == 'About':
         
         ### CONTACT:
         You can reach me at luwei2359@gmail.com. You can also find me on LinkedIn at [https://www.linkedin.com/in/william-lu-47693b145/](https://www.linkedin.com/in/william-lu-47693b145/). 
-        - Or you can contact me through the {contact_link} tab of my AI portfolio website.
+        - Or you can contact me through the "Contact" tab of my AI portfolio website.
+
         
         ### AVAILABILITY:
         William is actively seeking new opportunities and is ready to start immediately.

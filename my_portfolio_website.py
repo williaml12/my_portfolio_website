@@ -157,23 +157,7 @@ if 'conversation' not in st.session_state:
 user_icon_url = "https://path-to-your-user-icon.png"
 bot_icon_url = "https://path-to-your-bot-icon.png"
 
-# CSS to style the user input background
-st.markdown(
-    """
-    <style>
-    .user-message {
-        background-color: #f0f0f0;
-        padding: 10px;
-        border-radius: 5px;
-    }
-    .bot-message {
-        padding: 10px;
-        border-radius: 5px;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+
 
 # Display the conversation history with containers
 st.header("Conversation History")
@@ -201,6 +185,10 @@ with st.form(key='question_form'):
 if submit_button:
     if user_question:
         prompt = persona + "Here is the question that the user asked: " + user_question
+         # Display user message in chat message container
+        st.chat_message("user").markdown(prompt)
+        # Add user message to chat history
+        st.session_state.messages.append({"role": "user", "content": prompt})
         try:
             response = model.generate_content(prompt)
             # Append user question and AI response to conversation history

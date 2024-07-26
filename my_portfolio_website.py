@@ -205,7 +205,7 @@ if selected == 'About':
             st_lottie(lottie_socials, height=300)
 
 if selected == 'AI Assistant':
-    # with st.container():
+    with st.container():
         # Define the URLs
         education_url = "https://williamlu.streamlit.app/~/+/#education"
         experience_url = "https://williamlu.streamlit.app/~/+/#experience"

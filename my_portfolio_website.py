@@ -312,10 +312,15 @@ if selected == 'AI Assistant':
                 with col2:
                     st.markdown(f'<div class="bot-message"><strong>AI Bot:</strong> {chat["AI bot"]}</div>', unsafe_allow_html=True)
 
+        # # Create a form for input and button
+        # with st.form(key='question_form'):
+        #     user_question = st.text_input("Ask anything about me", placeholder="Enter a prompt here")
+        #     submit_button = st.form_submit_button(label='ASK ME', use_container_width=400)
+
         # Create a form for input and button
         with st.form(key='question_form'):
-            user_question = st.text_input("Ask anything about me", placeholder="Enter a prompt here")
-            submit_button = st.form_submit_button(label='ASK ME', use_container_width=400)
+            user_question = st.text_area("Ask anything about me", placeholder="Enter a prompt here")
+            submit_button = st.form_submit_button(label='ASK ME', use_container_width=True)
 
         # Handle form submission
         if submit_button:

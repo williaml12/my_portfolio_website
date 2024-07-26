@@ -263,7 +263,7 @@ if selected == 'AI Assistant':
                 my AI portfolio website."
 
                 
-                Availability:
+                ## Availability:
                 William is actively seeking new opportunities and is ready to start immediately.
                 """
 

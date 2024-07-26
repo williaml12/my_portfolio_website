@@ -324,7 +324,7 @@ if selected == 'AI Assistant':
                 try:
                     response = model.generate_content(prompt)
                     # Append user question and AI response to conversation history
-                    st.session_state.conversation.append({"": user_question, "": response.text})
+                    st.session_state.conversation.append({user_question, response.text})
                     # Clear the input field after submission
                     st.experimental_rerun()
                 except Exception as e:

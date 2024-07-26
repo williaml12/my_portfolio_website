@@ -317,10 +317,11 @@ if selected == 'AI Assistant':
         #     user_question = st.text_input("Ask anything about me", placeholder="Enter a prompt here")
         #     submit_button = st.form_submit_button(label='ASK ME', use_container_width=400)
 
-        # Create a form for input and button
+       # Create a form for input and button
         with st.form(key='question_form'):
-            user_question = st.text_area("Ask anything about me", placeholder="Enter a prompt here")
-            submit_button = st.form_submit_button(label='ASK ME', use_container_width=True)
+            cols = st.columns([4, 1])
+            user_question = cols[0].text_area("Ask anything about me", placeholder="Enter a prompt here")
+            submit_button = cols[1].form_submit_button(label='ASK ME')
 
         # Handle form submission
         if submit_button:

@@ -184,6 +184,7 @@ if selected == 'About':
                     response = model.generate_content(prompt)
                     # Append user question and AI response to conversation history
                     st.session_state.conversation.append({"user": user_question, "AI bot": response.text})
+                    st.chat_message("user").markdown(prompt)
                     # Clear the input field after submission
                     st.experimental_rerun()
                 except Exception as e:

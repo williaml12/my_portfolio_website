@@ -273,7 +273,7 @@ if selected == 'AI Assistant':
         # Initialize session state for conversation history if not already done
         if 'conversation' not in st.session_state:
             st.session_state.conversation = []
-        
+
         # Define the URLs for your custom icons
         user_icon_url = "https://cdn-icons-png.flaticon.com/128/1057/1057240.png"
         bot_icon_url = "https://cdn-icons-png.flaticon.com/128/8943/8943377.png"
@@ -311,25 +311,26 @@ if selected == 'AI Assistant':
                     st.image(bot_icon_url, width=30)
                 with col2:
                     st.markdown(f'<div class="bot-message"><strong>AI Bot:</strong> {chat["AI bot"]}</div>', unsafe_allow_html=True)
-        
+
         # Create a form for input and button
         with st.form(key='question_form'):
             user_question = st.text_input("Ask anything about me", placeholder="Enter a prompt here")
-            submit_button = st.form_submit_button(label='ASK ME', use_container_width=True)
-        
+            submit_button = st.form_submit_button(label='ASK ME', use_container_width=400)
+
         # Handle form submission
-        if submit_button and user_question:
-            # Simulate generating a response (replace this with your actual model call)
-            persona = "The persona of your AI bot. "  # Define your persona here
-            response = "This is a placeholder response."  # Replace this with the actual response from your model
-        
-            # Append user question and AI response to conversation history
-            st.session_state.conversation.append({"user": user_question, "AI bot": response})
-        
-            # Clear the input field after submission
-            st.experimental_rerun()
-        elif submit_button:
-            st.warning("Please enter a question before clicking ASK ME.")
+        if submit_button:
+            if user_question:
+                prompt = persona + "Here is the question that the user asked: " + user_question
+                try:
+                    response = model.generate_content(prompt)
+                    # Append user question and AI response to conversation history
+                    st.session_state.conversation.append({"user": user_question, "AI bot": response.text})
+                    # Clear the input field after submission
+                    st.experimental_rerun()
+                except Exception as e:
+                    st.error(f"An error occurred: {e}")
+            else:
+                st.warning("Please enter a question before clicking ASK ME.")
                 
         
 if selected == 'Projects':

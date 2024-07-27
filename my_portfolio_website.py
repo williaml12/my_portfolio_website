@@ -173,7 +173,7 @@ if selected == 'About':
             return r.json()
 
 
-        lottie_socials = load_lottieurl("https://lottie.host/388e33ea-ee07-4824-901a-ab65964df097/qc7HX5r2Qj.json")
+        lottie_socials = load_lottieurl("https://lottie.host/170ea02c-8dd1-4849-9dc5-b502e9d36782/NCgzpkFsas.json")
 
         col13, col14 = st.columns(2)
         with col13:

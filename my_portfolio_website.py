@@ -223,6 +223,7 @@ if selected == 'AI Assistant':
                 William's career goal is to emerging in AI and biotechnologies to drive meaningful innovation and create solutions that positively impact on society.
                 
                 ## EDUCATION: 
+                - I'm currently a student at the NYU Tandon Bridge Program. 
                 - You can find that information in the "Education" section of the "About" tab of my AI portfolio 
                 website.
 

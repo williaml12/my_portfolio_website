@@ -13,7 +13,7 @@ with st.container():
     selected = option_menu(
         menu_title=None,
         options=['About', 'AI Assistant', 'Projects', 'Contact'],
-        icons=['person-bounding-box', 'info-circle', 'grid-fill', 'chat-text-fill'],
+        icons=['person-bounding-box', 'info-circle-fill', 'grid-fill', 'chat-text-fill'],
         orientation='horizontal'
     )
 

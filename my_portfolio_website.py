@@ -143,23 +143,42 @@ if selected == 'About':
         # st.write("__05/2016 - 08/2016__")
 
         st.write('---')
+        # st.title("My Hobbies & Interests")
+        # col7, col8, col9, col10 = st.columns(4)
+        # with col7:
+        #     st.image("my images/Gym.jpg")
+        #     st.write("## Gym")
+
+        # with col8:
+        #     st.image("my images/Reading.jpg")
+        #     st.write("## Reading")
+
+        # with col9:
+        #     st.image("my images/Hiking.jpg")
+        #     st.write("## Hiking")
+
+        # with col10:
+        #     st.image("my images/Puzzle.jpg")
+        #     st.write("## Puzzles")
+
         st.title("My Hobbies & Interests")
         col7, col8, col9, col10 = st.columns(4)
+        
         with col7:
             st.image("my images/Gym.jpg")
-            st.write("## Gym")
-
+            st.markdown("<h2 style='text-align: center;'>Gym</h2>", unsafe_allow_html=True)
+        
         with col8:
             st.image("my images/Reading.jpg")
-            st.write("## Reading")
-
+            st.markdown("<h2 style='text-align: center;'>Reading</h2>", unsafe_allow_html=True)
+        
         with col9:
             st.image("my images/Hiking.jpg")
-            st.write("## Hiking")
-
+            st.markdown("<h2 style='text-align: center;'>Hiking</h2>", unsafe_allow_html=True)
+        
         with col10:
             st.image("my images/Puzzle.jpg")
-            st.write("## Puzzles")
+            st.markdown("<h2 style='text-align: center;'>Puzzles</h2>", unsafe_allow_html=True)
 
         st.write('---')
 

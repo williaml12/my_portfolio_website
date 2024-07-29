@@ -361,6 +361,7 @@ if selected == 'AI Assistant':
 if selected == 'Projects':
     with st.container():
         st.header("My Projects")
+        
         # col11, col12 = st.columns([8, 3])
         # with col11:
         #     st.write("""
@@ -377,63 +378,63 @@ if selected == 'Projects':
         #     st.write("__Jan 2017 - May 2017__")
 
         # CSS styles for themed projects
-        st.markdown("""
-            <style>
-            .project-container {
-                margin-top: 20px;
-                padding: 20px;
-                border-radius: 10px;
-            }
-            .project-1 { background-color: #ffdddd; }
-            .project-2 { background-color: #ddffdd; }
-            .project-3 { background-color: #ddddff; }
-            .project-4 { background-color: #ffffdd; }
-            .project-5 { background-color: #ddffff; }
-            .project-6 { background-color: #ff6347; }
-            .project-title {
-                font-size: 24px;
-                font-weight: bold;
-            }
-            .project-description {
-                font-size: 18px;
-                margin-top: 10px;
-            }
-            .project-technologies {
-                font-size: 16px;
-                margin-top: 10px;
-            }
-            .project-link {
-                font-size: 16px;
-                margin-top: 10px;
-            }
-            </style>
-            """, unsafe_allow_html=True)
+        # st.markdown("""
+        #     <style>
+        #     .project-container {
+        #         margin-top: 20px;
+        #         padding: 20px;
+        #         border-radius: 10px;
+        #     }
+        #     .project-1 { background-color: #ffdddd; }
+        #     .project-2 { background-color: #ddffdd; }
+        #     .project-3 { background-color: #ddddff; }
+        #     .project-4 { background-color: #ffffdd; }
+        #     .project-5 { background-color: #ddffff; }
+        #     .project-6 { background-color: #ff6347; }
+        #     .project-title {
+        #         font-size: 24px;
+        #         font-weight: bold;
+        #     }
+        #     .project-description {
+        #         font-size: 18px;
+        #         margin-top: 10px;
+        #     }
+        #     .project-technologies {
+        #         font-size: 16px;
+        #         margin-top: 10px;
+        #     }
+        #     .project-link {
+        #         font-size: 16px;
+        #         margin-top: 10px;
+        #     }
+        #     </style>
+        #     """, unsafe_allow_html=True)
 
-        # Project 1
-        with st.expander("Project 1: iSense: Smart Home Security System"):
-            st.markdown("""
-            <div class="project-container project-1">
-                <div class="project-title">iSense: Smart Home Security System</div>
-                <img src="https://hackster.imgix.net/uploads/attachments/1473651/_T0QQDArozA.blob?auto=compress"
-                             "%2Cformat&w=900&h=675&fit=min" alt="iSense: Smart Home Security System" style="width:100%">
-                <div class="project-description">
-                    <strong>Description</strong>: Make IoT-based Smart Home Security system to monitor daily home 
-                    activity and control all the home appliances with Blynk app & Switches.
-                </div>
-                <div class="project-technologies">
-                    <strong>Technologies Used</strong>: Sony Spresense boards (main & extension), PIR Motion Sensor , 
-                    Ultrasonic Sensor, NodeMCU ESP8266 Breakout Board, Arduino IDE, Blynk, etc.
-                </div>
-                <div class="project-link">
-                    <strong>Repository</strong>: <a href="https://www.hackster.io/wlu1/isense-smart-home-security-system-ee9156#things">Hackster.io</a>
-                </div>
-                <div class="project-video">
-                    <video width="320" height="240" controls>
-                        <source src="https://www.youtube.com/shorts/2l1Yx57YpeE" type="video/mp4">
-                    </video>
-                </div>
-            </div>
-            """, unsafe_allow_html=True)
+        # # Project 1
+        # with st.expander("Project 1: iSense: Smart Home Security System"):
+        #     st.markdown("""
+        #     <div class="project-container project-1">
+        #         <div class="project-title">iSense: Smart Home Security System</div>
+        #         <img src="https://hackster.imgix.net/uploads/attachments/1473651/_T0QQDArozA.blob?auto=compress"
+        #                      "%2Cformat&w=900&h=675&fit=min" alt="iSense: Smart Home Security System" style="width:100%">
+        #         <div class="project-description">
+        #             <strong>Description</strong>: Make IoT-based Smart Home Security system to monitor daily home 
+        #             activity and control all the home appliances with Blynk app & Switches.
+        #         </div>
+        #         <div class="project-technologies">
+        #             <strong>Technologies Used</strong>: Sony Spresense boards (main & extension), PIR Motion Sensor , 
+        #             Ultrasonic Sensor, NodeMCU ESP8266 Breakout Board, Arduino IDE, Blynk, etc.
+        #         </div>
+        #         <div class="project-link">
+        #             <strong>Repository</strong>: <a href="https://www.hackster.io/wlu1/isense-smart-home-security-system-ee9156#things">Hackster.io</a>
+        #         </div>
+        #         <div class="project-video">
+        #             <video width="320" height="240" controls>
+        #                 <source src="https://www.youtube.com/shorts/2l1Yx57YpeE" type="video/mp4">
+        #             </video>
+        #         </div>
+        #     </div>
+        #     """, unsafe_allow_html=True)
 
         # Project 2
         with st.expander("Project 2: Smart Temperature Monitoring System"):
@@ -537,6 +538,104 @@ if selected == 'Projects':
                 </div>
             </div>
             """, unsafe_allow_html=True)
+
+
+        # Sample project data
+        projects = [
+            {
+                "title": "AI Portfolio Website",
+                "image_url": "https://github.com/williaml12/AI_Portfolio_Website/raw/main/images/About.jpg",
+                "repo_url": "https://github.com/williaml12/AI_Portfolio_Website"
+            },
+            {
+                "title": "iSense: Smart Home Security System",
+                "image_url": "https://hackster.imgix.net/uploads/attachments/1473651/_T0QQDArozA.blob?auto=compress",
+                "repo_url": "https://www.hackster.io/wlu1/isense-smart-home-security-system-ee9156#things"
+            },
+            {
+                "title": "Data Visualization",
+                "image_url": "https://via.placeholder.com/150",
+                "repo_url": "https://github.com/yourusername/dataviz"
+            },
+            {
+                "title": "Mobile App Development",
+                "image_url": "https://via.placeholder.com/150",
+                "repo_url": "https://github.com/yourusername/fitnessapp"
+            }
+        ]
+        
+        # Custom CSS styles
+        st.markdown("""
+            <style>
+            .project-card {
+                background-color: #000000
+                border-radius: 15px;
+                padding: 20px;
+                margin: 10px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                transition: 0.3s;
+                text-align: center;
+            }
+            .project-card:hover {
+                box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+            }
+            .project-title {
+                font-size: 14px;
+                font-weight: bold;
+                margin-top: 10px;
+            }
+            .project-button {
+                background-color: #FFD966;
+                border: none;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin-top: 10px;
+                padding: 10px 24px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+            .project-button:hover {
+                background-color: #E06666;
+            }
+            </style>
+            """, unsafe_allow_html=True)
+        
+        # Function to display a project card
+        def display_project(project):
+            st.markdown(f"""
+            <div class="project-card">
+                <img src="{project['image_url']}" alt="{project['title']}" style="width:100%">
+                <div class="project-title">{project['title']}</div>
+                <a href="{project['repo_url']}" class="project-button">View Project</a>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        # Display projects in a grid
+        num_columns = 3  # Number of columns in the grid
+        columns = st.columns(num_columns)
+        
+        for i, project in enumerate(projects):
+            with columns[i % num_columns]:
+                display_project(project)
+        
+        # Add more projects and adjust the layout as needed
+        
+
+
+
+
+
+
+
+
+
+
+
+
 
 if selected == "Contact":
     with st.container():

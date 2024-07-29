@@ -171,7 +171,7 @@ if selected == 'About':
         
         with col8:
             st.image("my images/Reading.jpg")
-            st.markdown("<h3 style='text-align: center;'>Reading</h3>", unsafe_allow_html=True)
+            st.markdown("<h4 style='text-align: center;'>Reading</h4>", unsafe_allow_html=True)
         
         with col9:
             st.image("my images/Hiking.jpg")

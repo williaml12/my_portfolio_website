@@ -595,7 +595,7 @@ if selected == 'Projects':
                 box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
             }
             .project-title {
-                font-size: 12px;
+                font-size: 15px;
                 font-weight: bold;
                 margin-top: 10px;
             }

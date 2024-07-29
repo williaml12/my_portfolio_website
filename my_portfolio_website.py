@@ -160,6 +160,7 @@ if selected == 'About':
         # with col10:
         #     st.image("my images/Puzzle.jpg")
         #     st.write("## Puzzles")
+        
 
         st.title("My Hobbies & Interests")
         col7, col8, col9, col10 = st.columns(4)
@@ -170,7 +171,7 @@ if selected == 'About':
         
         with col8:
             st.image("my images/Reading.jpg")
-            st.markdown("<h2 style='text-align: center;'>Reading</h2>", unsafe_allow_html=True)
+            st.markdown("<h3 style='text-align: center;'>Reading</h3>", unsafe_allow_html=True)
         
         with col9:
             st.image("my images/Hiking.jpg")
@@ -180,10 +181,6 @@ if selected == 'About':
             st.image("my images/Puzzle.jpg")
             st.markdown("<h2 style='text-align: center;'>Puzzles</h2>", unsafe_allow_html=True)
 
-
-
-
-        
 
         st.write('---')
 

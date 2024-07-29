@@ -162,31 +162,23 @@ if selected == 'About':
         #     st.write("## Puzzles")
 
         st.title("My Hobbies & Interests")
-
         col7, col8, col9, col10 = st.columns(4)
         
-        def centered_image_with_text(image_path, text):
-            st.markdown(
-                f"""
-                <div style="display: flex; flex-direction: column; align-items: center;">
-                    <img src="{image_path}" style="width: 100%;">
-                    <h2 style="text-align: center;">{text}</h2>
-                </div>
-                """,
-                unsafe_allow_html=True
-            )
-        
         with col7:
-            centered_image_with_text("my images/Gym.jpg", "Gym")
+            st.image("my images/Gym.jpg")
+            st.markdown("<h2 style='text-align: center;'>Gym</h2>", unsafe_allow_html=True)
         
         with col8:
-            centered_image_with_text("my images/Reading.jpg", "Reading")
+            st.image("my images/Reading.jpg")
+            st.markdown("<h2 style='text-align: center;'>Reading</h2>", unsafe_allow_html=True)
         
         with col9:
-            centered_image_with_text("my images/Hiking.jpg", "Hiking")
+            st.image("my images/Hiking.jpg")
+            st.markdown("<h2 style='text-align: center;'>Hiking</h2>", unsafe_allow_html=True)
         
         with col10:
-            centered_image_with_text("my images/Puzzle.jpg", "Puzzles")
+            st.image("my images/Puzzle.jpg")
+            st.markdown("<h2 style='text-align: center;'>Puzzles</h2>", unsafe_allow_html=True)
 
 
 

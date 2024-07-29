@@ -162,23 +162,24 @@ if selected == 'About':
         #     st.write("## Puzzles")
 
         st.title("My Hobbies & Interests")
+
         col7, col8, col9, col10 = st.columns(4)
         
         with col7:
             st.image("my images/Gym.jpg")
-            st.markdown("<h2 style='text-align: center;'>Gym</h2>", unsafe_allow_html=True)
+            st.markdown("<div style='text-align: center;'><h2>Gym</h2></div>", unsafe_allow_html=True)
         
         with col8:
             st.image("my images/Reading.jpg")
-            st.markdown("<h2 style='text-align: center;'>Reading</h2>", unsafe_allow_html=True)
+            st.markdown("<div style='text-align: center;'><h2>Reading</h2></div>", unsafe_allow_html=True)
         
         with col9:
             st.image("my images/Hiking.jpg")
-            st.markdown("<h2 style='text-align: center;'>Hiking</h2>", unsafe_allow_html=True)
+            st.markdown("<div style='text-align: center;'><h2>Hiking</h2></div>", unsafe_allow_html=True)
         
         with col10:
             st.image("my images/Puzzle.jpg")
-            st.markdown("<h2 style='text-align: center;'>Puzzles</h2>", unsafe_allow_html=True)
+            st.markdown("<div style='text-align: center;'><h2>Puzzles</h2></div>", unsafe_allow_html=True)
 
 
 

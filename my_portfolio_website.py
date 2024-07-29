@@ -519,25 +519,25 @@ if selected == 'Projects':
         #     </div>
         #     """, unsafe_allow_html=True)
 
-        with st.expander("Project 6: “OcuTrack”: Personal Eye Tracking Profile (Eye Tracking)"):
-            st.markdown("""
-            <div class="project-container project-6">
-                <div class="project-title">“OcuTrack”: Personal Eye Tracking Profile (Eye Tracking)</div>
-                <img src="https://th.bing.com/th/id/R.87c2a5fc313737ea30509569edce7396?rik=MFt1m%2b0ppv50tg&pid=ImgRaw&r=0" alt="“OcuTrack”: Personal Eye Tracking Profile (Eye Tracking)" style="width:100%">
-                <div class="project-description">
-                    <strong>Description</strong>: BME Senior Capstone Design Project
-                </div>
-                <div class="project-technologies">
-                    <strong>Technologies Used</strong>: Python, OpenCV, Raspberry Pi 
-                </div>
-                <div class="project-link">
-                    <strong>Repository</strong>: <a href="https://github.com/williaml12/-OcuTrack-Personal-Eye-Tracking-Profile-Eye-Tracking-">GitHub</a>
-                </div>
-                <div class="project-chart">
-                    <!-- Place your chart code here -->
-                </div>
-            </div>
-            """, unsafe_allow_html=True)
+        # with st.expander("Project 6: “OcuTrack”: Personal Eye Tracking Profile (Eye Tracking)"):
+        #     st.markdown("""
+        #     <div class="project-container project-6">
+        #         <div class="project-title">“OcuTrack”: Personal Eye Tracking Profile (Eye Tracking)</div>
+        #         <img src="https://th.bing.com/th/id/R.87c2a5fc313737ea30509569edce7396?rik=MFt1m%2b0ppv50tg&pid=ImgRaw&r=0" alt="“OcuTrack”: Personal Eye Tracking Profile (Eye Tracking)" style="width:100%">
+        #         <div class="project-description">
+        #             <strong>Description</strong>: BME Senior Capstone Design Project
+        #         </div>
+        #         <div class="project-technologies">
+        #             <strong>Technologies Used</strong>: Python, OpenCV, Raspberry Pi 
+        #         </div>
+        #         <div class="project-link">
+        #             <strong>Repository</strong>: <a href="https://github.com/williaml12/-OcuTrack-Personal-Eye-Tracking-Profile-Eye-Tracking-">GitHub</a>
+        #         </div>
+        #         <div class="project-chart">
+        #             <!-- Place your chart code here -->
+        #         </div>
+        #     </div>
+        #     """, unsafe_allow_html=True)
 
 
         # Sample project data

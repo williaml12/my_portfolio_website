@@ -595,7 +595,7 @@ if selected == 'Projects':
                 box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
             }
             .project-title {
-                font-size: 12px;
+                font-size: 15px;
                 font-weight: bold;
                 margin-top: 10px;
             }
@@ -630,7 +630,7 @@ if selected == 'Projects':
             """, unsafe_allow_html=True)
         
         # Display projects in a grid
-        num_columns = 3  # Number of columns in the grid
+        num_columns = 4  # Number of columns in the grid
         columns = st.columns(num_columns)
         
         for i, project in enumerate(projects):

@@ -436,108 +436,108 @@ if selected == 'Projects':
         #     </div>
         #     """, unsafe_allow_html=True)
 
-        # Project 2
-        with st.expander("Project 2: Smart Temperature Monitoring System"):
-            st.markdown("""
-            <div class="project-container project-2">
-                <div class="project-title">Smart Temperature Monitoring System</div>
-                <img src="https://hackster.imgix.net/uploads/attachments/1630153/_aOOTsKkUrv.blob?auto=compress%2Cformat&w=900&h=675&fit=min" alt="Smart Temperature Monitoring System" style="width:100%">
-                <div class="project-description">
-                    <strong>Description</strong>: Monitor your room temperature from your mobile devices.
-                </div>
-                <div class="project-technologies">
-                    <strong>Technologies Used</strong>: Infineon CY8CPROTO-062-4343W,  Infineon ModusToolbox™ Software,  EFR Connect BLE Mobile App
-                </div>
-                <div class="project-link">
-                    <strong>Repository</strong>: <a href="https://www.hackster.io/wlu1/smart-temperature-monitoring-system-529da8">Hackster.io</a>
-                </div>
-            </div>
-            """, unsafe_allow_html=True)
+        # # Project 2
+        # with st.expander("Project 2: Smart Temperature Monitoring System"):
+        #     st.markdown("""
+        #     <div class="project-container project-2">
+        #         <div class="project-title">Smart Temperature Monitoring System</div>
+        #         <img src="https://hackster.imgix.net/uploads/attachments/1630153/_aOOTsKkUrv.blob?auto=compress%2Cformat&w=900&h=675&fit=min" alt="Smart Temperature Monitoring System" style="width:100%">
+        #         <div class="project-description">
+        #             <strong>Description</strong>: Monitor your room temperature from your mobile devices.
+        #         </div>
+        #         <div class="project-technologies">
+        #             <strong>Technologies Used</strong>: Infineon CY8CPROTO-062-4343W,  Infineon ModusToolbox™ Software,  EFR Connect BLE Mobile App
+        #         </div>
+        #         <div class="project-link">
+        #             <strong>Repository</strong>: <a href="https://www.hackster.io/wlu1/smart-temperature-monitoring-system-529da8">Hackster.io</a>
+        #         </div>
+        #     </div>
+        #     """, unsafe_allow_html=True)
 
-        # Project 3
-        with st.expander("Project 3: Vehicle-Edge-Application"):
-            st.markdown("""
-            <div class="project-container project-3">
-                <div class="project-title">Vehicle-Edge-Application</div>
-                <img src="https://github.com/williaml12/Vehicle-Edge-Application/raw/master/Capture_vehicle.PNG" alt="Vehicle-Edge-Application" style="width:100%">
-                <div class="project-description">
-                    <strong>Description</strong>: The vehicle counter application will demonstrate how to create a smart video IoT solution using Intel® hardware and software tools. The app will detect people, vehicle in a designated area, providing the number of frame, average duration of vehicle in frame, and total count.
-                </div>
-                <div class="project-technologies">
-                    <strong>Technologies Used</strong>: Intel® Distribution of OpenVINO™ toolkit 2019 R3 release, Node v6.17.1, Npm v3.10.10, CMake, MQTT Mosca server
-                </div>
-                <div class="project-link">
-                    <strong>Repository</strong>: <a href="https://github.com/williaml12/Vehicle-Edge-Application">GitHub</a>
-                </div>
-                <div class="project-chart">
-                    <!-- Place your chart code here -->
-                </div>
-            </div>
-            """, unsafe_allow_html=True)
+        # # Project 3
+        # with st.expander("Project 3: Vehicle-Edge-Application"):
+        #     st.markdown("""
+        #     <div class="project-container project-3">
+        #         <div class="project-title">Vehicle-Edge-Application</div>
+        #         <img src="https://github.com/williaml12/Vehicle-Edge-Application/raw/master/Capture_vehicle.PNG" alt="Vehicle-Edge-Application" style="width:100%">
+        #         <div class="project-description">
+        #             <strong>Description</strong>: The vehicle counter application will demonstrate how to create a smart video IoT solution using Intel® hardware and software tools. The app will detect people, vehicle in a designated area, providing the number of frame, average duration of vehicle in frame, and total count.
+        #         </div>
+        #         <div class="project-technologies">
+        #             <strong>Technologies Used</strong>: Intel® Distribution of OpenVINO™ toolkit 2019 R3 release, Node v6.17.1, Npm v3.10.10, CMake, MQTT Mosca server
+        #         </div>
+        #         <div class="project-link">
+        #             <strong>Repository</strong>: <a href="https://github.com/williaml12/Vehicle-Edge-Application">GitHub</a>
+        #         </div>
+        #         <div class="project-chart">
+        #             <!-- Place your chart code here -->
+        #         </div>
+        #     </div>
+        #     """, unsafe_allow_html=True)
 
-        # Project 4
-        with st.expander("Project 4: People Counter App at the Edge"):
-            st.markdown("""
-            <div class="project-container project-4">
-                <div class="project-title">People Counter App at the Edge</div>
-                <img src="https://github.com/williaml12/People-Counter-App-at-the-Edge/raw/master/images/people-counter-image.png" alt="People Counter App at the Edge" style="width:100%">
-                <div class="project-description">
-                    <strong>Description</strong>: The people counter application will demonstrate how to create a smart video IoT solution using Intel® hardware and software tools. The app will detect people in a designated area, providing the number of people in the frame, average duration of people in frame, and total count.
-                </div>
-                <div class="project-technologies">
-                    <strong>Technologies Used</strong>: Intel® Distribution of OpenVINO™ toolkit 2019 R3 release, Node v6.17.1, Npm v3.10.10, CMake, MQTT Mosca server
-                </div>
-                <div class="project-link">
-                    <strong>Repository</strong>: <a href="https://github.com/williaml12/People-Counter-App-at-the-Edge">GitHub</a>
-                </div>
-                <div class="project-video">
-                    <video width="320" height="240" controls>
-                        <source src="https://www.youtube.com/watch?v=dQw4w9WgXcQ" type="video/mp4">
-                    </video>
-                </div>
-            </div>
-            """, unsafe_allow_html=True)
+        # # Project 4
+        # with st.expander("Project 4: People Counter App at the Edge"):
+        #     st.markdown("""
+        #     <div class="project-container project-4">
+        #         <div class="project-title">People Counter App at the Edge</div>
+        #         <img src="https://github.com/williaml12/People-Counter-App-at-the-Edge/raw/master/images/people-counter-image.png" alt="People Counter App at the Edge" style="width:100%">
+        #         <div class="project-description">
+        #             <strong>Description</strong>: The people counter application will demonstrate how to create a smart video IoT solution using Intel® hardware and software tools. The app will detect people in a designated area, providing the number of people in the frame, average duration of people in frame, and total count.
+        #         </div>
+        #         <div class="project-technologies">
+        #             <strong>Technologies Used</strong>: Intel® Distribution of OpenVINO™ toolkit 2019 R3 release, Node v6.17.1, Npm v3.10.10, CMake, MQTT Mosca server
+        #         </div>
+        #         <div class="project-link">
+        #             <strong>Repository</strong>: <a href="https://github.com/williaml12/People-Counter-App-at-the-Edge">GitHub</a>
+        #         </div>
+        #         <div class="project-video">
+        #             <video width="320" height="240" controls>
+        #                 <source src="https://www.youtube.com/watch?v=dQw4w9WgXcQ" type="video/mp4">
+        #             </video>
+        #         </div>
+        #     </div>
+        #     """, unsafe_allow_html=True)
 
-        # Add more projects as needed
-        with st.expander("Project 5: Door-Security-System"):
-            st.markdown("""
-            <div class="project-container project-5">
-                <div class="project-title">Door-Security-System</div>
-                <img src="https://th.bing.com/th/id/OIP.TMupY92oAYCkcQr8MzzzOwHaHa?rs=1&pid=ImgDetMain" alt="Door-Security-System" style="width:100%">
-                <div class="project-description">
-                    <strong>Description</strong>: Contribute to design and develop on home security system. Users will get alert when they appoach to the door that set with sensor for detection.
-                </div>
-                <div class="project-technologies">
-                    <strong>Technologies Used</strong>: Arduino Nano, Ultrasonic sensor, Arduino IDE, Blynk, Arduino Web Editor
-                </div>
-                <div class="project-link">
-                    <strong>Repository</strong>: <a href="https://github.com/williaml12/Door-Security-System">GitHub</a>
-                </div>
-                <div class="project-chart">
-                    <!-- Place your chart code here -->
-                </div>
-            </div>
-            """, unsafe_allow_html=True)
+        # # Add more projects as needed
+        # with st.expander("Project 5: Door-Security-System"):
+        #     st.markdown("""
+        #     <div class="project-container project-5">
+        #         <div class="project-title">Door-Security-System</div>
+        #         <img src="https://th.bing.com/th/id/OIP.TMupY92oAYCkcQr8MzzzOwHaHa?rs=1&pid=ImgDetMain" alt="Door-Security-System" style="width:100%">
+        #         <div class="project-description">
+        #             <strong>Description</strong>: Contribute to design and develop on home security system. Users will get alert when they appoach to the door that set with sensor for detection.
+        #         </div>
+        #         <div class="project-technologies">
+        #             <strong>Technologies Used</strong>: Arduino Nano, Ultrasonic sensor, Arduino IDE, Blynk, Arduino Web Editor
+        #         </div>
+        #         <div class="project-link">
+        #             <strong>Repository</strong>: <a href="https://github.com/williaml12/Door-Security-System">GitHub</a>
+        #         </div>
+        #         <div class="project-chart">
+        #             <!-- Place your chart code here -->
+        #         </div>
+        #     </div>
+        #     """, unsafe_allow_html=True)
 
-        with st.expander("Project 6: “OcuTrack”: Personal Eye Tracking Profile (Eye Tracking)"):
-            st.markdown("""
-            <div class="project-container project-6">
-                <div class="project-title">“OcuTrack”: Personal Eye Tracking Profile (Eye Tracking)</div>
-                <img src="https://th.bing.com/th/id/R.87c2a5fc313737ea30509569edce7396?rik=MFt1m%2b0ppv50tg&pid=ImgRaw&r=0" alt="“OcuTrack”: Personal Eye Tracking Profile (Eye Tracking)" style="width:100%">
-                <div class="project-description">
-                    <strong>Description</strong>: BME Senior Capstone Design Project
-                </div>
-                <div class="project-technologies">
-                    <strong>Technologies Used</strong>: Python, OpenCV, Raspberry Pi 
-                </div>
-                <div class="project-link">
-                    <strong>Repository</strong>: <a href="https://github.com/williaml12/-OcuTrack-Personal-Eye-Tracking-Profile-Eye-Tracking-">GitHub</a>
-                </div>
-                <div class="project-chart">
-                    <!-- Place your chart code here -->
-                </div>
-            </div>
-            """, unsafe_allow_html=True)
+        # with st.expander("Project 6: “OcuTrack”: Personal Eye Tracking Profile (Eye Tracking)"):
+        #     st.markdown("""
+        #     <div class="project-container project-6">
+        #         <div class="project-title">“OcuTrack”: Personal Eye Tracking Profile (Eye Tracking)</div>
+        #         <img src="https://th.bing.com/th/id/R.87c2a5fc313737ea30509569edce7396?rik=MFt1m%2b0ppv50tg&pid=ImgRaw&r=0" alt="“OcuTrack”: Personal Eye Tracking Profile (Eye Tracking)" style="width:100%">
+        #         <div class="project-description">
+        #             <strong>Description</strong>: BME Senior Capstone Design Project
+        #         </div>
+        #         <div class="project-technologies">
+        #             <strong>Technologies Used</strong>: Python, OpenCV, Raspberry Pi 
+        #         </div>
+        #         <div class="project-link">
+        #             <strong>Repository</strong>: <a href="https://github.com/williaml12/-OcuTrack-Personal-Eye-Tracking-Profile-Eye-Tracking-">GitHub</a>
+        #         </div>
+        #         <div class="project-chart">
+        #             <!-- Place your chart code here -->
+        #         </div>
+        #     </div>
+        #     """, unsafe_allow_html=True)
 
 
         # Sample project data
@@ -553,14 +553,29 @@ if selected == 'Projects':
                 "repo_url": "https://www.hackster.io/wlu1/isense-smart-home-security-system-ee9156#things"
             },
             {
-                "title": "Data Visualization",
-                "image_url": "https://via.placeholder.com/150",
-                "repo_url": "https://github.com/yourusername/dataviz"
+                "title": "Smart Temperature Monitoring System",
+                "image_url": "https://hackster.imgix.net/uploads/attachments/1630153/_aOOTsKkUrv.blob?auto=compress%2Cformat&w=900&h=675&fit=min",
+                "repo_url": "https://www.hackster.io/wlu1/smart-temperature-monitoring-system-529da8"
             },
             {
-                "title": "Mobile App Development",
-                "image_url": "https://via.placeholder.com/150",
-                "repo_url": "https://github.com/yourusername/fitnessapp"
+                "title": "People Counter App at the Edge",
+                "image_url": "https://github.com/williaml12/People-Counter-App-at-the-Edge/raw/master/images/people-counter-image.png",
+                "repo_url": "https://github.com/williaml12/People-Counter-App-at-the-Edge"
+            },
+            {
+                "title": "Vehicle-Edge-Application",
+                "image_url": "https://github.com/williaml12/Vehicle-Edge-Application/raw/master/Capture_vehicle.PNG",
+                "repo_url": "https://github.com/williaml12/Vehicle-Edge-Application"
+            },
+            {
+                "title": "Door-Security-System",
+                "image_url": "https://th.bing.com/th/id/OIP.TMupY92oAYCkcQr8MzzzOwHaHa?rs=1&pid=ImgDetMain",
+                "repo_url": "https://github.com/williaml12/Door-Security-System"
+            },
+            {
+                "title": "“OcuTrack”: Personal Eye Tracking Profile",
+                "image_url": "https://th.bing.com/th/id/R.87c2a5fc313737ea30509569edce7396?rik=MFt1m%2b0ppv50tg&pid=ImgRaw&r=0",
+                "repo_url": "https://github.com/williaml12/-OcuTrack-Personal-Eye-Tracking-Profile-Eye-Tracking-"
             }
         ]
         

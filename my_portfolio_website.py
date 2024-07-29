@@ -544,7 +544,7 @@ if selected == 'Projects':
         projects = [
             {
                 "title": "AI Portfolio Website",
-                "image_url": "https://github.com/williaml12/AI_Portfolio_Website/raw/main/images/About.jpg",
+                "image_url": "https://blog.streamlit.io/content/images/size/w2000/2023/06/Announcement--7-.svg",
                 "repo_url": "https://github.com/williaml12/AI_Portfolio_Website"
             },
             {

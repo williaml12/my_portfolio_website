@@ -143,6 +143,7 @@ if selected == 'About':
         # st.write("__05/2016 - 08/2016__")
 
         st.write('---')
+        
         # st.title("My Hobbies & Interests")
         # col7, col8, col9, col10 = st.columns(4)
         # with col7:

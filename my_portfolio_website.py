@@ -630,7 +630,7 @@ if selected == 'Projects':
             """, unsafe_allow_html=True)
         
         # Display projects in a grid
-        num_columns = 3  # Number of columns in the grid
+        num_columns = 2  # Number of columns in the grid
         columns = st.columns(num_columns)
         
         for i, project in enumerate(projects):

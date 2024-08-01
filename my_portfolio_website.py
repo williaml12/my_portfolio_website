@@ -3,6 +3,11 @@ from streamlit_option_menu import option_menu
 import requests
 from streamlit_lottie import st_lottie
 
+# import streamlit as st
+
+if st.button('Rerun'):
+    st.experimental_rerun()
+
 import google.generativeai as genai
 
 api_key = st.secrets["GOOGLE_API_KEY"]

@@ -357,7 +357,6 @@ if selected == 'AI Assistant':
             else:
                 st.warning("Please enter a question before clicking ASK ME.")
 
-
         
 if selected == 'Projects':
     with st.container():

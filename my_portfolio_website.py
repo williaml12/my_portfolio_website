@@ -3,16 +3,6 @@ from streamlit_option_menu import option_menu
 import requests
 from streamlit_lottie import st_lottie
 
-if 'rerun' not in st.session_state:
-    st.session_state.rerun = False
-
-if st.button('Rerun'):
-    st.session_state.rerun = True
-
-if st.session_state.rerun:
-    st.session_state.rerun = False
-    st.experimental_rerun()  # Ensure that you check if this is supported in your version
-
 import google.generativeai as genai
 
 api_key = st.secrets["GOOGLE_API_KEY"]

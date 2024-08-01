@@ -340,7 +340,7 @@ if selected == 'AI Assistant':
         # Create a form for input and button
         with st.form(key='question_form'):
             user_question = st.text_input("Ask anything about me", placeholder="Enter a prompt here")
-            submit_button = st.form_submit_button(label='ASK ME', use_container_width=True)
+            submit_button = st.form_submit_button(label='ASK ME', use_container_width=400)
 
         # Handle form submission
         if submit_button:
@@ -350,13 +350,14 @@ if selected == 'AI Assistant':
                     response = model.generate_content(prompt)
                     # Append user question and AI response to conversation history
                     st.session_state.conversation.append({"user": user_question, "AI bot": response.text})
-                    # Use a placeholder to indicate an update (alternative method)
-                    st.experimental_rerun()  # Ensure this method is supported in your version
+                    # Clear the input field after submission
+                    st.experimental_rerun()
                 except Exception as e:
                     st.error(f"An error occurred: {e}")
             else:
                 st.warning("Please enter a question before clicking ASK ME.")
-                
+
+
         
 if selected == 'Projects':
     with st.container():

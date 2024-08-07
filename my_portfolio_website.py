@@ -33,7 +33,7 @@ if selected == 'About':
                     )
             if st.button("Get In Touch"):
                 # st.write("Get in touch by emailing me at luwei2359@gmail.com")
-                st.write(luwei2359@gmail.com)
+                st.write("luwei2359@gmail.com")
 
         with col2:
             st.title(" ")

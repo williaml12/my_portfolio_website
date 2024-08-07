@@ -31,9 +31,10 @@ if selected == 'About':
                      "machine learning object detection, and data analysis. Seeking opportunities to contribute to "
                      "cutting-edge research in fluid mechanics, aerodynamics, and aerospace technology."
                     )
-            if st.button("Get In Touch"):
-                # st.write("Get in touch by emailing me at luwei2359@gmail.com")
-                st.write("luwei2359@gmail.com")
+            # st.write("Get in touch by emailing me at luwei2359@gmail.com")
+            # if st.button("Get In Touch"):
+            #     st.write("luwei2359@gmail.com")
+            st.link_button("Get In Touch", "luwei2359@gmail.com")
 
         with col2:
             st.title(" ")

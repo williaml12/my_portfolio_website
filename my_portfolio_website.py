@@ -32,10 +32,10 @@ if selected == 'About':
                      "cutting-edge research in fluid mechanics, aerodynamics, and aerospace technology."
                     )
             # st.write("Get in touch by emailing me at luwei2359@gmail.com")
-            # if st.button("Get In Touch"):
-            #     st.write("luwei2359@gmail.com")
+            if st.button("Get In Touch"):
+                st.write("luwei2359@gmail.com")
             # st.link_button("Get In Touch", "https://mail.google.com/mail/u/0/#inbox?compose=CllgCJqTfmBCsDqXWvzGZxHNMSxcZJlvxmjkcDcFbNNmwLSnzLpbdzCBtbnxhDDshWtvDkJHblq")
-            st.link_button("Get In Touch", "https://luwei2359@gmail.com")
+            # st.link_button("Get In Touch", "https://luwei2359@gmail.com")
             
         with col2:
             st.title(" ")

@@ -39,7 +39,7 @@ if selected == 'About':
             
         with col2:
             st.title(" ")
-            st.img = st.image("my images/William.png")
+            st.img = st.image("my images/ChatGPT Image 2.png")
 
         # st.title(" ")
                         

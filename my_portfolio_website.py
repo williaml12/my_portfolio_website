@@ -10,7 +10,6 @@ genai.configure(api_key=api_key)
 # model = genai.GenerativeModel('gemini-1.5-flash')
 model = genai.GenerativeModel("gemini-2.5-flash")
 
-
 with st.container():
     selected = option_menu(
         menu_title=None,
@@ -349,6 +348,10 @@ if selected == 'AI Assistant':
         with st.form(key='question_form'):
             user_question = st.text_input("Ask anything about me", placeholder="Enter a prompt here")
             submit_button = st.form_submit_button(label='ASK ME', use_container_width=True)
+
+        def clear_chat_history():
+            st.session_state.messages = [{"role": "assistant", "content": "How may I assist you today?"}]
+        st.sidebar.button('Clear Chat History', on_click=clear_chat_history)
 
         # Handle form submission
         if submit_button:
@@ -703,4 +706,5 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 

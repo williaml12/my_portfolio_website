@@ -7,7 +7,9 @@ import google.generativeai as genai
 
 api_key = st.secrets["GOOGLE_API_KEY"]
 genai.configure(api_key=api_key)
-model = genai.GenerativeModel('gemini-1.5-flash')
+# model = genai.GenerativeModel('gemini-1.5-flash')
+model = genai.GenerativeModel("gemini-2.5-flash")
+
 
 with st.container():
     selected = option_menu(
@@ -701,3 +703,4 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+

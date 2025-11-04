@@ -344,6 +344,15 @@ if selected == 'AI Assistant':
                 with col2:
                     st.markdown(f'<div class="bot-message">{chat["AI bot"]}</div>', unsafe_allow_html=True)
 
+        # Initialize the session state for user_question
+        if "user_question" not in st.session_state:
+            st.session_state.user_question = ""
+
+        # Define a callback function to clear the text input
+        def clear_input():
+            st.session_state.user_question = ""
+
+    
         # Create a form for input and button
         with st.form(key='question_form'):
             user_question = st.text_input("Ask anything about me", placeholder="Enter a prompt here")
@@ -702,6 +711,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

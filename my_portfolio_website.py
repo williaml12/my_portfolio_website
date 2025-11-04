@@ -333,7 +333,7 @@ if selected == 'AI Assistant':
         # Display the conversation history with icons
         with placeholder.container():
             for chat in st.session_state.conversation:
-                col1, col2 = st.columns([1, 22])
+                col1, col2 = st.columns([1, 23])
                 with col1:
                     st.image(user_icon_url, width=30)
                 with col2:
@@ -707,6 +707,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

@@ -431,6 +431,7 @@ if selected == 'AI Assistant':
                 st.warning("Please enter a question before clicking ASK ME.")
 
 
+
         
 if selected == 'Projects':
     with st.container():
@@ -757,6 +758,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

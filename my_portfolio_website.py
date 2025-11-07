@@ -300,7 +300,7 @@ if selected == 'AI Assistant':
 
         st.title("William's AI Bot")
         
-       # Initialize session state for conversation history if not already done
+        # Initialize session state for conversation history if not already done
         if 'conversation' not in st.session_state:
             st.session_state.conversation = []
 
@@ -349,7 +349,7 @@ if selected == 'AI Assistant':
             user_question = st.text_input("Ask anything about me", placeholder="Enter a prompt here")
             submit_button = st.form_submit_button(label='ASK ME', use_container_width=True)
 
-        When submitted, do something and then clear input
+        # When submitted, do something and then clear input
         if submit_button:
             st.write(f"You asked: {st.session_state.user_question}")
             clear_input()
@@ -712,6 +712,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

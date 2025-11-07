@@ -344,71 +344,27 @@ if selected == 'AI Assistant':
                 with col2:
                     st.markdown(f'<div class="bot-message">{chat["AI bot"]}</div>', unsafe_allow_html=True)
     
-        # Create a form for input and button
-        # with st.form(key='question_form'):
-        #     user_question = st.text_input("Ask anything about me", placeholder="Enter a prompt here")
-        #     submit_button = st.form_submit_button(label='ASK ME', use_container_width=True)
-
-        # When submitted, do something and then clear input
-        # if submit_button:
-        #     st.write(f"You asked: {st.session_state.user_question}")
-        #     clear_input()
-
-        # # Handle form submission
-        # if submit_button:
-            
-        #     if user_question:
-        #         prompt = persona + "Here is the question that the user asked: " + user_question
-        #         try:
-        #             response = model.generate_content(prompt)
-        #             # Append user question and AI response to conversation history
-        #             st.session_state.conversation.append({"user": user_question, "AI bot": response.text})
-        #             # Update the placeholder with the new conversation
-        #             placeholder.empty()  # Clear the previous content
-        #             with placeholder.container():
-        #                 for chat in st.session_state.conversation:
-        #                     col1, col2 = st.columns([1, 22])
-        #                     with col1:
-        #                         st.image(user_icon_url, width=30)
-        #                     with col2:
-        #                         st.markdown(f'<div class="user-message">{chat["user"]}</div>', unsafe_allow_html=True)
-        #                     col1, col2 = st.columns([1, 22])
-        #                     with col1:
-        #                         st.image(bot_icon_url, width=30)
-        #                     with col2:
-        #                         st.markdown(f'<div class="bot-message">{chat["AI bot"]}</div>', unsafe_allow_html=True)
-
-        #             # # 🔹 Clear the input after submission
-        #             # st.session_state.user_input = ""
-                
-        #         except Exception as e:
-        #             st.error(f"An error occurred: {e}")
-        #     else:
-        #         st.warning("Please enter a question before clicking ASK ME.")
-
-        # Create a form for input and button
+        Create a form for input and button
         with st.form(key='question_form'):
-            user_question = st.text_input(
-                "Ask anything about me", 
-                placeholder="Enter a prompt here", 
-                key="user_input"
-            )
+            user_question = st.text_input("Ask anything about me", placeholder="Enter a prompt here")
             submit_button = st.form_submit_button(label='ASK ME', use_container_width=True)
-        
+
+        When submitted, do something and then clear input
+        if submit_button:
+            st.write(f"You asked: {st.session_state.user_question}")
+            clear_input()
+
         # Handle form submission
         if submit_button:
-            if st.session_state.user_input:
-                prompt = persona + "Here is the question that the user asked: " + st.session_state.user_input
+            
+            if user_question:
+                prompt = persona + "Here is the question that the user asked: " + user_question
                 try:
                     response = model.generate_content(prompt)
                     # Append user question and AI response to conversation history
-                    st.session_state.conversation.append({
-                        "user": st.session_state.user_input, 
-                        "AI bot": response.text
-                    })
-        
-                    # Update chat display
-                    placeholder.empty()
+                    st.session_state.conversation.append({"user": user_question, "AI bot": response.text})
+                    # Update the placeholder with the new conversation
+                    placeholder.empty()  # Clear the previous content
                     with placeholder.container():
                         for chat in st.session_state.conversation:
                             col1, col2 = st.columns([1, 22])
@@ -421,16 +377,14 @@ if selected == 'AI Assistant':
                                 st.image(bot_icon_url, width=30)
                             with col2:
                                 st.markdown(f'<div class="bot-message">{chat["AI bot"]}</div>', unsafe_allow_html=True)
-        
-                    # 🔹 Clear the input after submission
-                    st.session_state.user_input = ""
-        
+
+                    # # 🔹 Clear the input after submission
+                    # st.session_state.user_input = ""
+                
                 except Exception as e:
                     st.error(f"An error occurred: {e}")
             else:
                 st.warning("Please enter a question before clicking ASK ME.")
-
-
 
         
 if selected == 'Projects':
@@ -758,6 +712,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

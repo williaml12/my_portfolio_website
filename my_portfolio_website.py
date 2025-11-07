@@ -350,12 +350,16 @@ if selected == 'AI Assistant':
             submit_button = st.form_submit_button(label='ASK ME', use_container_width=True)
 
         # When submitted, do something and then clear input
-        if submit_button:
-            st.write(f"You asked: {st.session_state.user_question}")
-            clear_input()
+        # if submit_button:
+        #     st.write(f"You asked: {st.session_state.user_question}")
+        #     clear_input()
 
         # Handle form submission
         if submit_button:
+            
+            st.write(f"You asked: {st.session_state.user_question}")
+            clear_input()
+            
             if user_question:
                 prompt = persona + "Here is the question that the user asked: " + user_question
                 try:
@@ -711,6 +715,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

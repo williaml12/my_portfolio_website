@@ -447,7 +447,12 @@ if selected == 'AI Assistant':
                 placeholder="Enter a prompt here",
                 key="user_question"
             )
-            submit_button = st.form_submit_button(label='ASK ME', use_container_width=True)
+            submit_button = st.form_submit_button(
+                label='ASK ME',
+                use_container_width=True,
+                on_click=clear_input  # ✅ Clears safely
+            )
+
         
         # Handle form submission
         if submit_button:
@@ -475,7 +480,7 @@ if selected == 'AI Assistant':
                                 st.markdown(f'<div class="bot-message">{chat["AI bot"]}</div>', unsafe_allow_html=True)
         
                     # 🔹 Clear the input after submission
-                    clear_input()
+                    # clear_input()
         
                 except Exception as e:
                     st.error(f"An error occurred: {e}")
@@ -809,6 +814,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

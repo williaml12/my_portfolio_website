@@ -345,9 +345,14 @@ if selected == 'AI Assistant':
                     st.markdown(f'<div class="bot-message">{chat["AI bot"]}</div>', unsafe_allow_html=True)
     
         # Create a form for input and button
-        with st.form(key='question_form'):
+        # with st.form(key='question_form'):
+        #     user_question = st.text_input("Ask anything about me", placeholder="Enter a prompt here")
+        #     submit_button = st.form_submit_button(label='ASK ME', use_container_width=True)
+
+        with st.form(key='question_form', clear_on_submit=True):  # ✅ this auto-clears input
             user_question = st.text_input("Ask anything about me", placeholder="Enter a prompt here")
             submit_button = st.form_submit_button(label='ASK ME', use_container_width=True)
+
 
         # When submitted, do something and then clear input
         # if submit_button:
@@ -796,6 +801,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

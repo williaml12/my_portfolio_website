@@ -378,9 +378,11 @@ if selected == 'AI Assistant':
                             with col2:
                                 st.markdown(f'<div class="bot-message">{chat["AI bot"]}</div>', unsafe_allow_html=True)
 
-                    # # 🔹 Clear the input after submission
+                    # 🔹 Clear the input after submission
                     # st.session_state.user_input = ""
-                
+                    # 🔹 Clear the input box after successful submission
+                    clear_input()
+                    
                 except Exception as e:
                     st.error(f"An error occurred: {e}")
             else:
@@ -712,6 +714,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

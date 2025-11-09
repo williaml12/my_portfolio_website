@@ -462,7 +462,8 @@ if selected == 'AI Assistant':
                     })
         
                     # Rerun to refresh chat
-                    st.experimental_rerun()
+                    # st.experimental_rerun()
+                    st.rerun()
         
                 except Exception as e:
                     st.error(f"An error occurred: {e}")
@@ -797,6 +798,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

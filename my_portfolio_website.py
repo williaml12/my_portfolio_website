@@ -298,95 +298,190 @@ if selected == 'AI Assistant':
                 William is actively seeking new opportunities and is ready to start immediately.
                 """
 
-        st.title("William's AI Bot")
+        # st.title("William's AI Bot")
         
-        # Initialize session state for conversation history if not already done
-        if 'conversation' not in st.session_state:
-            st.session_state.conversation = []
+        # # Initialize session state for conversation history if not already done
+        # if 'conversation' not in st.session_state:
+        #     st.session_state.conversation = []
 
-        # Define the URLs for your custom icons
-        user_icon_url = "https://cdn-icons-png.flaticon.com/128/1057/1057240.png"
-        bot_icon_url = "https://cdn-icons-png.flaticon.com/128/8943/8943377.png"
+        # # Define the URLs for your custom icons
+        # user_icon_url = "https://cdn-icons-png.flaticon.com/128/1057/1057240.png"
+        # bot_icon_url = "https://cdn-icons-png.flaticon.com/128/8943/8943377.png"
 
-        # CSS to style the user input background
-        st.markdown(
-            """
-            <style>
-            .user-message {
-                background-color: #fafafa;  /* Even lighter gray color */
-                padding: 10px;
-                border-radius: 5px;
-            }
-            .bot-message {
-                background-color: #ffffff;  /* White background for bot messages */
-                padding: 10px;
-                border-radius: 5px;
-            }
-            </style>
-            """,
-            unsafe_allow_html=True
-        )
+        # # CSS to style the user input background
+        # st.markdown(
+        #     """
+        #     <style>
+        #     .user-message {
+        #         background-color: #fafafa;  /* Even lighter gray color */
+        #         padding: 10px;
+        #         border-radius: 5px;
+        #     }
+        #     .bot-message {
+        #         background-color: #ffffff;  /* White background for bot messages */
+        #         padding: 10px;
+        #         border-radius: 5px;
+        #     }
+        #     </style>
+        #     """,
+        #     unsafe_allow_html=True
+        # )
 
-        # Create a placeholder for conversation history
-        placeholder = st.empty()
+        # # Create a placeholder for conversation history
+        # placeholder = st.empty()
 
-        # Display the conversation history with icons
-        with placeholder.container():
-            for chat in st.session_state.conversation:
-                col1, col2 = st.columns([1, 20])
-                with col1:
-                    st.image(user_icon_url, width=30)
-                with col2:
-                    st.markdown(f'<div class="user-message">{chat["user"]}</div>', unsafe_allow_html=True)
-                col1, col2 = st.columns([1, 20])
-                with col1:
-                    st.image(bot_icon_url, width=30)
-                with col2:
-                    st.markdown(f'<div class="bot-message">{chat["AI bot"]}</div>', unsafe_allow_html=True)
+        # # Display the conversation history with icons
+        # with placeholder.container():
+        #     for chat in st.session_state.conversation:
+        #         col1, col2 = st.columns([1, 20])
+        #         with col1:
+        #             st.image(user_icon_url, width=30)
+        #         with col2:
+        #             st.markdown(f'<div class="user-message">{chat["user"]}</div>', unsafe_allow_html=True)
+        #         col1, col2 = st.columns([1, 20])
+        #         with col1:
+        #             st.image(bot_icon_url, width=30)
+        #         with col2:
+        #             st.markdown(f'<div class="bot-message">{chat["AI bot"]}</div>', unsafe_allow_html=True)
     
-        # Create a form for input and button
-        with st.form(key='question_form'):
-            user_question = st.text_input("Ask anything about me", placeholder="Enter a prompt here")
-            submit_button = st.form_submit_button(label='ASK ME', use_container_width=True)
+        # # Create a form for input and button
+        # with st.form(key='question_form'):
+        #     user_question = st.text_input("Ask anything about me", placeholder="Enter a prompt here")
+        #     submit_button = st.form_submit_button(label='ASK ME', use_container_width=True)
 
-        # When submitted, do something and then clear input
+        # # When submitted, do something and then clear input
+        # # if submit_button:
+        # #     st.write(f"You asked: {st.session_state.user_question}")
+        # #     clear_input()
+
+        # # Handle form submission
         # if submit_button:
-        #     st.write(f"You asked: {st.session_state.user_question}")
-        #     clear_input()
-
-        # Handle form submission
-        if submit_button:
             
-            if user_question:
-                prompt = persona + "Here is the question that the user asked: " + user_question
-                try:
-                    response = model.generate_content(prompt)
-                    # Append user question and AI response to conversation history
-                    st.session_state.conversation.append({"user": user_question, "AI bot": response.text})
-                    # Update the placeholder with the new conversation
-                    placeholder.empty()  # Clear the previous content
-                    with placeholder.container():
-                        for chat in st.session_state.conversation:
-                            col1, col2 = st.columns([1, 22])
-                            with col1:
-                                st.image(user_icon_url, width=30)
-                            with col2:
-                                st.markdown(f'<div class="user-message">{chat["user"]}</div>', unsafe_allow_html=True)
-                            col1, col2 = st.columns([1, 22])
-                            with col1:
-                                st.image(bot_icon_url, width=30)
-                            with col2:
-                                st.markdown(f'<div class="bot-message">{chat["AI bot"]}</div>', unsafe_allow_html=True)
+        #     if user_question:
+        #         prompt = persona + "Here is the question that the user asked: " + user_question
+        #         try:
+        #             response = model.generate_content(prompt)
+        #             # Append user question and AI response to conversation history
+        #             st.session_state.conversation.append({"user": user_question, "AI bot": response.text})
+        #             # Update the placeholder with the new conversation
+        #             placeholder.empty()  # Clear the previous content
+        #             with placeholder.container():
+        #                 for chat in st.session_state.conversation:
+        #                     col1, col2 = st.columns([1, 22])
+        #                     with col1:
+        #                         st.image(user_icon_url, width=30)
+        #                     with col2:
+        #                         st.markdown(f'<div class="user-message">{chat["user"]}</div>', unsafe_allow_html=True)
+        #                     col1, col2 = st.columns([1, 22])
+        #                     with col1:
+        #                         st.image(bot_icon_url, width=30)
+        #                     with col2:
+        #                         st.markdown(f'<div class="bot-message">{chat["AI bot"]}</div>', unsafe_allow_html=True)
 
-                    # 🔹 Clear the input after submission
-                    # st.session_state.user_input = ""
-                    # 🔹 Clear the input box after successful submission
-                    clear_input()
+        #             # 🔹 Clear the input after submission
+        #             # st.session_state.user_input = ""
+        #             # 🔹 Clear the input box after successful submission
+        #             clear_input()
                     
-                except Exception as e:
-                    st.error(f"An error occurred: {e}")
-            else:
-                st.warning("Please enter a question before clicking ASK ME.")
+        #         except Exception as e:
+        #             st.error(f"An error occurred: {e}")
+        #     else:
+        #         st.warning("Please enter a question before clicking ASK ME.")
+
+    # import streamlit as st
+
+    st.title("William's AI Bot")
+    
+    # 🔹 Define clear_input() function
+    def clear_input():
+        st.session_state["user_question"] = ""
+    
+    # Initialize session state for conversation history if not already done
+    if 'conversation' not in st.session_state:
+        st.session_state.conversation = []
+    
+    # Define the URLs for your custom icons
+    user_icon_url = "https://cdn-icons-png.flaticon.com/128/1057/1057240.png"
+    bot_icon_url = "https://cdn-icons-png.flaticon.com/128/8943/8943377.png"
+    
+    # CSS to style the user input background
+    st.markdown(
+        """
+        <style>
+        .user-message {
+            background-color: #fafafa;  /* Even lighter gray color */
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .bot-message {
+            background-color: #ffffff;  /* White background for bot messages */
+            padding: 10px;
+            border-radius: 5px;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+    
+    # Create a placeholder for conversation history
+    placeholder = st.empty()
+    
+    # Display the conversation history with icons
+    with placeholder.container():
+        for chat in st.session_state.conversation:
+            col1, col2 = st.columns([1, 20])
+            with col1:
+                st.image(user_icon_url, width=30)
+            with col2:
+                st.markdown(f'<div class="user-message">{chat["user"]}</div>', unsafe_allow_html=True)
+            col1, col2 = st.columns([1, 20])
+            with col1:
+                st.image(bot_icon_url, width=30)
+            with col2:
+                st.markdown(f'<div class="bot-message">{chat["AI bot"]}</div>', unsafe_allow_html=True)
+    
+    # Create a form for input and button
+    with st.form(key='question_form'):
+        user_question = st.text_input(
+            "Ask anything about me",
+            placeholder="Enter a prompt here",
+            key="user_question"
+        )
+        submit_button = st.form_submit_button(label='ASK ME', use_container_width=True)
+    
+    # Handle form submission
+    if submit_button:
+        if user_question:
+            prompt = persona + "Here is the question that the user asked: " + user_question
+            try:
+                response = model.generate_content(prompt)
+    
+                # Append user question and AI response to conversation history
+                st.session_state.conversation.append({"user": user_question, "AI bot": response.text})
+    
+                # Update the placeholder with the new conversation
+                placeholder.empty()
+                with placeholder.container():
+                    for chat in st.session_state.conversation:
+                        col1, col2 = st.columns([1, 22])
+                        with col1:
+                            st.image(user_icon_url, width=30)
+                        with col2:
+                            st.markdown(f'<div class="user-message">{chat["user"]}</div>', unsafe_allow_html=True)
+                        col1, col2 = st.columns([1, 22])
+                        with col1:
+                            st.image(bot_icon_url, width=30)
+                        with col2:
+                            st.markdown(f'<div class="bot-message">{chat["AI bot"]}</div>', unsafe_allow_html=True)
+    
+                # 🔹 Clear the input after submission
+                clear_input()
+    
+            except Exception as e:
+                st.error(f"An error occurred: {e}")
+        else:
+            st.warning("Please enter a question before clicking ASK ME.")
+
 
         
 if selected == 'Projects':
@@ -714,6 +809,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

@@ -334,13 +334,13 @@ if selected == 'AI Assistant':
         with placeholder.container():
             for chat in st.session_state.conversation:
                 # col1, col2 = st.columns([1, 20])
-                col1, col2 = st.columns([10, 0.7])
+                col1, col2 = st.columns([0.7, 10])
                 with col1:
                     st.image(user_icon_url, width=30)
                 with col2:
                     st.markdown(f'<div class="user-message">{chat["user"]}</div>', unsafe_allow_html=True)
                 # col1, col2 = st.columns([1, 20])
-                col1, col2 = st.columns([10, 0.7])
+                col1, col2 = st.columns([0.7, 10])
                 with col1:
                     st.image(bot_icon_url, width=30)
                 with col2:
@@ -803,6 +803,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

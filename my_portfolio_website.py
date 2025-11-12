@@ -342,7 +342,7 @@ if selected == 'AI Assistant':
                     st.markdown(f'<div class="user-message">{chat["user"]}</div>', unsafe_allow_html=True)
                 # col1, col2 = st.columns([1, 20])
                 # col1, col2 = st.columns([0.7, 10])
-                 col1, col2 = st.columns([0.8, 12])
+                col1, col2 = st.columns([0.8, 12])
                 with col1:
                     st.image(bot_icon_url, width=30)
                 with col2:
@@ -805,6 +805,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

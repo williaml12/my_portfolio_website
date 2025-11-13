@@ -314,12 +314,12 @@ if selected == 'AI Assistant':
             <style>
             .user-message {
                 background-color: #fafafa;  /* Even lighter gray color */
-                padding: 3px;
+                padding: 5px;
                 border-radius: 5px;
             }
             .bot-message {
                 background-color: #ffffff;  /* White background for bot messages */
-                padding: 3px;
+                padding: 5px;
                 border-radius: 5px;
             }
             </style>
@@ -810,6 +810,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

@@ -302,6 +302,19 @@ if selected == 'AI Assistant':
         
         st.title("William's AI Bot")
 
+        title_row = st.container(
+            horizontal=True,
+            vertical_alignment="bottom",
+        )
+
+        with title_row:
+            st.title(
+                # ":material/cognition_2: Streamlit AI assistant", anchor=False, width="stretch"
+                "Streamlit AI assistant",
+                anchor=False,
+                width="stretch",
+            )
+
         # # --- Create title row with restart button ---
         title_row = st.container()
 
@@ -827,6 +840,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

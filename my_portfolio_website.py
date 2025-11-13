@@ -335,10 +335,14 @@ if selected == 'AI Assistant':
             st.title("William's AI Bot")
         
         with col2:
+            st.markdown('<div class="align-right">', unsafe_allow_html=True)
+
             def clear_conversation():
                 st.session_state.conversation = []
         
             st.button("🔄 Restart", on_click=clear_conversation)
+        
+            st.markdown('</div>', unsafe_allow_html=True)
 
         
         # Initialize session state for conversation history if not already done
@@ -852,6 +856,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

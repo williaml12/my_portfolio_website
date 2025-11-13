@@ -299,62 +299,22 @@ if selected == 'AI Assistant':
                 """
 
 
-        st.set_page_config(page_title="William's AI Bot", layout="wide")
-
-        # --- Custom CSS for floating restart button ---
-        st.markdown("""
-            <style>
-            /* Floating Restart button container */
-            .floating-restart {
-                position: fixed;
-                top: 20px;
-                right: 25px;
-                z-index: 9999;
-            }
-            /* Optional: improve button appearance */
-            .floating-restart button {
-                background-color: #f5f5f5;
-                color: #333;
-                border: 1px solid #ccc;
-                border-radius: 8px;
-                padding: 0.4rem 0.8rem;
-                font-weight: 500;
-                transition: all 0.2s ease-in-out;
-            }
-            .floating-restart button:hover {
-                background-color: #e9e9e9;
-                border-color: #aaa;
-            }
-            </style>
-        """, unsafe_allow_html=True)
-        
-        # --- Floating Restart Button ---
-        restart_container = st.container()
-        with restart_container:
-            # Define the clearing function
-            def clear_conversation():
-                st.session_state.conversation = []
-            # Place the restart button inside a floating div
-            st.markdown('<div class="floating-restart">', unsafe_allow_html=True)
-            st.button("🔄 Restart", on_click=clear_conversation)
-            st.markdown('</div>', unsafe_allow_html=True)
-
         
         st.title("William's AI Bot")
 
         # # --- Create title row with restart button ---
-        # title_row = st.container()
+        title_row = st.container()
 
-        # with title_row:
-        #     # Define function to clear conversation
-        #     def clear_conversation():
-        #         st.session_state.conversation = []
+        with title_row:
+            # Define function to clear conversation
+            def clear_conversation():
+                st.session_state.conversation = []
         
-        #     st.button(
-        #         "Restart",
-        #         icon=":material/refresh:",
-        #         on_click=clear_conversation,
-        #     )
+            st.button(
+                "Restart",
+                icon=":material/refresh:",
+                on_click=clear_conversation,
+            )
         
         # Initialize session state for conversation history if not already done
         if 'conversation' not in st.session_state:
@@ -867,6 +827,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

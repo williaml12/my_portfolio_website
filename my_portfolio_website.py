@@ -300,34 +300,46 @@ if selected == 'AI Assistant':
 
 
         
-        st.title("William's AI Bot")
+        # st.title("William's AI Bot")
 
-        title_row = st.container(
-            horizontal=True,
-            vertical_alignment="bottom",
-        )
+        # title_row = st.container(
+        #     horizontal=True,
+        #     vertical_alignment="bottom",
+        # )
 
-        with title_row:
-            st.title(
-                # ":material/cognition_2: Streamlit AI assistant", anchor=False, width="stretch"
-                "Streamlit AI assistant",
-                anchor=False,
-                width="stretch",
-            )
+        # with title_row:
+        #     st.title(
+        #         # ":material/cognition_2: Streamlit AI assistant", anchor=False, width="stretch"
+        #         "Streamlit AI assistant",
+        #         anchor=False,
+        #         width="stretch",
+        #     )
 
-        # # --- Create title row with restart button ---
-        title_row = st.container()
+        # # # --- Create title row with restart button ---
+        # title_row = st.container()
 
-        with title_row:
-            # Define function to clear conversation
+        # with title_row:
+        #     # Define function to clear conversation
+        #     def clear_conversation():
+        #         st.session_state.conversation = []
+        
+        #     st.button(
+        #         "Restart",
+        #         icon=":material/refresh:",
+        #         on_click=clear_conversation,
+        #     )
+
+        col1, col2 = st.columns([8, 1])
+
+        with col1:
+            st.title("William's AI Bot")
+        
+        with col2:
             def clear_conversation():
                 st.session_state.conversation = []
         
-            st.button(
-                "Restart",
-                icon=":material/refresh:",
-                on_click=clear_conversation,
-            )
+            st.button("🔄 Restart", on_click=clear_conversation)
+
         
         # Initialize session state for conversation history if not already done
         if 'conversation' not in st.session_state:
@@ -840,6 +852,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

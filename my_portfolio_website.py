@@ -340,7 +340,11 @@ if selected == 'AI Assistant':
             def clear_conversation():
                 st.session_state.conversation = []
         
-            st.button("🔄 Restart", on_click=clear_conversation)
+            st.button(
+                "Restart",
+                icon=":material/refresh:",
+                on_click=clear_conversation,
+            )
         
             st.markdown('</div>', unsafe_allow_html=True)
 
@@ -856,6 +860,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

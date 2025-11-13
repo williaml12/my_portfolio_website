@@ -329,6 +329,21 @@ if selected == 'AI Assistant':
         #         on_click=clear_conversation,
         #     )
 
+        st.title("William's AI Bot")
+
+        # --- CSS for aligning restart button with title ---
+        st.markdown("""
+        <style>
+        .align-right {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            height: 100%;
+            padding-top: 12px; 
+        }
+        </style>
+        """, unsafe_allow_html=True)
+
         col1, col2 = st.columns([8, 2])
 
         with col1:
@@ -860,6 +875,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

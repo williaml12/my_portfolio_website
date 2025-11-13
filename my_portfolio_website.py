@@ -412,6 +412,127 @@ if selected == 'AI Assistant':
                 st.warning("Please enter a question before clicking ASK ME.")
 
 
+
+
+
+        # import streamlit as st
+        
+        st.set_page_config(page_title="William's AI Bot", layout="wide")
+        
+        # --- Custom CSS to position restart button on top-right ---
+        st.markdown(
+            """
+            <style>
+            /* Top bar container */
+            .top-bar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+        
+            /* Restart button style */
+            div[data-testid="stButton"] button {
+                background-color: #f5f5f5;
+                color: #333;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                padding: 0.4rem 0.8rem;
+                cursor: pointer;
+                transition: 0.2s;
+            }
+        
+            div[data-testid="stButton"] button:hover {
+                background-color: #e9e9e9;
+                border-color: #bbb;
+            }
+        
+            /* Chat message styles */
+            .user-message {
+                background-color: #fafafa;
+                padding: 5px;
+                border-radius: 5px;
+            }
+        
+            .bot-message {
+                background-color: #ffffff;
+                padding: 5px;
+                border-radius: 5px;
+            }
+            </style>
+            """,
+            unsafe_allow_html=True
+        )
+        
+        # --- Define clear conversation function ---
+        def clear_conversation():
+            st.session_state.conversation = []
+        
+        # --- Top Bar: Title on left, Restart button on right ---
+        with st.container():
+            col1, col2 = st.columns([8, 1])
+            with col1:
+                st.markdown('<div class="top-bar"><h1>William\'s AI Bot</h1></div>', unsafe_allow_html=True)
+            with col2:
+                st.button("🔄 Restart", on_click=clear_conversation)
+        
+        # --- Initialize conversation state ---
+        if 'conversation' not in st.session_state:
+            st.session_state.conversation = []
+        
+        # --- Custom icons ---
+        user_icon_url = "https://cdn-icons-png.flaticon.com/128/1057/1057240.png"
+        bot_icon_url = "https://cdn-icons-png.flaticon.com/128/8943/8943377.png"
+        
+        # --- Display chat history ---
+        placeholder = st.empty()
+        
+        with placeholder.container():
+            for chat in st.session_state.conversation:
+                col1, col2 = st.columns([1, 18])
+                with col1:
+                    st.image(user_icon_url, width=30)
+                with col2:
+                    st.markdown(f'<div class="user-message">{chat["user"]}</div>', unsafe_allow_html=True)
+        
+                col1, col2 = st.columns([1, 18])
+                with col1:
+                    st.image(bot_icon_url, width=30)
+                with col2:
+                    st.markdown(f'<div class="bot-message">{chat["AI bot"]}</div>', unsafe_allow_html=True)
+        
+        # --- Input form for user question ---
+        with st.form(key='question_form', clear_on_submit=True):
+            user_question = st.text_input("Ask anything about me", placeholder="Enter a prompt here")
+            submit_button = st.form_submit_button(label='ASK ME', use_container_width=True)
+        
+        # --- Handle form submission ---
+        if submit_button:
+            if user_question:
+                prompt = persona + "Here is the question that the user asked: " + user_question
+                try:
+                    response = model.generate_content(prompt)
+                    st.session_state.conversation.append({"user": user_question, "AI bot": response.text})
+                    
+                    placeholder.empty()
+                    with placeholder.container():
+                        for chat in st.session_state.conversation:
+                            col1, col2 = st.columns([1, 22])
+                            with col1:
+                                st.image(user_icon_url, width=50)
+                            with col2:
+                                st.markdown(f'<div class="user-message">{chat["user"]}</div>', unsafe_allow_html=True)
+                            col1, col2 = st.columns([1, 22])
+                            with col1:
+                                st.image(bot_icon_url, width=50)
+                            with col2:
+                                st.markdown(f'<div class="bot-message">{chat["AI bot"]}</div>', unsafe_allow_html=True)
+        
+                except Exception as e:
+                    st.error(f"An error occurred: {e}")
+            else:
+                st.warning("Please enter a question before clicking ASK ME.")
+
         
 
         # st.title("William's AI Bot")
@@ -823,6 +944,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

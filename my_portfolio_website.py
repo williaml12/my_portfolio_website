@@ -697,7 +697,7 @@ if selected == 'Projects':
             {
                 "title": "“OcuTrack”: Personal Eye Tracking Profile",
                 # "image_url": "https://th.bing.com/th/id/R.87c2a5fc313737ea30509569edce7396?rik=MFt1m%2b0ppv50tg&pid=ImgRaw&r=0",
-                "image_url": "https://www.istockphoto.com/video/biometric-retina-recognition-gm1285201659-382107276?searchscope=image%2Cfilm",
+                "image_url": "https://media.istockphoto.com/id/1285201659/video/biometric-retina-recognition.avif?s=640x640&k=20&c=qBuTPJhZYwR_3BUQIZHBTgnodwNpyBCakG-Py8uzEVI=",
                 "repo_url": "https://github.com/williaml12/-OcuTrack-Personal-Eye-Tracking-Profile-Eye-Tracking-"
             }
         ]
@@ -806,6 +806,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

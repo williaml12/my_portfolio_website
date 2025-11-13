@@ -398,6 +398,18 @@ if selected == 'AI Assistant':
                 st.warning("Please enter a question before clicking ASK ME.")
 
 
+            with title_row:
+
+                def clear_conversation():
+                    st.session_state.messages = []
+                    st.session_state.initial_question = None
+                    st.session_state.selected_suggestion = None
+            
+                st.button(
+                    "Restart",
+                    icon=":material/refresh:",
+                    on_click=clear_conversation,
+                )
         
 
 
@@ -810,6 +822,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

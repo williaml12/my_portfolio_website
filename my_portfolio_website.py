@@ -342,7 +342,7 @@ if selected == 'AI Assistant':
         </style>
         """, unsafe_allow_html=True)
 
-        col1, col2 = st.columns([6, 2])
+        col1, col2 = st.columns([10, 2])
 
         with col1:
             st.title("William's AI Bot")
@@ -873,6 +873,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

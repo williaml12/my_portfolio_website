@@ -415,7 +415,7 @@ if selected == 'AI Assistant':
 
 
 
-        # import streamlit as st
+        import streamlit as st
         
         st.set_page_config(page_title="William's AI Bot", layout="wide")
         

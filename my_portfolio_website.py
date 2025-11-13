@@ -337,12 +337,12 @@ if selected == 'AI Assistant':
             align-items: center;
             justify-content: flex-end;
             height: 100%;
-            padding-top: 8px; 
+            padding-top: 12px; 
         }
         </style>
         """, unsafe_allow_html=True)
 
-        col1, col2 = st.columns([8, 2])
+        col1, col2 = st.columns([9, 2])
 
         with col1:
             st.title("William's AI Bot")
@@ -873,6 +873,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

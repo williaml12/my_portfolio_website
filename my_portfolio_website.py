@@ -336,8 +336,8 @@ if selected == 'AI Assistant':
             display: flex;
             align-items: center;
             justify-content: flex-end;
-            height: 90%;
-            padding-top: 12px; 
+            height: 100%;
+            padding-top: 14px; 
         }
         </style>
         """, unsafe_allow_html=True)
@@ -873,6 +873,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

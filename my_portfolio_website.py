@@ -314,12 +314,12 @@ if selected == 'AI Assistant':
             <style>
             .user-message {
                 background-color: #fafafa;  /* Even lighter gray color */
-                padding: 7px;
+                padding: 5px;
                 border-radius: 5px;
             }
             .bot-message {
                 background-color: #ffffff;  /* White background for bot messages */
-                padding: 7px;
+                padding: 5px;
                 border-radius: 5px;
             }
             </style>

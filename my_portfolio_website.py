@@ -309,60 +309,23 @@ if selected == 'AI Assistant':
         bot_icon_url = "https://cdn-icons-png.flaticon.com/128/8943/8943377.png"
 
         # CSS to style the user input background
-        # st.markdown(
-        #     """
-        #     <style>
-        #     .user-message {
-        #         background-color: #fafafa;  /* Even lighter gray color */
-        #         padding: 10px;
-        #         border-radius: 5px;
-        #     }
-        #     .bot-message {
-        #         background-color: #ffffff;  /* White background for bot messages */
-        #         padding: 10px;
-        #         border-radius: 5px;
-        #     }
-        #     </style>
-        #     """,
-        #     unsafe_allow_html=True
-        # )
-
-        # Custom CSS for alignment and style
-        st.markdown("""
-        <style>
-        .chat-row {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 12px;
-        }
-        .chat-row.user {
-            flex-direction: row;
-        }
-        .chat-row.bot {
-            flex-direction: row;
-        }
-        .chat-icon {
-            width: 35px;
-            height: 35px;
-            margin-right: 10px;
-            margin-top: 3px;
-        }
-        .user-message, .bot-message {
-            padding: 10px 14px;
-            border-radius: 8px;
-            max-width: 75%;
-            word-wrap: break-word;
-        }
-        .user-message {
-            background-color: #f2f2f2;
-        }
-        .bot-message {
-            background-color: #ffffff;
-            border: 1px solid #e6e6e6;
-        }
-        </style>
-        """, unsafe_allow_html=True)
-
+        st.markdown(
+            """
+            <style>
+            .user-message {
+                background-color: #fafafa;  /* Even lighter gray color */
+                padding: 10px;
+                border-radius: 5px;
+            }
+            .bot-message {
+                background-color: #ffffff;  /* White background for bot messages */
+                padding: 10px;
+                border-radius: 5px;
+            }
+            </style>
+            """,
+            unsafe_allow_html=True
+        )
 
         # Create a placeholder for conversation history
         placeholder = st.empty()
@@ -843,6 +806,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

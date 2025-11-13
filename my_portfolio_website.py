@@ -337,14 +337,14 @@ if selected == 'AI Assistant':
                 # col1, col2 = st.columns([0.7, 10])
                 # col1, col2 = st.columns([0.8, 12])
                 with col1:
-                    st.image(user_icon_url, width=40)
+                    st.image(user_icon_url, width=30)
                 with col2:
                     st.markdown(f'<div class="user-message">{chat["user"]}</div>', unsafe_allow_html=True)
                 col1, col2 = st.columns([1, 18])
                 # col1, col2 = st.columns([0.7, 10])
                 # col1, col2 = st.columns([0.8, 12])
                 with col1:
-                    st.image(bot_icon_url, width=40)
+                    st.image(bot_icon_url, width=30)
                 with col2:
                     st.markdown(f'<div class="bot-message">{chat["AI bot"]}</div>', unsafe_allow_html=True)
     
@@ -378,12 +378,12 @@ if selected == 'AI Assistant':
                         for chat in st.session_state.conversation:
                             col1, col2 = st.columns([1, 22])
                             with col1:
-                                st.image(user_icon_url, width=40)
+                                st.image(user_icon_url, width=50)
                             with col2:
                                 st.markdown(f'<div class="user-message">{chat["user"]}</div>', unsafe_allow_html=True)
                             col1, col2 = st.columns([1, 22])
                             with col1:
-                                st.image(bot_icon_url, width=40)
+                                st.image(bot_icon_url, width=50)
                             with col2:
                                 st.markdown(f'<div class="bot-message">{chat["AI bot"]}</div>', unsafe_allow_html=True)
 
@@ -810,6 +810,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

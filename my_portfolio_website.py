@@ -351,7 +351,8 @@ if selected == 'AI Assistant':
             st.markdown('<div class="align-right">', unsafe_allow_html=True)
 
             def clear_conversation():
-                st.session_state.conversation = []
+                # st.session_state.conversation = []
+                st.session_state.messages = []
                 st.session_state.initial_question = None
                 st.session_state.selected_suggestion = None
 
@@ -880,6 +881,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

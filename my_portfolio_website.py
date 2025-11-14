@@ -352,6 +352,8 @@ if selected == 'AI Assistant':
 
             def clear_conversation():
                 st.session_state.conversation = []
+                st.session_state.initial_question = None
+                st.session_state.selected_suggestion = None
 
             # if st.session_state.conversation:   # Show ONLY after first message
             #     st.markdown('<div class="align-right">', unsafe_allow_html=True)
@@ -878,6 +880,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

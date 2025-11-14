@@ -360,12 +360,14 @@ if selected == 'AI Assistant':
             #     st.markdown('<div class="align-right">', unsafe_allow_html=True)
             #     # st.button("🔄 Restart", on_click=clear_conversation)
             #     # st.markdown('</div>', unsafe_allow_html=True)
-        
-            st.button(
-                "Restart",
-                icon=":material/refresh:",
-                on_click=clear_conversation,
-            )
+
+                # ✅ Show restart button ONLY if there is at least one message
+            if "conversation" in st.session_state and len(st.session_state.conversation) > 0:
+                st.button(
+                    "Restart",
+                    icon=":material/refresh:",
+                    on_click=clear_conversation,
+                )
             
             st.markdown('</div>', unsafe_allow_html=True)
 
@@ -881,6 +883,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

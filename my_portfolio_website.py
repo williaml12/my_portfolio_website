@@ -355,8 +355,6 @@ if selected == 'AI Assistant':
                 # st.session_state.messages = []
                 st.session_state.initial_question = None
                 st.session_state.selected_suggestion = None
-                st.session_state.user_has_sent_message = False
-
 
             # if st.session_state.conversation:   # Show ONLY after first message
             #     st.markdown('<div class="align-right">', unsafe_allow_html=True)
@@ -364,9 +362,7 @@ if selected == 'AI Assistant':
             #     # st.markdown('</div>', unsafe_allow_html=True)
 
             # ✅ Show restart button ONLY if there is at least one message
-            # if "conversation" in st.session_state and len(st.session_state.conversation) > 0:
-            # ✔ Only show restart button after the first real user message
-            if st.session_state.user_has_sent_message:
+            if "conversation" in st.session_state and len(st.session_state.conversation) > 0:
                 st.button(
                     "Restart",
                     icon=":material/refresh:",
@@ -887,6 +883,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

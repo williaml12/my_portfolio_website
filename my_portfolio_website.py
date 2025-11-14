@@ -350,13 +350,16 @@ if selected == 'AI Assistant':
         with col2:
             st.markdown('<div class="align-right">', unsafe_allow_html=True)
 
-            def clear_conversation():
-                st.session_state.conversation = []
+            # def clear_conversation():
+            #     st.session_state.conversation = []
 
             if st.session_state.conversation:   # Show ONLY after first message
                 st.markdown('<div class="align-right">', unsafe_allow_html=True)
                 # st.button("🔄 Restart", on_click=clear_conversation)
                 # st.markdown('</div>', unsafe_allow_html=True)
+
+                def clear_conversation():
+                    st.session_state.conversation = []
         
                 st.button(
                     "Restart",
@@ -878,6 +881,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

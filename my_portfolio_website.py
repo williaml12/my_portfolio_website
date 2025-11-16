@@ -257,7 +257,7 @@ if selected == 'About':
     <a href="#top" class="back-to-top">⬆ Back to Top</a>
     """,
     unsafe_allow_html=True
-)
+    )
 
 
 if selected == 'AI Assistant':
@@ -919,6 +919,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

@@ -895,32 +895,52 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-# --- Back to Top Button ---
-st.markdown(
-    """
-    <style>
-    #back-to-top {
-        position: fixed;
-        bottom: 40px;
-        right: 40px;
-        background-color: #4CAF50;
-        color: white;
-        padding: 12px 20px;
-        border-radius: 10px;
-        text-decoration: none;
-        font-size: 18px;
-        box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
-        z-index: 9999;
-    }
-    #back-to-top:hover {
-        background-color: #45a049;
-    }
-    </style>
+# Inject HTML + JS
+st.markdown("""
+<style>
+#back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+</style>
 
-    <a href="#top" id="back-to-top">⬆ Back to Top</a>
-    """,
-    unsafe_allow_html=True
-)
+<a id="back-to-top">⬆ Back to Top</a>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const btn = document.getElementById('back-to-top');
+
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            btn.classList.add('show');
+        } else {
+            btn.classList.remove('show');
+        }
+    });
+
+    btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+});
+</script>
+""", unsafe_allow_html=True)
+
 
 
 

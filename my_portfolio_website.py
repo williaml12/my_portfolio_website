@@ -369,6 +369,7 @@ if selected == 'AI Assistant':
                     icon=":material/refresh:",
                     on_click=clear_conversation,
                 )
+                st.rerun()
 
             
             st.markdown('</div>', unsafe_allow_html=True)
@@ -885,6 +886,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

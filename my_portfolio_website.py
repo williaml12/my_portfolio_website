@@ -234,6 +234,16 @@ if selected == 'About':
 if selected == 'AI Assistant':
     with st.container():
 
+        # Initialize session state for conversation history if not already done
+        if 'conversation' not in st.session_state:
+            st.session_state.conversation = []
+
+        def clear_conversation():
+                st.session_state.conversation = []
+                # st.session_state.messages = []
+                st.session_state.initial_question = None
+                st.session_state.selected_suggestion = None
+
         persona = """
                 You are William's AI bot. You help people answer questions about your self (i.e William)
                 Answer as if you are responding . Dont answer in second or third person.
@@ -350,11 +360,11 @@ if selected == 'AI Assistant':
         with col2:
             st.markdown('<div class="align-right">', unsafe_allow_html=True)
 
-            def clear_conversation():
-                st.session_state.conversation = []
-                # st.session_state.messages = []
-                st.session_state.initial_question = None
-                st.session_state.selected_suggestion = None
+            # def clear_conversation():
+            #     st.session_state.conversation = []
+            #     # st.session_state.messages = []
+            #     st.session_state.initial_question = None
+            #     st.session_state.selected_suggestion = None
 
             # if st.session_state.conversation:   # Show ONLY after first message
             #     st.markdown('<div class="align-right">', unsafe_allow_html=True)
@@ -362,8 +372,8 @@ if selected == 'AI Assistant':
             #     # st.markdown('</div>', unsafe_allow_html=True)
 
             # ✅ Show restart button ONLY if there is at least one message
-            if "conversation" in st.session_state and len(st.session_state.conversation) > 0:
-            # if len(st.session_state.conversation) > 0:
+            # if "conversation" in st.session_state and len(st.session_state.conversation) > 0:
+            if len(st.session_state.conversation) > 0:
                 st.button(
                     "Restart",
                     icon=":material/refresh:",
@@ -374,8 +384,8 @@ if selected == 'AI Assistant':
 
         
         # Initialize session state for conversation history if not already done
-        if 'conversation' not in st.session_state:
-            st.session_state.conversation = []
+        # if 'conversation' not in st.session_state:
+        #     st.session_state.conversation = []
 
         # Define the URLs for your custom icons
         user_icon_url = "https://cdn-icons-png.flaticon.com/128/1057/1057240.png"
@@ -884,6 +894,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

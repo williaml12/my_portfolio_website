@@ -892,52 +892,54 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-# Inject HTML + JS
-st.markdown("""
-<style>
-#back-to-top {
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 18px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
-    z-index: 9999;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease;
-}
-#back-to-top.show {
-    opacity: 1;
-    visibility: visible;
-}
-</style>
+import streamlit.components.v1 as components
 
-<a id="back-to-top">⬆ Back to Top</a>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const btn = document.getElementById('back-to-top');
-
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-            btn.classList.add('show');
-        } else {
-            btn.classList.remove('show');
+components.html(
+    """
+    <style>
+        #backToTop {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            padding: 12px 20px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
+            z-index: 99999;
         }
-    });
+        #backToTop.show {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
 
-    btn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-});
-</script>
-""", unsafe_allow_html=True)
+    <button id="backToTop">⬆ Back to Top</button>
 
+    <script>
+        const btn = document.getElementById("backToTop");
+
+        window.addEventListener("scroll", function() {
+            if (window.pageYOffset > 300) {
+                btn.classList.add("show");
+            } else {
+                btn.classList.remove("show");
+            }
+        });
+
+        btn.addEventListener("click", function() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+    """,
+    height=200,   # iframe height
+    scrolling=False
+)
 
 
 

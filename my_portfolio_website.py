@@ -10,8 +10,6 @@ genai.configure(api_key=api_key)
 # model = genai.GenerativeModel('gemini-1.5-flash')
 model = genai.GenerativeModel("gemini-2.5-flash")
 
-st.markdown("<a id='top'></a>", unsafe_allow_html=True)
-
 with st.container():
     selected = option_menu(
         menu_title=None,
@@ -232,51 +230,6 @@ if selected == 'About':
             #################################################################################################
         with col14:
             st_lottie(lottie_socials, height=300)
-
-# Inject JavaScript for back-to-top button
-st.markdown("""
-    <style>
-        #back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            padding: 12px 18px;
-            background-color: #4A90E2;
-            color: white;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: opacity 0.3s ease-in-out;
-            opacity: 0;
-            visibility: hidden;
-            z-index: 9999;
-        }
-        #back-to-top.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-    </style>
-
-    <div id="back-to-top">⬆ Back to Top</div>
-
-    <script>
-        const backToTopButton = document.getElementById('back-to-top');
-
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.add('visible');
-            } else {
-                backToTopButton.classList.remove('visible');
-            }
-        });
-
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    </script>
-""", unsafe_allow_html=True)
-
-
-
 
 
 if selected == 'AI Assistant':
@@ -938,6 +891,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

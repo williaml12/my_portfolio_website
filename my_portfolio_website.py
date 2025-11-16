@@ -10,8 +10,6 @@ genai.configure(api_key=api_key)
 # model = genai.GenerativeModel('gemini-1.5-flash')
 model = genai.GenerativeModel("gemini-2.5-flash")
 
-st.markdown("<a id='top'></a>", unsafe_allow_html=True)
-
 with st.container():
     selected = option_menu(
         menu_title=None,
@@ -19,6 +17,9 @@ with st.container():
         icons=['person-bounding-box', 'info-square-fill', 'grid-fill', 'chat-text-fill'],
         orientation='horizontal'
     )
+
+st.markdown("<a id='top'></a>", unsafe_allow_html=True)
+
 
 if selected == 'About':
     with st.container():
@@ -919,6 +920,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 
 
 

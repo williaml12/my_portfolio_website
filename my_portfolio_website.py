@@ -19,6 +19,8 @@ with st.container():
     )
 
 if selected == 'About':
+    st.markdown("<a id='top'></a>", unsafe_allow_html=True)
+
     with st.container():
         col1, col2 = st.columns(2)
 
@@ -230,6 +232,32 @@ if selected == 'About':
             #################################################################################################
         with col14:
             st_lottie(lottie_socials, height=300)
+
+    st.markdown(
+    """
+    <style>
+    .back-to-top {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 18px;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+        z-index: 9999;
+    }
+    .back-to-top:hover {
+        background-color: #45a049;
+    }
+    </style>
+
+    <a href="#top" class="back-to-top">⬆ Back to Top</a>
+    """,
+    unsafe_allow_html=True
+)
 
 
 if selected == 'AI Assistant':
@@ -891,6 +919,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

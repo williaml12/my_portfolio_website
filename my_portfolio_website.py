@@ -234,11 +234,6 @@ if selected == 'About':
 if selected == 'AI Assistant':
     with st.container():
 
-        # Initialize session state BEFORE anything else
-        if "conversation" not in st.session_state:
-            st.session_state.conversation = []
-
-
         persona = """
                 You are William's AI bot. You help people answer questions about your self (i.e William)
                 Answer as if you are responding . Dont answer in second or third person.
@@ -368,13 +363,6 @@ if selected == 'AI Assistant':
 
             # ✅ Show restart button ONLY if there is at least one message
             # if "conversation" in st.session_state and len(st.session_state.conversation) > 0:
-            # # if len(st.session_state.conversation) > 0:
-            #     st.button(
-            #         "Restart",
-            #         icon=":material/refresh:",
-            #         on_click=clear_conversation,
-            #     )
-
             if len(st.session_state.conversation) > 0:
                 st.button(
                     "Restart",
@@ -897,6 +885,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

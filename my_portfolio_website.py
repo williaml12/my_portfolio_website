@@ -887,6 +887,14 @@ if selected == "Contact":
             st_lottie(lottie_contact, height=300)
 
 
+# Footer
+st.markdown("""
+<div class="footer">
+    ©️ 2024 William Lu. All rights reserved.
+</div>
+""", unsafe_allow_html=True)
+
+
 # --- Back to Top Button ---
 st.markdown(
     """
@@ -913,16 +921,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
-
-# Footer
-st.markdown("""
-<div class="footer">
-    ©️ 2024 William Lu. All rights reserved.
-</div>
-""", unsafe_allow_html=True)
-
-
 
 
 

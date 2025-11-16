@@ -894,52 +894,54 @@ st.markdown("""
 
 import streamlit.components.v1 as components
 
-components.html(
-    """
-    <style>
-        #backToTop {
-            position: fixed;
-            bottom: 40px;
-            right: 40px;
-            padding: 12px 20px;
-            font-size: 18px;
-            background-color: #4CAF50;
-            color: white;
-            border-radius: 10px;
-            cursor: pointer;
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease;
-            z-index: 99999;
-        }
-        #backToTop.show {
-            opacity: 1;
-            visibility: visible;
-        }
-    </style>
+components.html("""
+<script>
+// Inject button into PARENT document (Streamlit outer page)
+const root = window.parent.document;
 
-    <button id="backToTop">⬆ Back to Top</button>
+let btn = root.getElementById("global-back-to-top");
 
-    <script>
-        const btn = document.getElementById("backToTop");
+if (!btn) {
+    btn = root.createElement("button");
+    btn.id = "global-back-to-top";
+    btn.innerHTML = "⬆ Back to Top";
 
-        window.addEventListener("scroll", function() {
-            if (window.pageYOffset > 300) {
-                btn.classList.add("show");
-            } else {
-                btn.classList.remove("show");
-            }
-        });
+    btn.style.position = "fixed";
+    btn.style.bottom = "40px";
+    btn.style.right = "40px";
+    btn.style.padding = "12px 20px";
+    btn.style.fontSize = "18px";
+    btn.style.background = "#4CAF50";
+    btn.style.color = "white";
+    btn.style.borderRadius = "10px";
+    btn.style.boxShadow = "0px 4px 10px rgba(0,0,0,0.3)";
+    btn.style.cursor = "pointer";
+    btn.style.opacity = "0";
+    btn.style.transition = "opacity 0.3s ease";
+    btn.style.zIndex = "999999";
+    btn.style.visibility = "hidden";
 
-        btn.addEventListener("click", function() {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        });
-    </script>
-    """,
-    height=200,   # iframe height
-    scrolling=False
-)
+    root.body.appendChild(btn);
+}
+
+// Scroll listener on parent window
+window.parent.addEventListener("scroll", () => {
+    if (window.parent.pageYOffset > 300) {
+        btn.style.opacity = "1";
+        btn.style.visibility = "visible";
+    } else {
+        btn.style.opacity = "0";
+        btn.style.visibility = "hidden";
+    }
+});
+
+// Click handler
+btn.addEventListener("click", () => {
+    window.parent.scrollTo({ top: 0, behavior: "smooth" });
+});
+</script>
+""", height=0, scrolling=False)
+
 
 
 

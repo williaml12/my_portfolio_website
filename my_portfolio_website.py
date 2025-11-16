@@ -896,9 +896,10 @@ import streamlit.components.v1 as components
 
 components.html("""
 <script>
-// Inject button into PARENT document (Streamlit outer page)
+// Inject button into PARENT Streamlit page (outside iframe)
 const root = window.parent.document;
 
+// If button doesn't already exist, create it
 let btn = root.getElementById("global-back-to-top");
 
 if (!btn) {
@@ -913,18 +914,19 @@ if (!btn) {
     btn.style.fontSize = "18px";
     btn.style.background = "#4CAF50";
     btn.style.color = "white";
+    btn.style.border = "none";
     btn.style.borderRadius = "10px";
-    btn.style.boxShadow = "0px 4px 10px rgba(0,0,0,0.3)";
     btn.style.cursor = "pointer";
-    btn.style.opacity = "0";
-    btn.style.transition = "opacity 0.3s ease";
+    btn.style.boxShadow = "0px 4px 10px rgba(0,0,0,0.3)";
     btn.style.zIndex = "999999";
+    btn.style.opacity = "0";
     btn.style.visibility = "hidden";
+    btn.style.transition = "opacity 0.3s ease";
 
     root.body.appendChild(btn);
 }
 
-// Scroll listener on parent window
+// Scroll listener
 window.parent.addEventListener("scroll", () => {
     if (window.parent.pageYOffset > 300) {
         btn.style.opacity = "1";
@@ -935,16 +937,12 @@ window.parent.addEventListener("scroll", () => {
     }
 });
 
-// Click handler
+// Scroll to top on click
 btn.addEventListener("click", () => {
     window.parent.scrollTo({ top: 0, behavior: "smooth" });
 });
 </script>
 """, height=0, scrolling=False)
-
-
-
-
 
 
 

@@ -10,6 +10,8 @@ genai.configure(api_key=api_key)
 # model = genai.GenerativeModel('gemini-1.5-flash')
 model = genai.GenerativeModel("gemini-2.5-flash")
 
+st.markdown("<a id='top'></a>", unsafe_allow_html=True)
+
 with st.container():
     selected = option_menu(
         menu_title=None,
@@ -892,57 +894,31 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-import streamlit.components.v1 as components
-
-components.html("""
-<script>
-// Inject button into PARENT Streamlit page (outside iframe)
-const root = window.parent.document;
-
-// If button doesn't already exist, create it
-let btn = root.getElementById("global-back-to-top");
-
-if (!btn) {
-    btn = root.createElement("button");
-    btn.id = "global-back-to-top";
-    btn.innerHTML = "⬆ Back to Top";
-
-    btn.style.position = "fixed";
-    btn.style.bottom = "40px";
-    btn.style.right = "40px";
-    btn.style.padding = "12px 20px";
-    btn.style.fontSize = "18px";
-    btn.style.background = "#4CAF50";
-    btn.style.color = "white";
-    btn.style.border = "none";
-    btn.style.borderRadius = "10px";
-    btn.style.cursor = "pointer";
-    btn.style.boxShadow = "0px 4px 10px rgba(0,0,0,0.3)";
-    btn.style.zIndex = "999999";
-    btn.style.opacity = "0";
-    btn.style.visibility = "hidden";
-    btn.style.transition = "opacity 0.3s ease";
-
-    root.body.appendChild(btn);
-}
-
-// Scroll listener
-window.parent.addEventListener("scroll", () => {
-    if (window.parent.pageYOffset > 300) {
-        btn.style.opacity = "1";
-        btn.style.visibility = "visible";
-    } else {
-        btn.style.opacity = "0";
-        btn.style.visibility = "hidden";
+st.markdown(
+    """
+    <style>
+    .back-to-top {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 18px;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+        z-index: 9999;
     }
-});
+    .back-to-top:hover {
+        background-color: #45a049;
+    }
+    </style>
 
-// Scroll to top on click
-btn.addEventListener("click", () => {
-    window.parent.scrollTo({ top: 0, behavior: "smooth" });
-});
-</script>
-""", height=0, scrolling=False)
+    <a href="#top" class="back-to-top">⬆ Back to Top</a>
+    """,
+    unsafe_allow_html=True
+)
 
 
 

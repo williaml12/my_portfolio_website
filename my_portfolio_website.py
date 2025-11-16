@@ -10,9 +10,6 @@ genai.configure(api_key=api_key)
 # model = genai.GenerativeModel('gemini-1.5-flash')
 model = genai.GenerativeModel("gemini-2.5-flash")
 
-# Anchor for Back to Top button
-st.markdown("<a name='top'></a>", unsafe_allow_html=True)
-
 with st.container():
     selected = option_menu(
         menu_title=None,
@@ -940,6 +937,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 """, unsafe_allow_html=True)
+
 
 
 

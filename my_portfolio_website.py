@@ -235,8 +235,10 @@ if selected == 'AI Assistant':
     with st.container():
 
         # Initialize session state for conversation history if not already done
-        if 'conversation' not in st.session_state:
+        # Initialize session state BEFORE anything else
+        if "conversation" not in st.session_state:
             st.session_state.conversation = []
+
 
         def clear_conversation():
                 st.session_state.conversation = []
@@ -894,6 +896,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

@@ -362,7 +362,7 @@ if selected == 'AI Assistant':
             #     # st.markdown('</div>', unsafe_allow_html=True)
 
             # ✅ Show restart button ONLY if there is at least one message
-            if "conversation" in st.session_state and len(st.session_state.conversation) = 1:
+            if "conversation" in st.session_state and len(st.session_state.conversation) == 1:
             # if len(st.session_state.conversation) > 0:
                 st.button(
                     "Restart",
@@ -885,6 +885,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

@@ -445,6 +445,11 @@ if selected == 'AI Assistant':
                     response = model.generate_content(prompt)
                     # Append user question and AI response to conversation history
                     st.session_state.conversation.append({"user": user_question, "AI bot": response.text})
+
+                    # ⭐ Force UI refresh so Restart button appears right after first message
+                    if len(st.session_state.conversation) == 1:
+                        st.rerun()
+
                     # Update the placeholder with the new conversation
                     placeholder.empty()  # Clear the previous content
                     with placeholder.container():
@@ -884,6 +889,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

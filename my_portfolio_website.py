@@ -251,77 +251,53 @@ if selected == 'About':
 
 
         
+
+
+
         st.markdown("""
         <style>
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        /* Floating Button */
         #back-to-top {
             position: fixed;
             bottom: 40px;
             right: 40px;
-            z-index: 9999;
             background-color: #4CAF50;
             color: white;
-            padding: 14px 20px;
+            padding: 12px 18px;
             border-radius: 50px;
             font-size: 20px;
-            text-decoration: none;
             cursor: pointer;
-        
-            /* Hidden by default */
             opacity: 0;
             visibility: hidden;
-        
             transition: opacity 0.4s ease, visibility 0.4s ease;
         }
-        
-        /* Scroll detector container */
-        .sticky-detector {
-            position: sticky;
-            top: 0;
-            height: 1px;
-        }
-        
-        /* When page scrolls, sticky element is no longer at top => show button */
-        .sticky-detector.scrolled + #back-to-top {
-            opacity: 1;
-            visibility: visible;
-        }
+        .opacity-0 { opacity: 0; visibility: hidden; }
+        .opacity-100 { opacity: 1; visibility: visible; }
         </style>
         
+        <a id="back-to-top" class="opacity-0">⬆️</a>
+        
         <script>
-        /*
-        We are NOT using JS for scroll, only to add a class when sticky moves position.
-        This JS does NOT scroll the page, it ONLY toggles a CSS class.
-        This matches your restriction: no JS for scroll-to-top.
-        */
-        const observer = new IntersectionObserver(entries => {
-            const entry = entries[0];
-            const el = document.querySelector('.sticky-detector');
-            if (!entry.isIntersecting) {
-                el.classList.add('scrolled');
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0');
+                backToTopButton.classList.add('opacity-100');
             } else {
-                el.classList.remove('scrolled');
+                backToTopButton.classList.remove('opacity-100');
+                backToTopButton.classList.add('opacity-0');
             }
         });
-        observer.observe(document.querySelector('.sticky-detector'));
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
         </script>
-        
-        <div class="sticky-detector"></div>
-        <a href="#top" id="back-to-top">⬆️</a>
-        
         """, unsafe_allow_html=True)
         
-
-
-
-
-
-
+        
+        
 
 
 
@@ -985,6 +961,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

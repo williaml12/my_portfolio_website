@@ -234,20 +234,77 @@ if selected == 'About':
             st_lottie(lottie_socials, height=300)
 
         # Back to Top button
+    #     st.markdown("""
+    #     <style>
+    #         .stButton > button {
+    #             background-color: #4CAF50;
+    #             color: white;
+    #             padding: 10px 20px;
+    #             border-radius: 10px;
+    #             font-size: 18px;
+    #         }
+    #     </style>
+    # """, unsafe_allow_html=True)
+
+    #     if st.button("⬆️ Back to Top"):
+    #         st.markdown("<meta http-equiv='refresh' content='0; url=#top'>", unsafe_allow_html=True)
+
+
         st.markdown("""
         <style>
-            .stButton > button {
-                background-color: #4CAF50;
-                color: white;
-                padding: 10px 20px;
-                border-radius: 10px;
-                font-size: 18px;
-            }
+        /* Floating button */
+        #back-to-top {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 18px;
+            border-radius: 50px;
+            font-size: 18px;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+        
+            /* Initial state (hidden like JS version) */
+            opacity: 0;
+            visibility: hidden;
+        
+            /* Smooth fade in/out */
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        
+        /* When user scrolls, Streamlit sets this class automatically */
+        .block-container {
+            scroll-behavior: smooth;
+        }
+        
+        /* Show button after scrolling down ~300px using CSS only */
+        body::-webkit-scrollbar-track-piece:start {
+            background: transparent;
+        }
+        
+        /* Use scroll position pseudo-selector (CSS-only trick) */
+        html:root:not(:has(body:empty)) #back-to-top {
+            opacity: 1;
+            visibility: visible;
+        }
         </style>
-    """, unsafe_allow_html=True)
+        
+        <!-- Button with anchor link -->
+        <a href="#top" id="back-to-top">⬆️</a>
+        
+        """, unsafe_allow_html=True)
+        
 
-        if st.button("⬆️ Back to Top"):
-            st.markdown("<meta http-equiv='refresh' content='0; url=#top'>", unsafe_allow_html=True)
+
+
+
+
+
+
+
+
 
 
 
@@ -912,6 +969,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

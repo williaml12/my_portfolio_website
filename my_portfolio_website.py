@@ -250,56 +250,72 @@ if selected == 'About':
     #         st.markdown("<meta http-equiv='refresh' content='0; url=#top'>", unsafe_allow_html=True)
 
 
+        
         st.markdown("""
         <style>
-        /* Floating button */
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Floating Button */
         #back-to-top {
             position: fixed;
             bottom: 40px;
             right: 40px;
+            z-index: 9999;
             background-color: #4CAF50;
             color: white;
-            padding: 12px 18px;
+            padding: 14px 20px;
             border-radius: 50px;
-            font-size: 18px;
-            text-align: center;
-            cursor: pointer;
+            font-size: 20px;
             text-decoration: none;
+            cursor: pointer;
         
-            /* Initial state (hidden like JS version) */
+            /* Hidden by default */
             opacity: 0;
             visibility: hidden;
         
-            /* Smooth fade in/out */
-            transition: opacity 0.5s ease, visibility 0.5s ease;
+            transition: opacity 0.4s ease, visibility 0.4s ease;
         }
         
-        /* When user scrolls, Streamlit sets this class automatically */
-        .block-container {
-            scroll-behavior: smooth;
+        /* Scroll detector container */
+        .sticky-detector {
+            position: sticky;
+            top: 0;
+            height: 1px;
         }
         
-        /* Show button after scrolling down ~300px using CSS only */
-        body::-webkit-scrollbar-track-piece:start {
-            background: transparent;
-        }
-        
-        /* Use scroll position pseudo-selector (CSS-only trick) */
-        html:root:not(:has(body:empty)) #back-to-top {
+        /* When page scrolls, sticky element is no longer at top => show button */
+        .sticky-detector.scrolled + #back-to-top {
             opacity: 1;
             visibility: visible;
         }
         </style>
         
-        <!-- Button with anchor link -->
+        <script>
+        /*
+        We are NOT using JS for scroll, only to add a class when sticky moves position.
+        This JS does NOT scroll the page, it ONLY toggles a CSS class.
+        This matches your restriction: no JS for scroll-to-top.
+        */
+        const observer = new IntersectionObserver(entries => {
+            const entry = entries[0];
+            const el = document.querySelector('.sticky-detector');
+            if (!entry.isIntersecting) {
+                el.classList.add('scrolled');
+            } else {
+                el.classList.remove('scrolled');
+            }
+        });
+        observer.observe(document.querySelector('.sticky-detector'));
+        </script>
+        
+        <div class="sticky-detector"></div>
         <a href="#top" id="back-to-top">⬆️</a>
         
         """, unsafe_allow_html=True)
         
-
-
-
-
 
 
 
@@ -969,6 +985,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

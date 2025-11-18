@@ -323,7 +323,64 @@ if selected == 'About':
         </script>
         """, unsafe_allow_html=True)
 
+
+
+
+
+
+
+
+
+
+
+
+        # --- Floating back-to-top button ---
+        st.markdown("""
+        <style>
+        #back-to-top {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            padding: 12px 16px;
+            background-color: #4A90E2;
+            color: white;
+            font-weight: 600;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: opacity .3s ease, visibility .3s ease;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 9999;
+        }
         
+        /* When visible (same as JS adding class opacity-100 visible) */
+        .show {
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        </style>
+        
+        <div id="back-to-top">⬆ Back to top</div>
+        """, unsafe_allow_html=True)
+        
+        # --- Simulated scroll-based visibility ---
+        if "button_visible" not in st.session_state:
+            st.session_state.button_visible = False
+        
+        # Anytime user interacts, treat it like scrolling -> show button
+        st.session_state.button_visible = True
+        
+        # Apply CSS class dynamically
+        if st.session_state.button_visible:
+            st.markdown("""
+            <script>
+            const btn = window.parent.document.getElementById("back-to-top");
+            btn.classList.add("show");
+            btn.onclick = () => {
+                window.parent.location.hash = "#top";
+            };
+            </script>
+            """, unsafe_allow_html=True)
 
 
 
@@ -986,6 +1043,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

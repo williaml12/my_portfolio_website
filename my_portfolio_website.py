@@ -372,7 +372,7 @@ if selected == 'About':
             </script>
             """,
             unsafe_allow_html=True
-
+        )
 
 
 
@@ -1093,6 +1093,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

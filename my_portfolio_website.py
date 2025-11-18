@@ -297,9 +297,7 @@ if selected == 'About':
         """, unsafe_allow_html=True)
         
         
-        
-
-       st.markdown("""
+        st.markdown("""
         <style>
         /* Initial button styles */
         #back-to-top {
@@ -1017,6 +1015,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

@@ -253,75 +253,75 @@ if selected == 'About':
        
     
 
-        st.markdown("""
-        <style>
-        /* Floating Back-to-Top Button */
-        #back-to-top {
-            position: fixed;
-            bottom: 40px;
-            right: 40px;
-            width: 55px;
-            height: 55px;
-            background: linear-gradient(135deg, #4CAF50, #45a049);
-            color: white;
-            border-radius: 50%;
-            font-size: 26px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        # st.markdown("""
+        # <style>
+        # /* Floating Back-to-Top Button */
+        # #back-to-top {
+        #     position: fixed;
+        #     bottom: 40px;
+        #     right: 40px;
+        #     width: 55px;
+        #     height: 55px;
+        #     background: linear-gradient(135deg, #4CAF50, #45a049);
+        #     color: white;
+        #     border-radius: 50%;
+        #     font-size: 26px;
+        #     display: flex;
+        #     align-items: center;
+        #     justify-content: center;
         
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-            cursor: pointer;
-            opacity: 0;
-            visibility: hidden;
+        #     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        #     cursor: pointer;
+        #     opacity: 0;
+        #     visibility: hidden;
         
-            transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.25s ease;
-            z-index: 9999;
-        }
+        #     transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.25s ease;
+        #     z-index: 9999;
+        # }
         
-        /* Hover effect */
-        #back-to-top:hover {
-            transform: scale(1.12);
-            box-shadow: 0 10px 25px rgba(76, 175, 80, 0.55);
-        }
+        # /* Hover effect */
+        # #back-to-top:hover {
+        #     transform: scale(1.12);
+        #     box-shadow: 0 10px 25px rgba(76, 175, 80, 0.55);
+        # }
         
-        /* Fade visibility classes */
-        .opacity-0 { opacity: 0; visibility: hidden; }
-        .opacity-100 { opacity: 1; visibility: visible; }
+        # /* Fade visibility classes */
+        # .opacity-0 { opacity: 0; visibility: hidden; }
+        # .opacity-100 { opacity: 1; visibility: visible; }
         
-        /* A subtle pulsing animation when visible */
-        .opacity-100 {
-            animation: pulse 1.8s infinite ease-in-out;
-        }
+        # /* A subtle pulsing animation when visible */
+        # .opacity-100 {
+        #     animation: pulse 1.8s infinite ease-in-out;
+        # }
         
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.08); }
-            100% { transform: scale(1); }
-        }
-        </style>
+        # @keyframes pulse {
+        #     0% { transform: scale(1); }
+        #     50% { transform: scale(1.08); }
+        #     100% { transform: scale(1); }
+        # }
+        # </style>
         
-        <a id="back-to-top" class="opacity-0">⬆️</a>
+        # <a id="back-to-top" class="opacity-0">⬆️</a>
         
-        <script>
-        // Back to top button
-        const backToTopButton = document.getElementById('back-to-top');
+        # <script>
+        # // Back to top button
+        # const backToTopButton = document.getElementById('back-to-top');
         
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.remove('opacity-0');
-                backToTopButton.classList.add('opacity-100');
-            } else {
-                backToTopButton.classList.remove('opacity-100');
-                backToTopButton.classList.add('opacity-0');
-            }
-        });
+        # window.addEventListener('scroll', () => {
+        #     if (window.pageYOffset > 300) {
+        #         backToTopButton.classList.remove('opacity-0');
+        #         backToTopButton.classList.add('opacity-100');
+        #     } else {
+        #         backToTopButton.classList.remove('opacity-100');
+        #         backToTopButton.classList.add('opacity-0');
+        #     }
+        # });
         
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-        </script>
-        """, unsafe_allow_html=True)
+        # backToTopButton.addEventListener('click', () => {
+        #     window.scrollTo({ top: 0, behavior: 'smooth' });
+        # });
+        # </script>
+        # """, unsafe_allow_html=True)
 
 
 
@@ -334,53 +334,56 @@ if selected == 'About':
 
 
 
-        # --- Floating back-to-top button ---
-        st.markdown("""
-        <style>
-        #back-to-top {
-            position: fixed;
-            bottom: 40px;
-            right: 40px;
-            padding: 12px 16px;
-            background-color: #4A90E2;
-            color: white;
-            font-weight: 600;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: opacity .3s ease, visibility .3s ease;
-            opacity: 0;
-            visibility: hidden;
-            z-index: 9999;
-        }
+        # CSS + Back to Top button
+        st.markdown(
+            """
+            <style>
+                .back-to-top {
+                    position: fixed;
+                    bottom: 30px;
+                    right: 30px;
+                    background: #333;
+                    color: white;
+                    padding: 10px 18px;
+                    border-radius: 999px;
+                    font-size: 18px;
+                    text-decoration: none;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: opacity 0.3s ease;
+                }
+                .show-btn {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            </style>
         
-        /* When visible (same as JS adding class opacity-100 visible) */
-        .show {
-            opacity: 1 !important;
-            visibility: visible !important;
-        }
-        </style>
-        
-        <div id="back-to-top">⬆ Back to top</div>
-        """, unsafe_allow_html=True)
-        
-        # --- Simulated scroll-based visibility ---
-        if "button_visible" not in st.session_state:
-            st.session_state.button_visible = False
-        
-        # Anytime user interacts, treat it like scrolling -> show button
-        st.session_state.button_visible = True
-        
-        # Apply CSS class dynamically
-        if st.session_state.button_visible:
-            st.markdown("""
             <script>
-            const btn = window.parent.document.getElementById("back-to-top");
-            btn.classList.add("show");
-            btn.onclick = () => {
-                window.parent.location.hash = "#top";
-            };
+                // Show/hide button on scroll
+                const handleScroll = () => {
+                    const btn = document.getElementById("backToTopBtn");
+                    if (window.pageYOffset > 300) {
+                        btn.classList.add("show-btn");
+                    } else {
+                        btn.classList.remove("show-btn");
+                    }
+                };
+        
+                window.addEventListener("scroll", handleScroll);
+        
+                // Smooth scroll to top
+                function scrollToTop() {
+                    window.scrollTo({top: 0, behavior: 'smooth'});
+                }
             </script>
-            """, unsafe_allow_html=True)
+        
+            <!-- Back to Top Button -->
+            <a id="backToTopBtn" class="back-to-top" href="javascript:scrollToTop()">
+                ↑ Top
+            </a>
+            """,
+            unsafe_allow_html=True
+        )
 
 
 
@@ -1043,6 +1046,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

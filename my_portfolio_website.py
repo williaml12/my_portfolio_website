@@ -252,43 +252,56 @@ if selected == 'About':
 
         st.markdown("""
         <style>
-        /* Back to Top button styles */
+        /* Floating Back-to-Top Button */
         #back-to-top {
             position: fixed;
             bottom: 40px;
-        
-            /* Move to far right of the screen */
-            right: 20px; /* Change to 10px if you want closer to the edge */
-        
-            background-color: #4CAF50;
+            right: 40px;
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, #4CAF50, #45a049);
             color: white;
-            padding: 14px 20px;
             border-radius: 50%;
-            font-size: 22px;
+            font-size: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
             cursor: pointer;
-            text-align: center;
-            z-index: 99999;
-        
-            transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.25s ease;
-        }
-        
-        /* Hidden state */
-        .opacity-0 {
             opacity: 0;
             visibility: hidden;
+        
+            transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.25s ease;
+            z-index: 9999;
         }
         
-        /* Visible state */
+        /* Hover effect */
+        #back-to-top:hover {
+            transform: scale(1.12);
+            box-shadow: 0 10px 25px rgba(76, 175, 80, 0.55);
+        }
+        
+        /* Fade visibility classes */
+        .opacity-0 { opacity: 0; visibility: hidden; }
+        .opacity-100 { opacity: 1; visibility: visible; }
+        
+        /* A subtle pulsing animation when visible */
         .opacity-100 {
-            opacity: 1;
-            visibility: visible;
+            animation: pulse 1.8s infinite ease-in-out;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+            100% { transform: scale(1); }
         }
         </style>
         
-        <!-- Back to Top Button -->
         <a id="back-to-top" class="opacity-0">⬆️</a>
         
         <script>
+        // Back to top button
         const backToTopButton = document.getElementById('back-to-top');
         
         window.addEventListener('scroll', () => {
@@ -1044,6 +1057,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

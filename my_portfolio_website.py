@@ -234,20 +234,20 @@ if selected == 'About':
             st_lottie(lottie_socials, height=300)
 
         # Back to Top button
-    #     st.markdown("""
-    #     <style>
-    #         .stButton > button {
-    #             background-color: #4CAF50;
-    #             color: white;
-    #             padding: 10px 20px;
-    #             border-radius: 10px;
-    #             font-size: 18px;
-    #         }
-    #     </style>
-    # """, unsafe_allow_html=True)
+        st.markdown("""
+        <style>
+            .stButton > button {
+                background-color: #4CAF50;
+                color: white;
+                padding: 10px 20px;
+                border-radius: 10px;
+                font-size: 18px;
+            }
+        </style>
+    """, unsafe_allow_html=True)
 
-    #     if st.button("⬆️ Back to Top"):
-    #         st.markdown("<meta http-equiv='refresh' content='0; url=#top'>", unsafe_allow_html=True)
+        if st.button("⬆️ Back to Top"):
+            st.markdown("<meta http-equiv='refresh' content='0; url=#top'>", unsafe_allow_html=True)
 
 
         st.markdown("""
@@ -1043,6 +1043,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

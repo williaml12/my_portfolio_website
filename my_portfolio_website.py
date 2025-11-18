@@ -234,29 +234,32 @@ if selected == 'About':
             st_lottie(lottie_socials, height=300)
 
         # Back to Top button
-        st.markdown("""
-        <style>
-            .stButton > button {
-                background-color: #4CAF50;
-                color: white;
-                padding: 10px 20px;
-                border-radius: 10px;
-                font-size: 18px;
-            }
-        </style>
-    """, unsafe_allow_html=True)
+    #     st.markdown("""
+    #     <style>
+    #         .stButton > button {
+    #             background-color: #4CAF50;
+    #             color: white;
+    #             padding: 10px 20px;
+    #             border-radius: 10px;
+    #             font-size: 18px;
+    #         }
+    #     </style>
+    # """, unsafe_allow_html=True)
 
-        if st.button("⬆️ Back to Top"):
-            st.markdown("<meta http-equiv='refresh' content='0; url=#top'>", unsafe_allow_html=True)
+    #     if st.button("⬆️ Back to Top"):
+    #         st.markdown("<meta http-equiv='refresh' content='0; url=#top'>", unsafe_allow_html=True)
 
 
        st.markdown("""
         <style>
-        /* Initial button styles */
+        /* Back to Top button styles */
         #back-to-top {
             position: fixed;
             bottom: 40px;
-            right: 40px;
+        
+            /* Move to far right of the screen */
+            right: 20px; /* Change to 10px if you want closer to the edge */
+        
             background-color: #4CAF50;
             color: white;
             padding: 14px 20px;
@@ -264,17 +267,18 @@ if selected == 'About':
             font-size: 22px;
             cursor: pointer;
             text-align: center;
-            transition: opacity 0.4s ease, visibility 0.4s ease;
-            z-index: 9999;
+            z-index: 99999;
+        
+            transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.25s ease;
         }
         
-        /* Hidden states */
+        /* Hidden state */
         .opacity-0 {
             opacity: 0;
             visibility: hidden;
         }
         
-        /* Visible states */
+        /* Visible state */
         .opacity-100 {
             opacity: 1;
             visibility: visible;
@@ -285,26 +289,24 @@ if selected == 'About':
         <a id="back-to-top" class="opacity-0">⬆️</a>
         
         <script>
-        // Back to top button
         const backToTopButton = document.getElementById('back-to-top');
         
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 300) {
-                backToTopButton.classList.remove('opacity-0', 'invisible');
-                backToTopButton.classList.add('opacity-100', 'visible');
+                backToTopButton.classList.remove('opacity-0');
+                backToTopButton.classList.add('opacity-100');
             } else {
-                backToTopButton.classList.remove('opacity-100', 'visible');
-                backToTopButton.classList.add('opacity-0', 'invisible');
+                backToTopButton.classList.remove('opacity-100');
+                backToTopButton.classList.add('opacity-0');
             }
         });
         
-        // Smooth scroll to top
         backToTopButton.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
         </script>
         """, unsafe_allow_html=True)
-
+        
 
 
 
@@ -1041,6 +1043,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

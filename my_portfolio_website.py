@@ -324,66 +324,113 @@ if selected == 'About':
         # """, unsafe_allow_html=True)
 
 
-
-
-
-
-
-
-
-
-
-
-        # CSS + Back to Top button
+        # Back to top button (JS + CSS)
         st.markdown(
             """
             <style>
-                .back-to-top {
+                #backToTopBtn {
                     position: fixed;
-                    bottom: 30px;
-                    right: 30px;
-                    background: #333;
+                    bottom: 25px;
+                    right: 25px;
+                    background-color: #4CAF50;
                     color: white;
-                    padding: 10px 18px;
-                    border-radius: 999px;
+                    padding: 12px 20px;
                     font-size: 18px;
-                    text-decoration: none;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    border: none;
                     opacity: 0;
                     visibility: hidden;
                     transition: opacity 0.3s ease;
+                    z-index: 9999;
                 }
-                .show-btn {
+                #backToTopBtn.show {
                     opacity: 1;
                     visibility: visible;
                 }
             </style>
         
+            <button id="backToTopBtn" onclick="scrollToTop()">
+                ⬆️ Back to Top
+            </button>
+        
             <script>
-                // Show/hide button on scroll
-                const handleScroll = () => {
+                // Show/hide on scroll (same logic as your JS)
+                window.addEventListener("scroll", function() {
                     const btn = document.getElementById("backToTopBtn");
                     if (window.pageYOffset > 300) {
-                        btn.classList.add("show-btn");
+                        btn.classList.add("show");
                     } else {
-                        btn.classList.remove("show-btn");
+                        btn.classList.remove("show");
                     }
-                };
+                });
         
-                window.addEventListener("scroll", handleScroll);
-        
-                // Smooth scroll to top
+                // Smooth scroll to top (same as your JS)
                 function scrollToTop() {
-                    window.scrollTo({top: 0, behavior: 'smooth'});
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
                 }
             </script>
-        
-            <!-- Back to Top Button -->
-            <a id="backToTopBtn" class="back-to-top" href="javascript:scrollToTop()">
-                ↑ Top
-            </a>
             """,
             unsafe_allow_html=True
-        )
+
+
+
+
+
+
+
+
+
+        # # CSS + Back to Top button
+        # st.markdown(
+        #     """
+        #     <style>
+        #         .back-to-top {
+        #             position: fixed;
+        #             bottom: 30px;
+        #             right: 30px;
+        #             background: #333;
+        #             color: white;
+        #             padding: 10px 18px;
+        #             border-radius: 999px;
+        #             font-size: 18px;
+        #             text-decoration: none;
+        #             opacity: 0;
+        #             visibility: hidden;
+        #             transition: opacity 0.3s ease;
+        #         }
+        #         .show-btn {
+        #             opacity: 1;
+        #             visibility: visible;
+        #         }
+        #     </style>
+        
+        #     <script>
+        #         // Show/hide button on scroll
+        #         const handleScroll = () => {
+        #             const btn = document.getElementById("backToTopBtn");
+        #             if (window.pageYOffset > 300) {
+        #                 btn.classList.add("show-btn");
+        #             } else {
+        #                 btn.classList.remove("show-btn");
+        #             }
+        #         };
+        
+        #         window.addEventListener("scroll", handleScroll);
+        
+        #         // Smooth scroll to top
+        #         function scrollToTop() {
+        #             window.scrollTo({top: 0, behavior: 'smooth'});
+        #         }
+        #     </script>
+        
+        #     <!-- Back to Top Button -->
+        #     <a id="backToTopBtn" class="back-to-top" href="javascript:scrollToTop()">
+        #         ↑ Top
+        #     </a>
+        #     """,
+        #     unsafe_allow_html=True
+        # )
 
 
 
@@ -1046,6 +1093,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

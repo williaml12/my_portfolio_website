@@ -299,51 +299,61 @@ if selected == 'About':
         
         
 
-        st.markdown("""
+       st.markdown("""
         <style>
-        /* Floating button */
+        /* Initial button styles */
         #back-to-top {
             position: fixed;
             bottom: 40px;
             right: 40px;
             background-color: #4CAF50;
             color: white;
-            padding: 12px 18px;
-            border-radius: 50px;
-            font-size: 18px;
-            text-align: center;
+            padding: 14px 20px;
+            border-radius: 50%;
+            font-size: 22px;
             cursor: pointer;
-            text-decoration: none;
+            text-align: center;
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+            z-index: 9999;
+        }
         
-            /* Initial state (hidden like JS version) */
+        /* Hidden states */
+        .opacity-0 {
             opacity: 0;
             visibility: hidden;
-        
-            /* Smooth fade in/out */
-            transition: opacity 0.5s ease, visibility 0.5s ease;
         }
         
-        /* When user scrolls, Streamlit sets this class automatically */
-        .block-container {
-            scroll-behavior: smooth;
-        }
-        
-        /* Show button after scrolling down ~300px using CSS only */
-        body::-webkit-scrollbar-track-piece:start {
-            background: transparent;
-        }
-        
-        /* Use scroll position pseudo-selector (CSS-only trick) */
-        html:root:not(:has(body:empty)) #back-to-top {
+        /* Visible states */
+        .opacity-100 {
             opacity: 1;
             visibility: visible;
         }
         </style>
         
-        <!-- Button with anchor link -->
-        <a href="#top" id="back-to-top">⬆️</a>
+        <!-- Back to Top Button -->
+        <a id="back-to-top" class="opacity-0">⬆️</a>
         
+        <script>
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        // Smooth scroll to top
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        </script>
         """, unsafe_allow_html=True)
+
 
 
 
@@ -1006,6 +1016,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

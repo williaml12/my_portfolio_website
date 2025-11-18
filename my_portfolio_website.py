@@ -254,47 +254,47 @@ if selected == 'About':
 
 
 
-        st.markdown("""
-        <style>
-        #back-to-top {
-            position: fixed;
-            bottom: 40px;
-            right: 40px;
-            background-color: #4CAF50;
-            color: white;
-            padding: 12px 18px;
-            border-radius: 50px;
-            font-size: 20px;
-            cursor: pointer;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.4s ease, visibility 0.4s ease;
-        }
-        .opacity-0 { opacity: 0; visibility: hidden; }
-        .opacity-100 { opacity: 1; visibility: visible; }
-        </style>
+        # st.markdown("""
+        # <style>
+        # #back-to-top {
+        #     position: fixed;
+        #     bottom: 40px;
+        #     right: 40px;
+        #     background-color: #4CAF50;
+        #     color: white;
+        #     padding: 12px 18px;
+        #     border-radius: 50px;
+        #     font-size: 20px;
+        #     cursor: pointer;
+        #     opacity: 0;
+        #     visibility: hidden;
+        #     transition: opacity 0.4s ease, visibility 0.4s ease;
+        # }
+        # .opacity-0 { opacity: 0; visibility: hidden; }
+        # .opacity-100 { opacity: 1; visibility: visible; }
+        # </style>
         
-        <a id="back-to-top" class="opacity-0">⬆️</a>
+        # <a id="back-to-top" class="opacity-0">⬆️</a>
         
-        <script>
-        // Back to top button
-        const backToTopButton = document.getElementById('back-to-top');
+        # <script>
+        # // Back to top button
+        # const backToTopButton = document.getElementById('back-to-top');
         
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.remove('opacity-0');
-                backToTopButton.classList.add('opacity-100');
-            } else {
-                backToTopButton.classList.remove('opacity-100');
-                backToTopButton.classList.add('opacity-0');
-            }
-        });
+        # window.addEventListener('scroll', () => {
+        #     if (window.pageYOffset > 300) {
+        #         backToTopButton.classList.remove('opacity-0');
+        #         backToTopButton.classList.add('opacity-100');
+        #     } else {
+        #         backToTopButton.classList.remove('opacity-100');
+        #         backToTopButton.classList.add('opacity-0');
+        #     }
+        # });
         
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-        </script>
-        """, unsafe_allow_html=True)
+        # backToTopButton.addEventListener('click', () => {
+        #     window.scrollTo({ top: 0, behavior: 'smooth' });
+        # });
+        # </script>
+        # """, unsafe_allow_html=True)
         
 
 
@@ -1031,6 +1031,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

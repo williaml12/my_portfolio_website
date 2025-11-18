@@ -370,6 +370,64 @@ if selected == 'About':
 
 
 
+        st.markdown("""
+        <style>
+        /* Back to Top button styles */
+        #back-to-top {
+            position: fixed;
+            bottom: 40px;
+        
+            /* Move to far right of the screen */
+            right: 20px; /* Change to 10px if you want closer to the edge */
+        
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            border-radius: 50%;
+            font-size: 22px;
+            cursor: pointer;
+            text-align: center;
+            z-index: 99999;
+        
+            transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.25s ease;
+        }
+        
+        /* Hidden state */
+        .opacity-0 {
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        /* Visible state */
+        .opacity-100 {
+            opacity: 1;
+            visibility: visible;
+        }
+        </style>
+        
+        <!-- Back to Top Button -->
+        <a id="back-to-top" class="opacity-0">⬆️</a>
+        
+        <script>
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0');
+                backToTopButton.classList.add('opacity-100');
+            } else {
+                backToTopButton.classList.remove('opacity-100');
+                backToTopButton.classList.add('opacity-0');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        </script>
+        """, unsafe_allow_html=True)
+
+
 
 
 if selected == 'AI Assistant':
@@ -1031,6 +1089,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

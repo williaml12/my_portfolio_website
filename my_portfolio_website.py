@@ -299,47 +299,52 @@ if selected == 'About':
         
         
 
-        # Inject JavaScript for back-to-top button
         st.markdown("""
-            <style>
-                #back-to-top {
-                    position: fixed;
-                    bottom: 20px;
-                    right: 20px;
-                    padding: 12px 18px;
-                    background-color: #4A90E2;
-                    color: white;
-                    border-radius: 8px;
-                    cursor: pointer;
-                    transition: opacity 0.3s ease-in-out;
-                    opacity: 0;
-                    visibility: hidden;
-                    z-index: 9999;
-                }
-                #back-to-top.visible {
-                    opacity: 1;
-                    visibility: visible;
-                }
-            </style>
+        <style>
+        /* Floating button */
+        #back-to-top {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 18px;
+            border-radius: 50px;
+            font-size: 18px;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
         
-            <div id="back-to-top">⬆ Back to Top</div>
+            /* Initial state (hidden like JS version) */
+            opacity: 0;
+            visibility: hidden;
         
-            <script>
-                const backToTopButton = document.getElementById('back-to-top');
+            /* Smooth fade in/out */
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
         
-                window.addEventListener('scroll', () => {
-                    if (window.pageYOffset > 300) {
-                        backToTopButton.classList.add('visible');
-                    } else {
-                        backToTopButton.classList.remove('visible');
-                    }
-                });
+        /* When user scrolls, Streamlit sets this class automatically */
+        .block-container {
+            scroll-behavior: smooth;
+        }
         
-                backToTopButton.addEventListener('click', () => {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                });
-            </script>
+        /* Show button after scrolling down ~300px using CSS only */
+        body::-webkit-scrollbar-track-piece:start {
+            background: transparent;
+        }
+        
+        /* Use scroll position pseudo-selector (CSS-only trick) */
+        html:root:not(:has(body:empty)) #back-to-top {
+            opacity: 1;
+            visibility: visible;
+        }
+        </style>
+        
+        <!-- Button with anchor link -->
+        <a href="#top" id="back-to-top">⬆️</a>
+        
         """, unsafe_allow_html=True)
+
 
 
 if selected == 'AI Assistant':
@@ -1001,6 +1006,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

@@ -357,6 +357,7 @@ if selected == 'About':
 
 
 
+
 if selected == 'AI Assistant':
     with st.container():
 
@@ -1016,6 +1017,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

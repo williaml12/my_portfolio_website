@@ -253,10 +253,8 @@ if selected == 'About':
 
 
 
-        # Back to Top button (Streamlit version of your JS)
         components.html("""
         <style>
-            /* Button styling (same idea as your JS version) */
             #back-to-top {
                 position: fixed;
                 bottom: 30px;
@@ -272,22 +270,19 @@ if selected == 'About':
                 justify-content: center;
                 cursor: pointer;
                 box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-                z-index: 9999;
+                z-index: 999999;
         
-                /* Hidden by default */
                 opacity: 0;
                 visibility: hidden;
                 transition: opacity 0.4s ease, visibility 0.4s ease;
             }
         
-            /* Tailwind-like class behavior */
             .opacity-0 { opacity: 0; visibility: hidden; }
             .opacity-100 { opacity: 1; visibility: visible; }
             .invisible { visibility: hidden; }
             .visible { visibility: visible; }
         </style>
         
-        <!-- Button -->
         <div id="back-to-top" class="opacity-0 invisible">
             ⬆️
         </div>
@@ -295,7 +290,6 @@ if selected == 'About':
         <script>
         const backToTopButton = document.getElementById('back-to-top');
         
-        // Scroll behavior (EXACTLY your JS logic)
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 300) {
                 backToTopButton.classList.remove('opacity-0', 'invisible');
@@ -306,14 +300,12 @@ if selected == 'About':
             }
         });
         
-        // Smooth scroll (same as your JS)
         backToTopButton.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
         </script>
-        """, height=0)
-
-       
+        """, height=200)   # <-- IMPORTANT! This makes the button appear.
+               
     
 
        
@@ -979,6 +971,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

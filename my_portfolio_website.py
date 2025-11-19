@@ -253,12 +253,14 @@ if selected == 'About':
 
 
 
+       
         components.html("""
         <style>
+            /* Same styles as your JS code version */
             #back-to-top {
                 position: fixed;
-                bottom: 30px;
-                right: 30px;
+                bottom: 40px;
+                right: 40px;
                 width: 55px;
                 height: 55px;
                 background: #4CAF50;
@@ -269,12 +271,12 @@ if selected == 'About':
                 align-items: center;
                 justify-content: center;
                 cursor: pointer;
-                box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-                z-index: 999999;
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
         
                 opacity: 0;
                 visibility: hidden;
                 transition: opacity 0.4s ease, visibility 0.4s ease;
+                z-index: 9999;
             }
         
             .opacity-0 { opacity: 0; visibility: hidden; }
@@ -283,13 +285,13 @@ if selected == 'About':
             .visible { visibility: visible; }
         </style>
         
-        <div id="back-to-top" class="opacity-0 invisible">
-            ⬆️
-        </div>
+        <!-- BUTTON -->
+        <div id="back-to-top" class="opacity-0 invisible">⬆️</div>
         
         <script>
         const backToTopButton = document.getElementById('back-to-top');
         
+        /* EXACT same JS logic you provided */
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 300) {
                 backToTopButton.classList.remove('opacity-0', 'invisible');
@@ -304,11 +306,10 @@ if selected == 'About':
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
         </script>
-        """, height=200)   # <-- IMPORTANT! This makes the button appear.
+        """, height=200)   # <-- required so button renders
+            
+        
                
-    
-
-       
 
 
 
@@ -971,6 +972,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

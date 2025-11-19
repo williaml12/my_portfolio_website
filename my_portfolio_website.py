@@ -279,6 +279,8 @@ if selected == 'About':
             unsafe_allow_html=True
         )
 
+        if st.button("⬆ Back to top"):
+            st.markdown("<meta http-equiv='refresh' content='0; #top'>", unsafe_allow_html=True)
       
 
 if selected == 'AI Assistant':
@@ -940,6 +942,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

@@ -250,37 +250,37 @@ if selected == 'About':
         if st.button("⬆️ Back to top"):
             st.markdown("<meta http-equiv='refresh' content='0; url=#top'>", unsafe_allow_html=True)
 
-        # --- BACK TO TOP BUTTON (NO JS) ---
-        st.markdown(
-            """
-            <style>
-            /* Floating fixed-position button */
-            .back-to-top {
-                position: fixed;
-                bottom: 40px;
-                right: 40px;
-                background-color: #4CAF50;
-                color: white;
-                padding: 12px 20px;
-                border-radius: 10px;
-                text-decoration: none;
-                font-size: 18px;
-                font-weight: bold;
-                box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
-                z-index: 9999;
-            }
-            .back-to-top:hover {
-                background-color: #45a049;
-            }
-            </style>
+        # # --- BACK TO TOP BUTTON (NO JS) ---
+        # st.markdown(
+        #     """
+        #     <style>
+        #     /* Floating fixed-position button */
+        #     .back-to-top {
+        #         position: fixed;
+        #         bottom: 40px;
+        #         right: 40px;
+        #         background-color: #4CAF50;
+        #         color: white;
+        #         padding: 12px 20px;
+        #         border-radius: 10px;
+        #         text-decoration: none;
+        #         font-size: 18px;
+        #         font-weight: bold;
+        #         box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+        #         z-index: 9999;
+        #     }
+        #     .back-to-top:hover {
+        #         background-color: #45a049;
+        #     }
+        #     </style>
         
-            <a href="#top" class="back-to-top">⬆</a>
-            """,
-            unsafe_allow_html=True
-        )
+        #     <a href="#top" class="back-to-top">⬆</a>
+        #     """,
+        #     unsafe_allow_html=True
+        # )
 
-        if st.button("⬆ Back to top"):
-            st.markdown("<meta http-equiv='refresh' content='0; #top'>", unsafe_allow_html=True)
+        # if st.button("⬆ Back to top"):
+        #     st.markdown("<meta http-equiv='refresh' content='0; #top'>", unsafe_allow_html=True)
 
 
         # --- Back to Top Button ---
@@ -960,6 +960,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

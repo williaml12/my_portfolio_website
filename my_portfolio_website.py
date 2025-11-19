@@ -234,20 +234,20 @@ if selected == 'About':
             st_lottie(lottie_socials, height=300)
 
         # Back to Top button
-    #     st.markdown("""
-    #     <style>
-    #         .stButton > button {
-    #             background-color: #4CAF50;
-    #             color: white;
-    #             padding: 10px 20px;
-    #             border-radius: 10px;
-    #             font-size: 18px;
-    #         }
-    #     </style>
-    # """, unsafe_allow_html=True)
+        st.markdown("""
+        <style>
+            .stButton > button {
+                background-color: #4CAF50;
+                color: white;
+                padding: 10px 20px;
+                border-radius: 10px;
+                font-size: 18px;
+            }
+        </style>
+    """, unsafe_allow_html=True)
 
-    #     if st.button("⬆️ Back to Top"):
-    #         st.markdown("<meta http-equiv='refresh' content='0; url=#top'>", unsafe_allow_html=True)
+        if st.button("⬆️ Back to Top"):
+            st.markdown("<meta http-equiv='refresh' content='0; url=#top'>", unsafe_allow_html=True)
 
 
        
@@ -377,63 +377,7 @@ if selected == 'About':
 
 
 
-        # === Back to Top button (final clean version) ===
-        st.markdown("""
-        <style>
-            #back-to-top {
-                position: fixed;
-                bottom: 35px;
-                right: 35px;
-                background-color: #4CAF50;
-                color: white;
-                padding: 12px 20px;
-                border-radius: 10px;
-                font-size: 18px;
-                cursor: pointer;
-                border: none;
-        
-                /* hidden by default */
-                opacity: 0;
-                visibility: hidden;
-                transition: opacity 0.3s ease;
-                z-index: 9999;
-            }
-        
-            /* visible (like your JS classes) */
-            .opacity-100 {
-                opacity: 1 !important;
-                visibility: visible !important;
-            }
-            .opacity-0 {
-                opacity: 0 !important;
-                visibility: hidden !important;
-            }
-        </style>
-        
-        <button id="back-to-top" class="opacity-0">⬆️ Back to Top</button>
-        
-        <script>
-            const backToTopButton = document.getElementById('back-to-top');
-        
-            // exact JS provided by you, 1:1 converted for Streamlit environment
-            window.addEventListener('scroll', () => {
-                if (window.pageYOffset > 300) {
-                    backToTopButton.classList.remove('opacity-0');
-                    backToTopButton.classList.add('opacity-100');
-                } else {
-                    backToTopButton.classList.remove('opacity-100');
-                    backToTopButton.classList.add('opacity-0');
-                }
-            });
-        
-            backToTopButton.addEventListener('click', () => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-        </script>
-        """, unsafe_allow_html=True)
+       
 
 
 
@@ -1149,6 +1093,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

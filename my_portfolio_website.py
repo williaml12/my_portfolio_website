@@ -11,6 +11,9 @@ genai.configure(api_key=api_key)
 # model = genai.GenerativeModel('gemini-1.5-flash')
 model = genai.GenerativeModel("gemini-2.5-flash")
 
+st.markdown("<a id='top'></a>", unsafe_allow_html=True)
+
+
 with st.container():
     selected = option_menu(
         menu_title=None,
@@ -19,8 +22,12 @@ with st.container():
         orientation='horizontal'
     )
 
+
+
+
+
 if selected == 'About':
-    st.markdown("<a id='top'></a>", unsafe_allow_html=True)
+    # st.markdown("<a id='top'></a>", unsafe_allow_html=True)
 
     with st.container():
         col1, col2 = st.columns(2)
@@ -960,6 +967,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

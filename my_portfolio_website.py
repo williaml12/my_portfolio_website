@@ -234,85 +234,25 @@ if selected == 'About':
             st_lottie(lottie_socials, height=300)
 
         # Back to Top button
-    #     st.markdown("""
-    #     <style>
-    #         .stButton > button {
-    #             background-color: #4CAF50;
-    #             color: white;
-    #             padding: 10px 20px;
-    #             border-radius: 10px;
-    #             font-size: 18px;
-    #         }
-    #     </style>
-    # """, unsafe_allow_html=True)
-
-    #     if st.button("⬆️ Back to Top"):
-    #         st.markdown("<meta http-equiv='refresh' content='0; url=#top'>", unsafe_allow_html=True)
-
-
-
-
-        # Back to Top button (HTML + CSS + JS)
         st.markdown("""
-        <a id="top"></a>
-        
         <style>
-            #back-to-top {
-                position: fixed;
-                bottom: 30px;
-                right: 30px;
+            .stButton > button {
                 background-color: #4CAF50;
                 color: white;
                 padding: 10px 20px;
                 border-radius: 10px;
                 font-size: 18px;
-                border: none;
-                cursor: pointer;
-                z-index: 9999;
-        
-                /* Hidden by default */
-                opacity: 0;
-                visibility: hidden;
-                transition: opacity 0.3s ease-in-out;
-            }
-        
-            /* mimic your JS classes */
-            .opacity-0 {
-                opacity: 0 !important;
-                visibility: hidden !important;
-            }
-            .opacity-100 {
-                opacity: 1 !important;
-                visibility: visible !important;
             }
         </style>
-        
-        <button id="back-to-top" class="opacity-0">⬆️ Back to Top</button>
-        
-        <script>
-            const backToTopButton = document.getElementById('back-to-top');
-        
-            // same logic as your JS code
-            window.addEventListener('scroll', () => {
-                if (window.pageYOffset > 300) {
-                    backToTopButton.classList.remove('opacity-0');
-                    backToTopButton.classList.add('opacity-100');
-                } else {
-                    backToTopButton.classList.remove('opacity-100');
-                    backToTopButton.classList.add('opacity-0');
-                }
-            });
-        
-            // smooth scroll to top
-            backToTopButton.addEventListener('click', () => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-        </script>
-        """, unsafe_allow_html=True)
+    """, unsafe_allow_html=True)
 
+        if st.button("⬆️ Back to Top"):
+            st.markdown("<meta http-equiv='refresh' content='0; url=#top'>", unsafe_allow_html=True)
+
+
+
+
+       
     
 
         # st.markdown("""
@@ -1155,6 +1095,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

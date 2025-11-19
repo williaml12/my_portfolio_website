@@ -250,48 +250,36 @@ if selected == 'About':
         if st.button("⬆️ Back to Top"):
             st.markdown("<meta http-equiv='refresh' content='0; url=#top'>", unsafe_allow_html=True)
 
-
-        # Inject JavaScript for back-to-top button
-        st.markdown("""
+        # --- BACK TO TOP BUTTON (NO JS) ---
+        st.markdown(
+            """
             <style>
-                #back-to-top {
-                    position: fixed;
-                    bottom: 20px;
-                    right: 20px;
-                    padding: 12px 18px;
-                    background-color: #4A90E2;
-                    color: white;
-                    border-radius: 8px;
-                    cursor: pointer;
-                    transition: opacity 0.3s ease-in-out;
-                    opacity: 0;
-                    visibility: hidden;
-                    z-index: 9999;
-                }
-                #back-to-top.visible {
-                    opacity: 1;
-                    visibility: visible;
-                }
+            /* Floating fixed-position button */
+            .back-to-top {
+                position: fixed;
+                bottom: 40px;
+                right: 40px;
+                background-color: #4CAF50;
+                color: white;
+                padding: 12px 20px;
+                border-radius: 10px;
+                text-decoration: none;
+                font-size: 18px;
+                font-weight: bold;
+                box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+                z-index: 9999;
+            }
+            .back-to-top:hover {
+                background-color: #45a049;
+            }
             </style>
         
-            <div id="back-to-top">⬆ Back to Top</div>
-        
-            <script>
-                const backToTopButton = document.getElementById('back-to-top');
-        
-                window.addEventListener('scroll', () => {
-                    if (window.pageYOffset > 300) {
-                        backToTopButton.classList.add('visible');
-                    } else {
-                        backToTopButton.classList.remove('visible');
-                    }
-                });
-        
-                backToTopButton.addEventListener('click', () => {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                });
-            </script>
-        """, unsafe_allow_html=True)
+            <a href="#top" class="back-to-top">⬆ Back to Top</a>
+            """,
+            unsafe_allow_html=True
+        )
+
+      
 
 if selected == 'AI Assistant':
     with st.container():
@@ -952,6 +940,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

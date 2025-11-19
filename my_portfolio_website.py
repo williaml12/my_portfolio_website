@@ -247,7 +247,7 @@ if selected == 'About':
         </style>
     """, unsafe_allow_html=True)
 
-        if st.button("⬆️ Back to Top"):
+        if st.button("⬆️"):
             st.markdown("<meta http-equiv='refresh' content='0; url=#top'>", unsafe_allow_html=True)
 
         # --- BACK TO TOP BUTTON (NO JS) ---
@@ -940,6 +940,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

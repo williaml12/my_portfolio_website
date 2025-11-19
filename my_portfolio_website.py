@@ -306,6 +306,34 @@ if selected == 'About':
             </form>
         </div>
         """, unsafe_allow_html=True)
+
+
+        st.markdown("""
+        <style>
+        #back-top-btn {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            padding: 12px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 12px;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            z-index: 9999;
+        }
+        </style>
+        
+        <button id="back-top-btn">⬆ Back to Top</button>
+        
+        <script>
+        document.getElementById("back-top-btn").onclick = function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        };
+        </script>
+        """, unsafe_allow_html=True)
+
               
 
 if selected == 'AI Assistant':
@@ -967,6 +995,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

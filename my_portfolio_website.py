@@ -274,7 +274,7 @@ if selected == 'About':
             }
             </style>
         
-            <a href="#top" class="back-to-top">⬆ Back to Top</a>
+            <a href="#top" class="back-to-top">⬆</a>
             """,
             unsafe_allow_html=True
         )
@@ -960,6 +960,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

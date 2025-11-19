@@ -253,65 +253,6 @@ if selected == 'About':
 
 
 
-       
-        components.html("""
-        <style>
-            /* Same styles as your JS code version */
-            #back-to-top {
-                position: fixed;
-                bottom: 40px;
-                right: 40px;
-                width: 55px;
-                height: 55px;
-                background: #4CAF50;
-                color: white;
-                border-radius: 50%;
-                font-size: 26px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                cursor: pointer;
-                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-        
-                opacity: 0;
-                visibility: hidden;
-                transition: opacity 0.4s ease, visibility 0.4s ease;
-                z-index: 9999;
-            }
-        
-            .opacity-0 { opacity: 0; visibility: hidden; }
-            .opacity-100 { opacity: 1; visibility: visible; }
-            .invisible { visibility: hidden; }
-            .visible { visibility: visible; }
-        </style>
-        
-        <!-- BUTTON -->
-        <div id="back-to-top" class="opacity-0 invisible">⬆️</div>
-        
-        <script>
-        const backToTopButton = document.getElementById('back-to-top');
-        
-        /* EXACT same JS logic you provided */
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.remove('opacity-0', 'invisible');
-                backToTopButton.classList.add('opacity-100', 'visible');
-            } else {
-                backToTopButton.classList.remove('opacity-100', 'visible');
-                backToTopButton.classList.add('opacity-0', 'invisible');
-            }
-        });
-        
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-        </script>
-        """, height=200)   # <-- required so button renders
-            
-        
-               
-
-
 
 if selected == 'AI Assistant':
     with st.container():
@@ -972,6 +913,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

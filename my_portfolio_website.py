@@ -310,7 +310,6 @@ if selected == 'About':
 
 
 
-
         # Back to Top button (Styled Streamlit Button)
         st.markdown("""
             <style>
@@ -331,7 +330,7 @@ if selected == 'About':
                 </script>
             """, unsafe_allow_html=True)
 
-              
+
 
 if selected == 'AI Assistant':
     with st.container():
@@ -992,6 +991,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

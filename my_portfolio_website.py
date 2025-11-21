@@ -62,7 +62,7 @@ if selected == 'About':
         st.markdown("<div id='skills-section'></div>", unsafe_allow_html=True)
 
         
-        st.title("🧠 My Skills")
+        st.title("🧠My Skills")
 
         col3, col4 = st.columns(2)
         with col3:
@@ -1013,6 +1013,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

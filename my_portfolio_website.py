@@ -311,47 +311,42 @@ if selected == 'About':
         # </div>
         # """, unsafe_allow_html=True)
 
+
+
+
+   # Fixed button that only appears in Skills section
         st.markdown("""
-            <style>
-            #back-to-top-btn {
+        <style>
+            .skills-back-to-top {
                 position: fixed;
-                bottom: 40px;
-                right: 40px;
+                bottom: 20px;
+                right: 20px;
+                z-index: 999;
+                display: block;
+            }
+            .skills-back-to-top button {
                 background-color: #4CAF50;
                 color: white;
                 padding: 12px 20px;
-                border: none;
                 border-radius: 10px;
                 font-size: 18px;
+                border: none;
                 cursor: pointer;
-                z-index: 9999;
-                opacity: 0;
-                transition: opacity 0.3s ease;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.2);
             }
-            </style>
-        
-            <button id="back-to-top-btn">⬆ Back to Top</button>
-        
-            <script>
-            const btn = document.getElementById("back-to-top-btn");
-            const skillsSection = document.getElementById("skills-section");
-        
-            window.addEventListener("scroll", () => {
-                const rect = skillsSection.getBoundingClientRect();
-        
-                // If Skills section is in view → SHOW button
-                if (rect.top < window.innerHeight && rect.bottom >= 0) {
-                    btn.style.opacity = 1;
-                } else {
-                    btn.style.opacity = 0;
-                }
-            });
-        
-            btn.addEventListener("click", () => {
-                window.scrollTo({ top: 0, behavior: "smooth" });
-            });
-            </script>
+            .skills-back-to-top button:hover {
+                background-color: #45a049;
+            }
+        </style>
+    
+        <div class="skills-back-to-top">
+            <a href="#top">
+                <button>⬆️ Back to Top</button>
+            </a>
+        </div>
         """, unsafe_allow_html=True)
+
+
 
 
 if selected == 'AI Assistant':
@@ -1013,6 +1008,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

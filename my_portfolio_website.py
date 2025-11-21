@@ -58,9 +58,6 @@ if selected == 'About':
         # st.title(" ")
 
         # st.write(" ")
-
-        st.markdown("<div id='skills-section'></div>", unsafe_allow_html=True)
-
         
         st.title("🧠My Skills")
 
@@ -295,57 +292,21 @@ if selected == 'About':
 
 
         # --- Back to Top Button ---
-        # st.markdown("""
-        # <div style='position: fixed; bottom: 40px; right: 40px;'>
-        #     <form action="#top">
-        #         <button style="
-        #             background-color:#4CAF50;
-        #             color:white;
-        #             padding:12px 20px;
-        #             border:none;
-        #             border-radius:10px;
-        #             font-size:18px;
-        #             cursor:pointer;
-        #         ">⬆ Back to Top</button>
-        #     </form>
-        # </div>
-        # """, unsafe_allow_html=True)
-
-
-
-
-   # Fixed button that only appears in Skills section
         st.markdown("""
-        <style>
-            .skills-back-to-top {
-                position: fixed;
-                bottom: 20px;
-                right: 20px;
-                z-index: 999;
-                display: block;
-            }
-            .skills-back-to-top button {
-                background-color: #4CAF50;
-                color: white;
-                padding: 12px 20px;
-                border-radius: 10px;
-                font-size: 18px;
-                border: none;
-                cursor: pointer;
-                box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-            }
-            .skills-back-to-top button:hover {
-                background-color: #45a049;
-            }
-        </style>
-    
-        <div class="skills-back-to-top">
-            <a href="#top">
-                <button>⬆️ Back to Top</button>
-            </a>
+        <div style='position: fixed; bottom: 40px; right: 40px;'>
+            <form action="#top">
+                <button style="
+                    background-color:#4CAF50;
+                    color:white;
+                    padding:12px 20px;
+                    border:none;
+                    border-radius:10px;
+                    font-size:18px;
+                    cursor:pointer;
+                ">⬆ Back to Top</button>
+            </form>
         </div>
         """, unsafe_allow_html=True)
-
 
 
 
@@ -1008,6 +969,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

@@ -309,6 +309,38 @@ if selected == 'About':
 
 
 
+        # Back to Top button - Fixed position
+        st.markdown("""
+        <style>
+            .fixed-bottom {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                z-index: 999;
+            }
+            .stButton > button {
+                background-color: #4CAF50;
+                color: white;
+                padding: 10px 20px;
+                border-radius: 10px;
+                font-size: 18px;
+                border: none;
+                cursor: pointer;
+            }
+            .stButton > button:hover {
+                background-color: #45a049;
+            }
+        </style>
+        
+        <div class="fixed-bottom">
+            <a href="#top">
+                <button>⬆️ Back to top</button>
+            </a>
+        </div>
+        """, unsafe_allow_html=True)
+        
+
+
 
 
 if selected == 'AI Assistant':
@@ -970,6 +1002,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

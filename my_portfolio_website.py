@@ -58,7 +58,11 @@ if selected == 'About':
         # st.title(" ")
 
         # st.write(" ")
-        st.title("My Skills")
+
+        st.markdown("<div id='skills-section'></div>", unsafe_allow_html=True)
+
+        
+        st.title("🧠 My Skills")
 
         col3, col4 = st.columns(2)
         with col3:
@@ -291,56 +295,63 @@ if selected == 'About':
 
 
         # --- Back to Top Button ---
+        # st.markdown("""
+        # <div style='position: fixed; bottom: 40px; right: 40px;'>
+        #     <form action="#top">
+        #         <button style="
+        #             background-color:#4CAF50;
+        #             color:white;
+        #             padding:12px 20px;
+        #             border:none;
+        #             border-radius:10px;
+        #             font-size:18px;
+        #             cursor:pointer;
+        #         ">⬆ Back to Top</button>
+        #     </form>
+        # </div>
+        # """, unsafe_allow_html=True)
+
         st.markdown("""
-        <div style='position: fixed; bottom: 40px; right: 40px;'>
-            <form action="#top">
-                <button style="
-                    background-color:#4CAF50;
-                    color:white;
-                    padding:12px 20px;
-                    border:none;
-                    border-radius:10px;
-                    font-size:18px;
-                    cursor:pointer;
-                ">⬆ Back to Top</button>
-            </form>
-        </div>
-        """, unsafe_allow_html=True)
-
-
-
-        # Back to Top button - Fixed position
-        st.markdown("""
-        <style>
-            .fixed-bottom {
+            <style>
+            #back-to-top-btn {
                 position: fixed;
-                bottom: 20px;
-                right: 20px;
-                z-index: 999;
-            }
-            .stButton > button {
+                bottom: 40px;
+                right: 40px;
                 background-color: #4CAF50;
                 color: white;
-                padding: 10px 20px;
+                padding: 12px 20px;
+                border: none;
                 border-radius: 10px;
                 font-size: 18px;
-                border: none;
                 cursor: pointer;
+                z-index: 9999;
+                opacity: 0;
+                transition: opacity 0.3s ease;
             }
-            .stButton > button:hover {
-                background-color: #45a049;
-            }
-        </style>
+            </style>
         
-        <div class="fixed-bottom">
-            <a href="#top">
-                <button>⬆️ Back to top</button>
-            </a>
-        </div>
+            <button id="back-to-top-btn">⬆ Back to Top</button>
+        
+            <script>
+            const btn = document.getElementById("back-to-top-btn");
+            const skillsSection = document.getElementById("skills-section");
+        
+            window.addEventListener("scroll", () => {
+                const rect = skillsSection.getBoundingClientRect();
+        
+                // If Skills section is in view → SHOW button
+                if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                    btn.style.opacity = 1;
+                } else {
+                    btn.style.opacity = 0;
+                }
+            });
+        
+            btn.addEventListener("click", () => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+            </script>
         """, unsafe_allow_html=True)
-        
-
-
 
 
 if selected == 'AI Assistant':
@@ -1002,6 +1013,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

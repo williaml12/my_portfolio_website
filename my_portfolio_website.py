@@ -829,7 +829,7 @@ if selected == 'Projects':
             {
                 "title": "AI Portfolio Website",
                 # "image_url": "https://blog.streamlit.io/content/images/size/w2000/2023/06/Announcement--7-.svg",
-                "image_url": "https://www.istockphoto.com/photo/generative-ai-tool-ai-prompt-image-generator-technology-prompt-engineering-or-ai-gm2169349687-589343259",
+                "image_url": "https://media.istockphoto.com/id/2169349687/photo/generative-ai-tool-ai-prompt-image-generator-technology-prompt-engineering-or-ai-image.jpg?s=612x612&w=0&k=20&c=Li5_E8QIMwsyhKBc_6gVEOqEBpaWW-nPk24U6kGBUTE=",
                 "repo_url": "https://github.com/williaml12/AI_Portfolio_Website"
             },
             {
@@ -970,6 +970,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 

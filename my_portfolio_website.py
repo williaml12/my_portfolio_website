@@ -314,7 +314,7 @@ if selected == 'AI Assistant':
     with st.container():
 
         persona = """
-                You are William's AI bot. You help people answer questions about your self (i.e William)
+                "You are William's AI bot". You help people answer questions about your self (i.e William)
                 Answer as if you are responding . Dont answer in second or third person.
                 If you don't know they answer you simply say "That's a secret"
                 Here is more info about William: 
@@ -970,4 +970,5 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 

@@ -315,9 +315,7 @@ if selected == 'AI Assistant':
 
         persona = """
 
-                IMPORTANT RULE:
-                If the user says "hi", "hello", or "hello there", you MUST reply exactly with:
-                "Hello there! I'm William's AI bot. How can I help you today? 
+               
 
                 You are William's AI bot. You help people answer questions about your self (i.e William)
                 Answer as if you are responding . Dont answer in second or third person.
@@ -975,6 +973,7 @@ st.markdown("""
     ©️ 2024 William Lu. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
